@@ -763,43 +763,103 @@ function App() {
                 </Section>
                 <Section>
                     <Title>Conjunctions</Title>
-                    <Section>
-                        <Title>or</Title>
-                        <Expos>
-                            The particle <TM>anu</TM> is used to mean <Eng>"or"</Eng> in a very similar way to its use
-                            in English. In fact, essentially any place you'd want to use <Eng>"or"</Eng> in English, you
-                            can use <TM>anu</TM> in toki ma. Here is a non-exhaustive list of examples:
-                        </Expos>
-                        <Examples>
-                            <Ex>
-                                <TM>mi li wile te li moku e kili anu kasi anu pan</TM>
-                                <Answer>
-                                    <Eng>"I want to eat fruit, or vegetables, or bread"</Eng>
-                                </Answer>
-                            </Ex>
-                            <Ex>
-                                <TM>mi li wile te li ato, anu te li tawa pelu noka mi</TM>
-                                <Answer>
-                                    <Eng>"I either want to drive or walk"</Eng>
-                                </Answer>
-                            </Ex>
-                            <Ex>
-                                <TM>jan Ken anu jan Tan o pana e mani ki on</TM>
-                                <Answer>
-                                    <Eng>"Ken or Dan should give them money"</Eng>
-                                </Answer>
-                            </Ex>
-                        </Examples>
+                    <Section><Title>en / anu / lekin</Title>
+                    <Expos>
+                        The particles <TM>en</TM> (<Eng>"and"</Eng>), <TM>anu</TM> (<Eng>"or"</Eng>), and <TM>lekin</TM>{' '}
+                        (<Eng>"but"</Eng>) can be used in almost exactly the same way as English. You can use them to
+                        separate or join sentences, clauses, individual words, etc. Here is a non-exhaustive list of
+                        examples:
+                    </Expos>
+                    <Examples>
+                        <Ex>
+                            <TM>
+                                mi li wile te li moku e kili <B>anu</B> kasi <B>anu</B> pan
+                            </TM>
+                            <Answer>
+                                <Eng>
+                                    "I want to eat fruit, <B>or</B> vegetables, <B>or</B> bread"
+                                </Eng>
+                            </Answer>
+                        </Ex>
+                        <Ex>
+                            <TM>
+                                mi li wile te li ato, <B>anu</B> te li tawa pelu noka mi
+                            </TM>
+                            <Answer>
+                                <Eng>
+                                    "I either want to drive <B>or</B> walk"
+                                </Eng>
+                            </Answer>
+                        </Ex>
+                        <Ex>
+                            <TM>
+                                jan Ken <B>anu</B> jan Tan o pana e mani ki on
+                            </TM>
+                            <Answer>
+                                <Eng>
+                                    "Ken <B>or</B> Dan should give them money"
+                                </Eng>
+                            </Answer>
+                        </Ex>
+                        <Ex>
+                            <TM>
+                                mi li pasan nen pawo <B>en</B> meja
+                            </TM>
+                            <Answer>
+                                <Eng>
+                                    "I like dogs <B>and</B> cats"
+                                </Eng>
+                            </Answer>
+                        </Ex>
+                        <Ex>
+                            <TM>
+                                mi li pasan nen pawo <B>en</B> si li pasan nen meja
+                            </TM>
+                            <Answer>
+                                <Eng>
+                                    "I like dogs <B>and</B> you like cats"
+                                </Eng>
+                            </Answer>
+                        </Ex>
+                        <Ex>
+                            <TM>
+                                mi li pasan nen pawo <B>lekin</B> si li pasan nen meja
+                            </TM>
+                            <Answer>
+                                <Eng>
+                                    "I like dogs <B>but</B> you like cats"
+                                </Eng>
+                            </Answer>
+                        </Ex>
+                        <Ex>
+                            <TM>
+                                mi li tini <B>lekin</B> wiki
+                            </TM>
+                            <Answer>
+                                <Eng>
+                                    "I am short <B>but</B> fast"
+                                </Eng>
+                            </Answer>
+                        </Ex>
+                    </Examples>
                     </Section>
                     <Section>
-                        <Title>but</Title>
+                        <Title>Sequentiality</Title>
                         <Expos>
-                            The particle <TM>lekin</TM> is also used in almost the exact same way as the English{' '}
-                            <Eng>"but"</Eng>. It is mostly placed between complete sentences, used to contrast the two
-                            statements.
+                            Using the particle <TM>en</TM> generally implies <Word>concurrency</Word> of events or states, meaning they occur at the same time.
                         </Expos>
                         <Examples>
-                            <Ex></Ex>
+                            <Ex><TM>mi li wile te li moku e kasi <B>en</B> pan suwi</TM><Answer><Eng>"I want to eat vegetables and cake"</Eng>, implying eating them together <B>in the same course</B></Answer></Ex>
+                            <Ex><TM>mi li moku <B>en</B> mi li lukin e sitelen kanpe</TM><Answer><Eng>"I eat and watch a movie"</Eng>, implying eating <B>while</B> watching the movie</Answer></Ex>
+                            <Ex><TM>mi li pana e mani ki si <B>en</B> on</TM><Answer><Eng>"I am giving money to you and them"</Eng>, implying <B>one moment</B> of giving out money to two people</Answer></Ex>
+                        </Examples>
+                        <Expos>
+                            In order to convey <Word>sequentiality</Word>, events occuring one after the other, you can instead <B>repeat the related preposition</B> or <B>repeat <TM>li</TM></B>. Think of it like <Eng>"and then"</Eng>.
+                        </Expos>
+                        <Examples>
+                            <Ex><TM>mi li wile te li moku <B>e</B> kasi <B>e</B> pan suwi</TM><Answer><Eng>"I want to eat vegetables <B>and then</B> cake"</Eng></Answer></Ex>
+                            <Ex><TM>mi <B>li</B> moku <B>li</B> lukin e sitelen kanpe</TM><Answer><Eng>"I eat <B>and then</B> watch a movie"</Eng></Answer></Ex>
+                            <Ex><TM>mi li pana e mani <B>ki</B> si <B>ki</B> on</TM><Answer><Eng>"I am giving money to you <B>and then</B> to them"</Eng>, implying <B>two separate moments</B> of giving out money</Answer></Ex>
                         </Examples>
                     </Section>
                 </Section>
