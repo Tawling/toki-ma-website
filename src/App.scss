@@ -12,6 +12,13 @@
             margin-right: 20px;
         }
 
+        &.no-spacer {
+            margin-left: unset;
+            & > .spacer {
+                display: none;
+            }
+        }
+
         cursor: pointer;
 
         &.hidden {
@@ -44,14 +51,14 @@
 
     .tm {
         font-style: italic;
-        background-color: rgba(255, 208, 0, 0.349);
+        background-color: rgb(232, 226, 166);
         border-radius: 0.3em;
         padding: 0 0.2em;
         font-weight: normal;
     }
 
     .eng {
-        background-color: rgba(14, 21, 124, 0.5);
+        background-color: #7580bd;
         color: rgb(226, 217, 195);
         padding: 0 0.4em;
         border-radius: 0.2em 0.8em;
@@ -62,7 +69,7 @@
     .example {
         padding-left: 4em;
         margin: 0.4em 0;
-        line-height: 1.5em;
+        line-height: 2em;
         text-indent: -3em;
         > .tm {
             padding: 0 0.6em;
@@ -77,5 +84,24 @@
             margin-top: 20px;
             margin-left: -20px;
         }
+    }
+    th {
+        border: 2px solid rgb(196, 178, 19);
+        padding: 0.6em;
+    }
+    td {
+        border: 1px solid rgb(196, 178, 19);
+        padding: 0.6em;
+    }
+    table {
+        border-collapse: collapse;
+        margin: auto;
+    }
+    th {
+        background-color: rgb(197, 195, 184);
+    }
+    td {
+        text-align: center;
+        line-height: 2em;
     }
 }
