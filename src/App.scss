@@ -5,6 +5,36 @@
     padding-bottom: 100px;
     background-color: #dcebff;
     color: rgb(0, 32, 129);
+    &.no-unofficial .unofficial {
+        display: none;
+    }
+    line-height: 1.4em;
+
+    .todo {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        &:before {
+            content: "TODO:";
+            display: block;
+            color: red;
+            font-weight: bold;
+        }
+        background-color: rgb(209, 209, 209);
+    }
+
+    .unofficial {
+        background-color: rgba(255, 0, 0, 0.15);
+        border-radius: 10px;
+        &:before {
+            content: "Unofficial";
+            color: red;
+            position: relative;
+            display: block;
+            font-weight: bold;
+            top: 0.5em;
+        }
+    }
 
     .answer {
         margin-left: 20px;
@@ -78,11 +108,14 @@
     }
 
     .section {
-        margin-left: 20px;
+        padding-left: 20px;
         .title {
             font-size: 20pt;
             margin-top: 20px;
             margin-left: -20px;
+            .tm {
+                background-color: transparent;
+            }
         }
     }
     th {
