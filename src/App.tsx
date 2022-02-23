@@ -1697,7 +1697,7 @@ function App() {
                     </TODO>
                     <h2>Taking Action</h2>
                     <Section>
-                        <TODO>pali, pelu, ki, tan, kan</TODO>
+                        <TODO>pelu, ki, tan, kan</TODO>
                     </Section>
                     <h2>Specifying Further</h2>
                     <Section>
@@ -1708,6 +1708,44 @@ function App() {
                         <TODO>Cardinals</TODO>
                         <TODO>Ordinals</TODO>
                         <TODO>Zero</TODO>
+                    </Section>
+                    <h2>Notes and Specifics</h2>
+                    <Section>
+                        <P>
+                            Many words and/or common constructions have some specifics in their use or meaning that may
+                            not be obvious in the definition. This chart contains notes about specific constructions and
+                            how they are used.
+                        </P>
+                        <table className="notes">
+                            <tr>
+                                <th>Word/Construction</th>
+                                <th>Notes</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <TM>on</TM>
+                                    <br />
+                                    <Eng>he/she/it/they</Eng>
+                                </td>
+                                <td>
+                                    This third person pronoun can only refer to <B>animate objects</B>. You wouldn't use
+                                    it to refer to a previous subject as "it" like you would in English. For that you'd
+                                    use <TM>ni</TM> and <TM>na</TM> for <Eng>this</Eng> and <Eng>that</Eng>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <TM>[li] pali</TM>
+                                    <br />
+                                    <Eng>to make, to do</Eng>
+                                </td>
+                                <td>
+                                    In this definition, <Eng>"to make"</Eng> always means <Eng>"to create"</Eng>,{' '}
+                                    <B>not</B> as in <Eng>"to cause"</Eng>. English uses the word for both meanings, but
+                                    for causation in toki ma you can only use the verb <TM>wa</TM>.
+                                </td>
+                            </tr>
+                        </table>
                     </Section>
                     <TODO style={{ marginTop: 200 }}>
                         <ul>
