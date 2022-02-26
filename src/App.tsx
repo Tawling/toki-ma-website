@@ -45,6 +45,12 @@ const Answer = ({ id, children, className }: Props) => {
     );
 };
 
+const See = ({ children, href }: { children: React.ReactNode; href: string }) => (
+    <a className="see" href={`#${href}`}>
+        [See section on <span>{children}</span> for more]
+    </a>
+);
+
 const Section = ({
     id,
     children,
@@ -57,25 +63,28 @@ const Section = ({
     className?: string | object;
     style?: object;
     unofficial?: boolean;
-}) => {
-    const showUnofficial = useContext(UnofficialContext);
-    return !showUnofficial && unofficial ? null : (
-        <div id={id} className={classNames('section', className, { unofficial })} style={style}>
-            {children}
-        </div>
-    );
-};
+}) => (
+    <div id={id} className={classNames('section', className, { unofficial })} style={style}>
+        {children}
+    </div>
+);
+
+const Title = ({ id, children, className, style }: Props) => (
+    <a href={`#${id}`} id={id} style={style} className={classNames('title', className)}>
+        {children}
+    </a>
+);
 
 const TM = spanType('tm');
 const Examples = divType('examples');
 const Word = spanType('word');
 const B = spanType('bold');
 const P = divType('expos');
-const Title = divType('title');
 const Ex = divType('example');
 const Eng = spanType('eng');
 const Unofficial = divType('unofficial');
 const TODO = divType('todo');
+const Separator = divType('separator');
 
 function App() {
     const [blur, setBlur] = useState(true);
@@ -84,7 +93,7 @@ function App() {
         <UnofficialContext.Provider value={showUnofficial}>
             <BlurContext.Provider value={blur}>
                 <div className={classNames('App', { 'no-unofficial': !showUnofficial })}>
-                    <h1>Complete Guide to toki ma Grammar</h1>
+                    <h1 className="header">Complete Guide to toki ma Grammar</h1>
                     <h2>Written by jan Ta</h2>
                     <P>
                         Due to the nature of the language, toki ma is made up of a small set of relatively simple
@@ -94,17 +103,287 @@ function App() {
                         general language grammar rules, and more specific, smaller constructions seen in common use.
                     </P>
                     <P>
-                        <B>
-                            This guide will have example sentences in toki ma, and blurred translations in English.
-                            Click the translations to reveal them. You are highly encouraged to try translating the
-                            examples before peeking!
-                        </B>
+                        <Eng style={{ display: 'block' }}>
+                            <B>
+                                This guide will have example sentences in toki ma, and blurred translations in English.
+                                Click the translations to reveal them. You are highly encouraged to try translating the
+                                examples before peeking!
+                            </B>
+                            <br />
+                            <br />
+                            If you really don't want the blur,{' '}
+                            <button onClick={() => setBlur(!blur)}>click here</button> to toggle it on and off for
+                            everything.
+                            <br />
+                            <br />
+                            Blur is <B>{blur ? 'on' : 'off'}</B>.
+                        </Eng>
                     </P>
+                    <P className="unofficial no-hide">
+                        <br />
+                        This guide also contains some unofficial grammar rules and constructions. These are shown by
+                        default, but you can <button onClick={() => setUnofficial(!showUnofficial)}>
+                            click here
+                        </button>{' '}
+                        to show or hide them.
+                        <br />
+                        <br />
+                        Unofficial content is <B>{showUnofficial ? 'on' : 'off'}</B>.
+                    </P>
+                    <Separator>* * *</Separator>
+                    <div className="toc">
+                        <a href="#word-derivations">Word Derivations</a>
+                        <br />
+                        <ul>
+                            <li>
+                                <a href="#base-nouns">Base Nouns</a>
+                            </li>
+                            <li>
+                                <a href="#base-modifiers">Base Modifiers</a>
+                            </li>
+                            <li>
+                                <a href="#base-verbs">Base Verbs</a>
+                            </li>
+                        </ul>
+                        <a href="#basic-sentence-structure">Basic Sentence Structure</a>
+                        <br />
+                        <ul>
+                            <li>
+                                <a href="#li">
+                                    <TM>li</TM>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#e">
+                                    <TM>e</TM>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#o">
+                                    <TM>o</TM>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#word-order">Word Order: SVO and SOV</a>
+                            </li>
+                            <li>
+                                <a href="#modifiers">Modifiers</a>
+                            </li>
+                            <ul>
+                                <li>
+                                    <a href="#pi">
+                                        <TM>pi</TM>
+                                    </a>
+                                </li>
+                                <li className="#unofficial">
+                                    <a href="ji">
+                                        <TM>ji</TM>
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                        <a href="#adding-complexity">Adding Complexity</a>
+                        <br />
+                        <ul>
+                            <li>
+                                <a href="#te">
+                                    <TM>te</TM>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#punctuation">Punctuation</a>
+                            </li>
+                            <li>
+                                <a href="#negation">Negation</a>
+                            </li>
+                            <li>
+                                <a href="#cause-and-effect">Cause and Effect</a>
+                            </li>
+                            <ul>
+                                <li>
+                                    <a href="#wa">
+                                        <TM>wa</TM>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#nen">
+                                        <TM>nen</TM>
+                                    </a>
+                                </li>
+                            </ul>
+                            <li>
+                                <a href="#conjunctions">Conjunctions</a>
+                            </li>
+                            <ul>
+                                <li>
+                                    <a href="#en-anu-lekin">
+                                        <TM>en</TM>/<TM>anu</TM>/<TM>lekin</TM>
+                                    </a>
+                                </li>
+                                <li className="#unofficial">
+                                    <a href="sequentiality">Sequentiality</a>
+                                </li>
+                            </ul>
+                            <li>
+                                <a href="#asking-questions">Asking Questions</a>
+                            </li>
+                        </ul>
+                        <a href="#setting-the-scene">Setting the Scene</a>
+                        <br />
+                        <ul>
+                            <li>
+                                <a href="#tense-and-aspect">Tense and Aspect</a>
+                            </li>
+                            <li>
+                                <a href="#units-of-time">Units of Time</a>
+                            </li>
+                            <li>
+                                <a href="#la-ita">
+                                    <TM>la</TM>/<TM>ita</TM>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#specifying-topics">Specifying Topics</a>
+                            </li>
+                            <li>
+                                <a href="#conditionals">Conditionals</a>
+                            </li>
+                            <li>
+                                <a href="#an">
+                                    <TM>an</TM>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#taking-action">Taking Action</a>
+                        <br />
+                        <ul>
+                            <li>
+                                <a href="#pali">
+                                    <TM>pali</TM>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#pelu">
+                                    <TM>pelu</TM>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#kan">
+                                    <TM>kan</TM>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#ki">
+                                    <TM>ki</TM>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tan">
+                                    <TM>tan</TM>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#specifying-further">Specifying Further</a>
+                        <br />
+                        <ul></ul>
+                        <a href="#numbers-and-mathematics">Numbers and Mathematics</a>
+                        <br />
+                        <ul>
+                            <li>
+                                <a href="#forming-numbers">Forming Numbers</a>
+                            </li>
+                            <li className="unofficial">
+                                <a href="#zero">Zero</a>
+                            </li>
+                            <li>
+                                <a href="#cardinals-and-ordinals">Cardinals and Ordinals</a>
+                            </li>
+                            <li>
+                                <a href="#fractions-decimals-and-percents">Fractions, Decimals, and Percents</a>
+                            </li>
+                            <li>
+                                <a href="#negative-numbers">Negative Numbers</a>
+                            </li>
+                            <li>
+                                <a href="#mathematical-operations">Mathematical Operations</a>
+                            </li>
+                        </ul>
+                        <a href="#misc">Miscellaneous</a>
+                        <ul>
+                            <li>
+                                <a href="#cardinal-directions">Cardinal Directions</a>
+                            </li>
+                            <li>
+                                <a href="#names-and-loan-words">Names and Loan Words</a>
+                            </li>
+                            <li>
+                                <a href="#notes">Notes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <Separator>* * *</Separator>
+                    <Title id="word-derivations" className="major">
+                        Word Derivations
+                    </Title>
                     <P>
-                        If you really don't want the blur, <button onClick={() => setBlur(!blur)}>click here</button> to
-                        toggle it on and off for everything.
+                        Before we start with grammar, it's important to know how the flexible vocabulary of toki ma can
+                        be derived from the base definitions of its words. Aside from a select few irregular words,{' '}
+                        <B>any noun, verb, or modifier can be converted to one of the other two word forms</B> using
+                        consistent rules.
                     </P>
-                    <h2 id="basic-sentence-structure">Basic Sentence Structure</h2>
+                    <Section>
+                        <Title id="base-nouns">Base Nouns</Title>
+                        <P>
+                            <Word>Base nouns</Word> are very simple to convert into verbs and modifiers. When a{' '}
+                            <B>noun</B> is used as a <B>verb</B>, it just means the verb phrase{' '}
+                            <Eng>"to be [the noun]</Eng>. When used as a <B>modifier</B>, it becomes{' '}
+                            <Eng>"of [the noun]"</Eng> or <Eng>"relating to [the noun]</Eng>.
+                        </P>
+                        <P>
+                            As a <B>noun</B>, <TM>jan</TM> means <Eng>"person"</Eng>.<br />
+                            As a <B>verb</B> it means <Eng>is a person</Eng> or <Eng>"to be a person"</Eng>.<br />
+                            As a <B>modifier</B> it means <Eng>"of a person"</Eng>.
+                        </P>
+                    </Section>
+                    <Section>
+                        <Title id="base-modifiers">Base Modifiers</Title>
+                        <P>
+                            <Word>Base modifiers</Word> are also quite easy to convert. When a <B>modifier</B> is used
+                            as a <B>noun</B>, it becomes the <Word>abstract object</Word> of the modifier. Think of it
+                            like adding <Eng>"-ness"</Eng> to the word. When used as a <B>verb</B>, it also just means{' '}
+                            <Eng>"to be [the modifier]"</Eng> or <Eng>"is [the modifier]"</Eng>.
+                        </P>
+                        <P>
+                            As a <B>modifier</B>, <TM>lete</TM> means <Eng>"cold"</Eng>.<br />
+                            As a <B>noun</B> it means <Eng>"coldness"</Eng>.<br />
+                            As a <B>verb</B> it means <Eng>"is cold"</Eng> or <Eng>"to be cold"</Eng>.
+                        </P>
+                    </Section>
+                    <Section>
+                        <Title id="base-verbs">Base Verbs</Title>
+                        <P>
+                            <Word>Base verbs</Word> are the trickiest of the three, but still not very tough. When a{' '}
+                            <B>verb</B> is used as a <B>noun</B>, it becomes the <Word>generic object</Word> of the
+                            verb: the <B>most basic object you would normally do the verb to</B>. For example, the{' '}
+                            <B>generic object</B> of <Eng>"to sit"</Eng> would be <Eng>"chair"</Eng> or{' '}
+                            <Eng>"seat"</Eng>. The <B>generic object</B> of <Eng>"to use"</Eng> would be{' '}
+                            <Eng>"tool"</Eng>. When used as a <B>modifier</B>, it means{' '}
+                            <Eng>"[generic object]-like"</Eng> or <Eng>"resembling [the generic object]"</Eng>.
+                        </P>
+                        <P>
+                            As a <B>verb</B>, <TM>moku</TM> means <Eng>"to eat"</Eng> or <Eng>"to consume"</Eng>.<br />
+                            As a <B>noun</B> it means <Eng>"food"</Eng>.<br />
+                            As a <B>modifier</B> it means <Eng>"food-like"</Eng>, or <Eng>"edible"</Eng>.
+                        </P>
+                    </Section>
+                    <P>
+                        These rules apply to <B>almost every</B> word in toki ma, with only a few irregular words such
+                        as <B>body parts</B>. Check <a href="https://toki-ma.com/?page=dictionary">the dictionary</a>{' '}
+                        for proper definitions of irregulars in all forms.
+                    </P>
+                    <Title id="basic-sentence-structure" className="major">
+                        Basic Sentence Structure
+                    </Title>
                     <Section>
                         <Title id="li">
                             <TM>li</TM>
@@ -300,198 +579,6 @@ function App() {
                             These two sentences are <B>both allowed</B>. Any <Word>subject</Word> must come first, but
                             the <Word>verb</Word>, the <Word>object</Word>, and any other{' '}
                             <Word>prepositional phrases</Word> may come in <B>any order</B> after it.
-                        </P>
-                    </Section>
-                    <h2 id="adding-complexity">Adding Complexity</h2>
-                    <Section>
-                        <Title id="te">
-                            <TM>te</TM>
-                        </Title>
-                        <P>
-                            The particle <TM>te</TM> marks <Word>noun clauses</Word> and <Word>relative clauses</Word>.
-                            This is a very powerful tool for sentence construction, so let's start simple to show what
-                            that means.
-                        </P>
-                        <Examples>
-                            <Ex>
-                                <TM>te li moku e kili</TM>
-                                <Answer>
-                                    <Eng>"to eat fruit"</Eng>
-                                </Answer>
-                            </Ex>
-                        </Examples>
-                        <P>
-                            This isn't a complete sentence, it's a <Word>noun clause</Word>. It simply refers to the
-                            concept of eating fruit, <B>as an entire noun</B>. This allows it to be used as a{' '}
-                            <B>subject</B> or <B>object</B> of a verb. Let's take a look at an example:
-                        </P>
-                        <Examples>
-                            <Ex>
-                                <TM>mi li wile e kili</TM>
-                                <Answer>
-                                    <Eng>"I want fruit"</Eng>
-                                </Answer>
-                            </Ex>
-                            <Ex>
-                                <TM>
-                                    mi li wile e <B>te li moku e kili</B>
-                                </TM>
-                                <Answer>
-                                    <Eng>
-                                        "I want <B>to eat fruit</B>"
-                                    </Eng>
-                                </Answer>
-                            </Ex>
-                        </Examples>
-                        <P>
-                            Notice how <TM>te li moku e kili</TM> is preceded by <TM>e</TM>, making the entire phrase a{' '}
-                            <B>noun clause</B>; technically it's a <B>noun clause object of a verb</B> for you linguists
-                            out there. Let's look at another example:
-                        </P>
-                        <Examples>
-                            <Ex>
-                                <TM>
-                                    <B>te li moku e kili</B>, li pona
-                                </TM>
-                                <Answer>
-                                    <Eng>
-                                        "It is good <B>to eat fruit</B>"
-                                    </Eng>
-                                    , or{' '}
-                                    <Eng>
-                                        "It is good <B>that fruit is eaten</B>"
-                                    </Eng>
-                                    , or{' '}
-                                    <Eng>
-                                        "<B>Eating fruit</B> is good"
-                                    </Eng>
-                                </Answer>
-                            </Ex>
-                        </Examples>
-                        <P>
-                            The phrases <Eng>"to eat fruit"</Eng>, <Eng>"that fruit is eaten"</Eng>, and{' '}
-                            <Eng>"eating fruit"</Eng> are all simply <B>noun clauses</B> once again referring to the
-                            concept of eating fruit, all marked by <TM>te</TM>, and all valid interpretations of{' '}
-                            <TM>te li moku e kili</TM>. In this case, again for you linguists out there, this is a{' '}
-                            <B>noun clause subject of a verb</B>.
-                        </P>
-                        <P>
-                            As previously stated, <TM>te</TM> can also mark <Word>relative clauses</Word>. While noun
-                            clauses act as a noun (surprise surprise), relative clauses, also known as{' '}
-                            <Word>adjective clauses</Word>, are phrases that act as an <B>adjective</B>.
-                        </P>
-                        <Examples>
-                            <Ex>
-                                <TM>
-                                    jan <B>te li moku e kili</B>, li pona
-                                </TM>
-                                <Answer>
-                                    <Eng>
-                                        "The person <B>who eats fruit</B> is good"
-                                    </Eng>
-                                </Answer>
-                            </Ex>
-                        </Examples>
-                        <P>
-                            The subject of the sentence is <Eng>"the person"</Eng>, but we have tacked on a descriptive
-                            phrase: <Eng>"who eats fruit"</Eng>. This phrase is a <Word>relative clause</Word>. It acts
-                            as an adjective, enhancing the description of the person we are talking about. Here are more
-                            examples:
-                        </P>
-                        <Examples>
-                            <Ex>
-                                <TM>
-                                    kili <B>te mi li moku e</B>, li pona
-                                </TM>
-                                <Answer>
-                                    <Eng>
-                                        "The fruit <B>that I eat</B> is good"
-                                    </Eng>
-                                </Answer>
-                            </Ex>
-                            <Ex>
-                                <TM>
-                                    jan <B>te mi li toki ki</B>, li lamo
-                                </TM>
-                                <Answer>
-                                    <Eng>
-                                        "The person <B>to whom I am talking</B> is tall"
-                                    </Eng>
-                                </Answer>
-                            </Ex>
-                        </Examples>
-                        <P>
-                            These relative clauses have one minor difference to the first example: they have a{' '}
-                            <Word>dangling preposition</Word> at the end. This happens because the <B>subject</B> of our
-                            sentence would normally be the <B>object of a preposition</B> if we were to rearrange the
-                            relative clause to stand on its own. Let's analyze the first example further to understand
-                            this better.
-                        </P>
-                        <Examples>
-                            <Ex>
-                                <TM>kili te mi li moku e ...</TM>
-                                <Answer className="no-blur">
-                                    <Eng>"The fruit that I eat ..."</Eng>
-                                </Answer>
-                            </Ex>
-                        </Examples>
-                        <P>
-                            The subject of the sentence is <TM>kili</TM>, <Eng>"the fruit</Eng>. Let's drop the{' '}
-                            <TM>te</TM> and rearrange it.
-                        </P>
-                        <Ex>
-                            <TM>mi li moku e kili</TM>
-                            <Answer className="no-blur">
-                                <Eng>"I eat fruit"</Eng>
-                            </Answer>
-                        </Ex>
-                        <P>
-                            This is now a complete sentence, but the <B>subject has changed</B> to <TM>mi</TM>. We are
-                            now talking about ourselves eating the fruit. Without using <TM>te</TM>, we could only ever
-                            talk about <B>the thing doing the action</B> as the subject of a sentence. If we ever want
-                            to talk about the <B>object of a preposition</B> rather than the subject of the action, we
-                            must rearrange the sentence using <TM>te</TM>. In this case{' '}
-                            <B>the original preposition must dangle</B> at the end of the relative clause.
-                        </P>
-                        <P>
-                            There is one last thing to mention about using <TM>te</TM> in a sentence. Whenever{' '}
-                            <TM>te</TM> comes after the preposition <TM>e</TM>, the <TM>e</TM> can simply be dropped.
-                            Additionally, whenever <TM>te</TM> comes before <TM>li</TM>, the <TM>li</TM> can be dropped.
-                            These can combine to cause the construction <TM>... e te li ...</TM> to simply become{' '}
-                            <TM>... te ...</TM>.
-                        </P>
-                        <Examples>
-                            <Ex>
-                                <TM>jan te moku e kili, li pona</TM>
-                                <Answer>
-                                    <Eng>"The person who eats fruit is good"</Eng>
-                                </Answer>
-                            </Ex>
-                            <Ex>
-                                <TM>mi li wile te moku e kili</TM>
-                                <Answer>
-                                    <Eng>"I want to eat fruit"</Eng>
-                                </Answer>
-                            </Ex>
-                        </Examples>
-                        <P>
-                            This is very commonly used, though not required. There may be cases where it feels more
-                            natural to keep one or both in the sentence.
-                        </P>
-                    </Section>
-                    <Section>
-                        <Title id="punctuation">Punctuation</Title>
-                        <P>
-                            This is a good time to mention punctuation rules in toki ma, because there are really only
-                            two.
-                            <ol>
-                                <li>Place periods to separate sentences</li>
-                                <li>
-                                    Place commas after <TM>te</TM> clauses before moving on to the rest of the sentence
-                                </li>
-                            </ol>
-                            Any other punctuation use is up to you. You can do whatever feels comfortable or clears up
-                            ambiguity. Question marks, exclamation points, commas, colons, elipses...Go wild.
                         </P>
                     </Section>
                     <Section>
@@ -695,6 +782,231 @@ function App() {
                             </P>
                         </Section>
                     </Section>
+                    <Separator>* * *</Separator>
+                    <Title id="adding-complexity" className="major">
+                        Adding Complexity
+                    </Title>
+                    <Section>
+                        <Title id="te">
+                            <TM>te</TM>
+                        </Title>
+                        <P>
+                            The particle <TM>te</TM> marks <Word>noun clauses</Word> and <Word>relative clauses</Word>.
+                            This is a very powerful tool for sentence construction, so let's start simple to show what
+                            that means.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>te li moku e kili</TM>
+                                <Answer>
+                                    <Eng>"to eat fruit"</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            This isn't a complete sentence, it's a <Word>noun clause</Word>. It simply refers to the
+                            concept of eating fruit, <B>as an entire noun</B>. This allows it to be used as a{' '}
+                            <B>subject</B> or <B>object</B> of a verb. Let's take a look at an example:
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>mi li wile e kili</TM>
+                                <Answer>
+                                    <Eng>"I want fruit"</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>
+                                    mi li wile e <B>te li moku e kili</B>
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "I want <B>to eat fruit</B>"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            Notice how <TM>te li moku e kili</TM> is preceded by <TM>e</TM>, making the entire phrase a{' '}
+                            <B>noun clause</B>; technically it's a <B>noun clause object of a verb</B> for you linguists
+                            out there. Let's look at another example:
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>
+                                    <B>te li moku e kili</B>, li pona
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "It is good <B>to eat fruit</B>"
+                                    </Eng>
+                                    , or{' '}
+                                    <Eng>
+                                        "It is good <B>that fruit is eaten</B>"
+                                    </Eng>
+                                    , or{' '}
+                                    <Eng>
+                                        "<B>Eating fruit</B> is good"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            The phrases <Eng>"to eat fruit"</Eng>, <Eng>"that fruit is eaten"</Eng>, and{' '}
+                            <Eng>"eating fruit"</Eng> are all simply <B>noun clauses</B> once again referring to the
+                            concept of eating fruit, all marked by <TM>te</TM>, and all valid interpretations of{' '}
+                            <TM>te li moku e kili</TM>. In this case, again for you linguists out there, this is a{' '}
+                            <B>noun clause subject of a verb</B>.
+                        </P>
+                        <P>
+                            As previously stated, <TM>te</TM> can also mark <Word>relative clauses</Word>. While noun
+                            clauses act as a noun (surprise surprise), relative clauses, also known as{' '}
+                            <Word>adjective clauses</Word>, are phrases that act as an <B>adjective</B>.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>
+                                    jan <B>te li moku e kili</B>, li pona
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "The person <B>who eats fruit</B> is good"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            The subject of the sentence is <Eng>"the person"</Eng>, but we have tacked on a descriptive
+                            phrase: <Eng>"who eats fruit"</Eng>. This phrase is a <Word>relative clause</Word>. It acts
+                            as an adjective, enhancing the description of the person we are talking about. Here are more
+                            examples:
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>
+                                    kili <B>te mi li moku e</B>, li pona
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "The fruit <B>that I eat</B> is good"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>
+                                    jan <B>te mi li toki ki</B>, li lamo
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "The person <B>to whom I am talking</B> is tall"
+                                    </Eng>
+                                    <See href="ki">
+                                        <TM>ki</TM>
+                                    </See>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            These relative clauses have one minor difference to the first example: they have a{' '}
+                            <Word>dangling preposition</Word> at the end. This happens because the <B>subject</B> of our
+                            sentence would normally be the <B>object of a preposition</B> if we were to rearrange the
+                            relative clause to stand on its own. Let's analyze the first example further to understand
+                            this better.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>
+                                    <B>kili</B> te mi li moku <B>e</B> ...
+                                </TM>
+                                <Answer className="no-blur">
+                                    <Eng>"The fruit that I eat ..."</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            The subject of the sentence is <TM>kili</TM>, <Eng>"the fruit</Eng>. Let's drop the{' '}
+                            <TM>te</TM> and rearrange it.
+                        </P>
+                        <Ex>
+                            <TM>
+                                mi li moku <B>e kili</B>
+                            </TM>
+                            <Answer className="no-blur">
+                                <Eng>"I eat fruit"</Eng>
+                            </Answer>
+                        </Ex>
+                        <P>
+                            This is now a complete sentence, but the <B>subject has changed</B> to <TM>mi</TM>. We are
+                            now talking about ourselves eating the fruit.{' '}
+                        </P>
+                        <P>
+                            Without using <TM>te</TM>, we could only ever talk about <B>the thing doing the action</B>{' '}
+                            as the subject of a sentence. If we ever want to talk about the{' '}
+                            <B>object of a preposition</B> rather than the subject of the action, we must rearrange the
+                            sentence using <TM>te</TM>, and <B>the original preposition must dangle</B> at the end of
+                            the relative clause.
+                        </P>
+                        <P>
+                            It is also completely valid to{' '}
+                            <B>
+                                nest a <TM>te</TM> clause inside another <TM>te</TM> clause.
+                            </B>
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>
+                                    mi li wile e <B>te</B> li jan <B>te</B> li moku e kili na
+                                </TM>
+                                <Answer>
+                                    <Eng>"I want to be the person who eats that fruit."</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            There is one last thing to mention about using <TM>te</TM> in a sentence. Whenever{' '}
+                            <TM>te</TM> comes after the preposition <TM>e</TM>, the <TM>e</TM> can simply be dropped.
+                            Additionally, whenever <TM>te</TM> comes before <TM>li</TM>, the <TM>li</TM> can be dropped.
+                            These can combine to cause the construction <TM>... e te li ...</TM> to simply become{' '}
+                            <TM>... te ...</TM>.
+                        </P>
+                        <P>
+                            While this is allowed, it is suggested that you only drop the <TM>e</TM> and keep it as{' '}
+                            <TM>te li</TM> in many cases, as it can become harder to parse with more complex sentences.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>jan te moku e kili, li pona</TM>
+                                <Answer>
+                                    <Eng>"The person who eats fruit is good"</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>mi li wile te moku e kili</TM>
+                                <Answer>
+                                    <Eng>"I want to eat fruit"</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            This is very commonly used, though not required. There may be cases where it feels more
+                            natural to keep one or both in the sentence.
+                        </P>
+                    </Section>
+                    <Section>
+                        <Title id="punctuation">Punctuation</Title>
+                        <P>
+                            This is a good time to mention punctuation rules in toki ma, because there are really only
+                            two.
+                            <ol>
+                                <li>Place periods to separate sentences</li>
+                                <li>
+                                    Place commas after <TM>te</TM> clauses before moving on to the rest of the sentence
+                                </li>
+                            </ol>
+                            Any other punctuation use is up to you. You can do whatever feels comfortable or clears up
+                            ambiguity. Question marks, exclamation points, commas, colons, elipses...Go wild.
+                        </P>
+                    </Section>
                     <Section>
                         <Title id="negation">Negation</Title>
                         <P>
@@ -750,7 +1062,9 @@ function App() {
                         </P>
                     </Section>
                     <Section>
-                        <Title id="cause-and-effect">Cause and Effect</Title>
+                        <Title id="cause-and-effect" className="minor">
+                            Cause and Effect
+                        </Title>
                         <Section>
                             <Title id="wa">
                                 <TM>wa</TM>
@@ -762,8 +1076,10 @@ function App() {
                                 <Word>agent</Word> (the one doing the action) to perform the action. The preposition{' '}
                                 <TM>ki</TM> is used to mark the <B>agent</B>. You can think of <TM>ki</TM> in this
                                 context as meaning something like <Eng>"from the perspective of"</Eng>, rather than the
-                                usual <Eng>"to"</Eng> or <Eng>"towards"</Eng>. (More on other uses of <TM>ki</TM> in a{' '}
-                                <a href="#ki">later section</a>)
+                                usual <Eng>"to"</Eng> or <Eng>"towards"</Eng>.
+                                <See href="ki">
+                                    <TM>ki</TM>
+                                </See>
                             </P>
                             <Examples>
                                 <Ex>
@@ -945,7 +1261,9 @@ function App() {
                         </Section>
                     </Section>
                     <Section>
-                        <Title id="conjunctions">Conjunctions</Title>
+                        <Title id="conjunctions" className="minor">
+                            Conjunctions
+                        </Title>
                         <Section>
                             <Title id="en-anu-lekin">
                                 <TM>en</TM> / <TM>anu</TM> / <TM>lekin</TM>
@@ -979,11 +1297,11 @@ function App() {
                                 </Ex>
                                 <Ex>
                                     <TM>
-                                        jan Ken <B>anu</B> jan Tan o pana e mani ki on
+                                        jan Ken <B>anu</B> jan Susen o pana e mani ki on
                                     </TM>
                                     <Answer>
                                         <Eng>
-                                            "Ken <B>or</B> Dan should give them money"
+                                            "Ken <B>or</B> Susen should give them money"
                                         </Eng>
                                     </Answer>
                                 </Ex>
@@ -1107,6 +1425,7 @@ function App() {
                             </Examples>
                         </Section>
                     </Section>
+                    <Separator className="small">* * *</Separator>
                     <Section>
                         <Title id="asking-questions">Asking Questions</Title>
                         <P>
@@ -1208,6 +1527,26 @@ function App() {
                                     </Eng>
                                 </Answer>
                             </Ex>
+                            <Ex>
+                                <TM>
+                                    si li solu nen <B>seme</B>
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "<B>Why</B> are you asking?"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>
+                                    si li tawa an tenpo <B>seme</B>
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "<B>When</B> do you go?"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
                         </Examples>
                         <P>
                             Simply place <TM>seme</TM> into the sentence where you would normally place the answer, had
@@ -1233,7 +1572,10 @@ function App() {
                             The construction <TM>seme pi [X] anu [Y] anu [Z] anu ...</TM> is used to list possibilities.
                         </P>
                     </Section>
-                    <h2 id="setting-the-scene">Setting the Scene</h2>
+                    <Separator>* * *</Separator>
+                    <Title id="setting-the-scene" className="major">
+                        Setting the Scene
+                    </Title>
                     <Section>
                         <Title id="tense-and-aspect">Tense and Aspect</Title>
                         <P>
@@ -1316,7 +1658,7 @@ function App() {
                                 <th>
                                     <TM>
                                         <B>akile</B>
-                                    </TM>
+                                    </TM>{' '}
                                     (<Eng>future</Eng>)
                                 </th>
                             </tr>
@@ -1550,14 +1892,13 @@ function App() {
                         </table>
                         <P>
                             When talking about times, it is common to start the time phrase with <TM>tenpo pi</TM>,
-                            thought not always necessary. Stating the time of day may be done by connecting time units
-                            with <TM>en</TM>.
+                            though not always necessary.
                         </P>
                         <Examples>
                             <Ex>
                                 <TM>tenpo li seme (an) iputu</TM>
                                 <Answer>
-                                    <Eng>"What time is it now?"</Eng>
+                                    <Eng>"What time is it now?"</Eng>, the <TM>an</TM> is optional
                                     <br />
                                     This could also be <TM>tenpo seme li pisile</TM>, literally{' '}
                                     <Eng>"how much time has passed?"</Eng>, or <TM>tenpo seme li sajo</TM>,{' '}
@@ -1577,9 +1918,8 @@ function App() {
                             <TM>tenpo seme li pisile</TM>, one might simply respond <TM>18 pi 3</TM>.
                         </P>
                         <P>
-                            To talk about a duration the unit comes after the number, sometimes prefixed with{' '}
-                            <TM>sajo pi</TM> meaning <Eng>"continuation of"</Eng>. (More on numbers in a{' '}
-                            <a id="numbers-and-counting">later section</a>)
+                            To talk about a duration the unit comes after the number.
+                            <See href="numbers-and-counting">Numbers and Counting</See>
                         </P>
                         <Examples>
                             <Ex>
@@ -1607,6 +1947,20 @@ function App() {
                             The particles <TM>la</TM> and <TM>ita</TM> are used to attach <Word>context</Word> phrases
                             to your sentences. With <TM>la</TM>, the context phrase comes before it and the sentence
                             comes after, and with <TM>ita</TM>, the context comes after and the sentence comes before.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>
+                                    [context phrase] <B>la</B> [main sentence]
+                                </TM>
+                            </Ex>
+                            <Ex>
+                                <TM>
+                                    [main sentence] <B>ita</B> [context phrase]
+                                </TM>
+                            </Ex>
+                        </Examples>
+                        <P>
                             Yes, that's a pretty vague explanation, but that's kind of the point. "Context" can be a
                             wide variety of things. Among those is specifying a <B>relative time</B> for the entire
                             sentence.
@@ -1640,6 +1994,7 @@ function App() {
                                     <Eng>
                                         "<B>Tonight</B> I will eat fruit"
                                     </Eng>
+                                    , literally <Eng>"this dark time"</Eng>
                                 </Answer>
                             </Ex>
                         </Examples>
@@ -1664,22 +2019,37 @@ function App() {
                             <TM>moku pisile pini</TM> is interpreted as if it is already in the future context of{' '}
                             <Eng>"tonight"</Eng>.
                         </P>
-                        <TODO>More examples</TODO>
+                        <Examples>
+                            <Ex>
+                                <TM>tenpo pimeja pisile la mi li tawa ki tomo pi moku</TM>
+                                <Answer>
+                                    <Eng>"Last night I went to the store"</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
                         <P>
                             Times are not always relative to simple ideas like <Eng>"today"</Eng>, <Eng>"tomorrow"</Eng>
                             , or <Eng>"in three days"</Eng> sometimes you need to talk about something{' '}
                             <B>relative to a specific event</B>. For this, we state the context as literally{' '}
-                            <Eng>"time that [event] occurred"</Eng> using <TM>tenpo te [event] la ...</TM>.
+                            <Eng>"time that [event] occurred"</Eng> using{' '}
+                            <TM>
+                                <B>tenpo te [event] an</B>, la ...
+                            </TM>
+                            , with the <TM>an</TM> preposition dangling. Another option is to use{' '}
+                            <TM>
+                                <B>tenpo pi te [event]</B>, la
+                            </TM>{' '}
+                            meaning literally <Eng>"time of [event]"</Eng>
                         </P>
                         <Examples>
                             <Ex>
-                                <TM>tenpo te mi li moku e kili la mi li pasan</TM>
+                                <TM>tenpo te mi li moku e kili an, la mi li pasan</TM>
                                 <Answer>
                                     <Eng>"When I eat fruit, I am happy"</Eng>
                                 </Answer>
                             </Ex>
                             <Ex>
-                                <TM>tenpo te mi li moku pisile e kili la mi li pasan</TM>
+                                <TM>tenpo te mi li moku pisile e kili an, la mi li pasan</TM>
                                 <Answer>
                                     <Eng>"When I ate fruit, I was happy"</Eng>
                                 </Answer>
@@ -1689,7 +2059,20 @@ function App() {
                             See how when the context is put in the past, the main verb is also interpreted as being past
                             tense, just like the earlier example with <TM>tenpo pimeja ni la</TM>.
                         </P>
-                        <TODO>Expand on "when" / "since"</TODO>
+                        <Examples>
+                            <Ex>
+                                <TM>tenpo te mi li tawa akile ki tomo esun pi moku an, la mi li lanpan esun e kili</TM>
+                                <Answer>
+                                    <Eng>"When I go to the grocery store later, I will buy fruit"</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>tenpo pi te mi li tawa akile ki tomo esun pi moku, la mi li lanpan esun e kili</TM>
+                                <Answer>
+                                    <Eng>"When I go to the grocery store later, I will buy fruit"</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
                     </Section>
                     <Section>
                         <Title id="specifying-topics">Specifying Topics</Title>
@@ -1775,7 +2158,7 @@ function App() {
                                 </Answer>
                             </Ex>
                             <Ex>
-                                <TM>si li wile te li tawa ki tomo pi moku la mi li wile te li tawa kan si</TM>
+                                <TM>si li wile te li tawa ki tomo pi moku, la mi li wile te li tawa kan si</TM>
                                 <Answer>
                                     <Eng>"If you want go to the restaurant, then I want to go with you"</Eng>
                                 </Answer>
@@ -1849,7 +2232,10 @@ function App() {
                             <Title id="mood">Mood</Title>
                         </Section>
                     </TODO>
-                    <h2 id="taking-action">Taking Action</h2>
+                    <Separator>* * *</Separator>
+                    <Title id="taking-action" className="major">
+                        Taking Action
+                    </Title>
                     <Section>
                         <Title id="pali">
                             <TM>pali</TM>
@@ -1897,6 +2283,15 @@ function App() {
                             or <B>assistance</B> from other objects or individuals.
                         </P>
                         <Examples>
+                            <Ex>
+                                <TM></TM>
+                            </Ex>
+                            <Ex>
+                                <TM></TM>
+                            </Ex>
+                            <Ex>
+                                <TM></TM>
+                            </Ex>
                             <TODO>examples</TODO>
                         </Examples>
                     </Section>
@@ -1910,6 +2305,15 @@ function App() {
                             object or individual. This is used for doing actions <B>along with</B> a person or group.
                         </P>
                         <Examples>
+                            <Ex>
+                                <TM></TM>
+                            </Ex>
+                            <Ex>
+                                <TM></TM>
+                            </Ex>
+                            <Ex>
+                                <TM></TM>
+                            </Ex>
                             <TODO>examples</TODO>
                         </Examples>
                     </Section>
@@ -1918,20 +2322,38 @@ function App() {
                             <TM>ki</TM>
                         </Title>
                         <P>
-                            The preposition <TM>ki</TM> means <Eng>"to"</Eng>, <Eng>"towards"</Eng>,
-                            <Eng>"in order to"</Eng>, or <Eng>"until [a time]"</Eng>. This is used to indicate{' '}
-                            <B>motion towards</B> an object or place, to mark <B>the recipient</B> of an action, or to
-                            specify the end of a time range. It is this recipient marking that is the reason we use{' '}
-                            <TM>ki</TM> for causative-<TM>wa</TM> phrases, as previously explained.
+                            The preposition <TM>ki</TM> means <Eng>"to"</Eng>,<Eng>"in order to"</Eng>, or{' '}
+                            <Eng>"until [a time]"</Eng>. This is used to indicate <B>motion towards</B> an object or
+                            place, to mark <B>the recipient</B> of an action, or to specify the end of a time range. It
+                            is this recipient marking that is the reason we use <TM>ki</TM> for causative-<TM>wa</TM>{' '}
+                            phrases, as previously explained.
                         </P>
                         <Examples>
                             <Ex>
-                                <TM>mi li pali e sa ki osa 18</TM>
+                                <TM>mi li pali ki osa 18</TM>
                                 <Answer>
                                     <Eng>"I am busy until 18:00"</Eng>
                                 </Answer>
                             </Ex>
-                            <TODO>examples</TODO>
+                            <Ex>
+                                <TM>mi li tawa ki tomo pi moku</TM>
+                                <Answer>
+                                    <Eng>"I go to the restaurant"</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>o tawa open ki nasin pi nasin suli pi ato</TM>
+                                <Answer>
+                                    <Eng>"Start heading toward the freeway/motorway"</Eng>, literally{' '}
+                                    <Eng>"... to the direction of the big road of cars"</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>mi li pesoni te li konta sata, ki te li konta e ni</TM>
+                                <Answer>
+                                    <Eng>"I need to learn more in order to understand this"</Eng>
+                                </Answer>
+                            </Ex>
                         </Examples>
                     </Section>
                     <Section>
@@ -1944,21 +2366,433 @@ function App() {
                             range.
                         </P>
                         <Examples>
+                            <Ex>
+                                <TM></TM>
+                            </Ex>
+                            <Ex>
+                                <TM></TM>
+                            </Ex>
+                            <Ex>
+                                <TM></TM>
+                            </Ex>
                             <TODO>examples</TODO>
                         </Examples>
                     </Section>
-                    <h2 id="specifying-further">Specifying Further</h2>
+                    <Separator>* * *</Separator>
+                    <Title id="specifying-further" className="major">
+                        Specifying Further
+                    </Title>
+                    <Section></Section>
+                    <TODO>sata, kata, su, sama, ante, suti, comparatives, superlatives</TODO>
+                    <Separator>* * *</Separator>
+                    <Title id="numbers-and-counting" className="major">
+                        Numbers and Mathematics
+                    </Title>
                     <Section>
-                        <TODO>sata, kata, su, sama, ante, suti</TODO>
+                        <Title id="forming-numbers">Forming Numbers</Title>
+                        <P>
+                            It's simple enough to talk about the base number words that toki ma provides: (<TM>wan</TM>,{' '}
+                            <TM>tu</TM>, <TM>san</TM>, ..., <TM>ten</TM>, <TM>kenta</TM>, etc.), but how do you put
+                            these words together to form other numbers? It's actually very much like you would do it in
+                            English! There is no such thing as a modifier form of a number, they all act as connected
+                            nouns. Let's look at examples and it will all be clear.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>ten tu</TM>
+                                <Answer>
+                                    <Eng>12</Eng> (ten and two)
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>oto ten</TM>
+                                <Answer>
+                                    <Eng>80</Eng> (eight tens)
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>san ten tu</TM>
+                                <Answer>
+                                    <Eng>23</Eng> (three tens and two)
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>lima kenta sesi</TM>
+                                <Answer>
+                                    <Eng>506</Eng> (five hundreds and six)
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>po ten san kilo</TM>
+                                <Answer>
+                                    <Eng>43,000</Eng> ([four tens and three] thousands)
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>po ten san kilo wan</TM>
+                                <Answer>
+                                    <Eng>43,001</Eng> ([four tens and three] thousands, and [one])
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>san meka po kenta po ten sesi kilo sepen ten oto</TM>
+                                <Answer>
+                                    <Eng>3,446,078</Eng> ([three] millions, [four hundreds and ten fours and six]
+                                    thousands, [seven tens and eight])
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            Unlike other words which would be considered modifiers after the first one, no matter how
+                            many number words you put together <B>it always counts as a single noun.</B>
+                        </P>
                     </Section>
-                    <h2 id="numbers-and-counting">Numbers and Counting</h2>
-                    <Section>
-                        <TODO>
-                            Cardinals, Ordinals, Percentages, Zero, Negatives, Fractions, Mathematical operations
-                        </TODO>
+                    <Section unofficial>
+                        <Title id="zero">Zero</Title>
+                        <P>
+                            The word <TM>nula</TM> is used for <Eng>"zero"</Eng>, though, like in English, it doesn't
+                            often appear in compound whole number words. You don't find yourself saying{' '}
+                            <Eng>"four thousand, zero hundred, and fifty six"</Eng>, do you? That said, zero is still a
+                            very important concept. Until this becomes official, the word <TM>no</TM> can be used as a
+                            number word to mean <Eng>"zero"</Eng>.
+                        </P>
                     </Section>
-                    <h2 id="notes">Notes and Specifics</h2>
                     <Section>
+                        <Title id="cardinals-and-ordinals">Cardinals and Ordinals</Title>
+                        <P>
+                            <Word>Cardinal</Word> numbers are placed <B>before the noun</B>. These are used for counting{' '}
+                            <B>how many</B> or <B>how much</B> of something there is.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>
+                                    mi li jo e <B>san pawo</B>
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "I have <B>three dogs</B>"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>
+                                    mi li pali tan <B>ten oto osa</B> pisile
+                                </TM>{' '}
+                                <Answer>
+                                    <Eng>
+                                        "I have been working for <B>eighteen hours</B>
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            <Word>Ordinal</Word> numbers are placed <B>after the noun</B>. These are used to specify the
+                            position of an item in a series, like <Eng>"fourth"</Eng> or <Eng>"seventeenth"</Eng>.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>
+                                    <B>pawo tu</B> li pona sata pi ali
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "<B>The second dog</B> is the best"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>
+                                    <B>san tenpo</B> akile pi <B>osa ten oto</B> li pisile
+                                </TM>
+                                <Answer>
+                                    <Eng>It is 18:03</Eng>, literally{' '}
+                                    <Eng>
+                                        "<B>three minutes</B> after the <B>eighteenth hour</B> have passed"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            This is why when telling times, we say <TM>san osa</TM> to mean <Eng>"three hours"</Eng>,
+                            and <TM>"osa san"</TM> to mean <Eng>"three o'clock"</Eng>, literally <Eng>"third hour"</Eng>
+                            .
+                        </P>
+                        <See href="units-of-time">Units of Time</See>
+                    </Section>
+                    <Section>
+                        <Title id="fractions-decimals-and-percents">Fractions, Decimals, and Percents</Title>
+                        <P>
+                            It's pretty straight forward to talk about whole numbers, but it gets a bit more complicated
+                            when you need to discuss numbers with fractional components.
+                        </P>
+                        <P>
+                            To talk about <B>fractions</B> we use <TM>[numerator] osa pi [denominator]</TM>, literally{' '}
+                            <Eng>"[numerator] parts of [denominator]</Eng>.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>san osa pi lima</TM>
+                                <Answer>
+                                    <Eng>3/5</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>tu ten po osa pi tu kenta san ten wan</TM>
+                                <Answer>
+                                    <Eng>24/231</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            To talk about <B>decimals</B> we use <TM>[whole number] suti [decimal digits]</TM>. Decimal
+                            digits are stated one by one using single digit number words.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>ten tu suti san tu po po</TM>
+                                <Answer>
+                                    <Eng>12.3244</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>san suti wan po wan lima newen tu ...</TM>
+                                <Answer>
+                                    <Eng>3.141592...</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            To talk about <B>percentages</B> we add the word <TM>senti</TM> to the end of the number.
+                            This can be combined with decimal notation to specify decimal percentages.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>tu ten lima senti</TM>
+                                <Answer>
+                                    <Eng>25%</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>po ten suti oto sepen wan senti</TM>
+                                <Answer>
+                                    <Eng>40.871%</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                    </Section>
+                    <Section>
+                        <Title id="negative-numbers">Negative Numbers</Title>
+                        <P>
+                            <B>Negative numbers</B> are stated using <TM>ta pi [number]</TM> meaning{' '}
+                            <Eng>"reflection of [number]"</Eng> or <Eng>"opposite of [number]"</Eng>.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>ta pi san</TM>
+                                <Answer>
+                                    <Eng>-3</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>ta pi po osa pi ten</TM>
+                                <Answer>
+                                    <Eng>-4/10</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>ta pi sesi suti newen newen</TM>
+                                <Answer>
+                                    <Eng>-6.99</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                    </Section>
+                    <Section>
+                        <Title id="mathematical-operations">Mathematical Operations</Title>
+                        <P>
+                            While there are no specific words for mathematical operations such as <Eng>"addition"</Eng>{' '}
+                            or <Eng>"multiplication"</Eng>, other descriptions can be used to talk about the operations
+                            in a mathematical context.
+                        </P>
+                        <table>
+                            <tr>
+                                <th>Operation</th>
+                                <th>toki ma</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Addition
+                                    <br />2 + 3
+                                </td>
+                                <td>
+                                    <TM>[te] li tewe wa ki tu kan san </TM>
+                                    <Answer>
+                                        literally <Eng>"to join 2 with 3"</Eng>
+                                    </Answer>
+                                    <br />
+                                    <TM>[te] li pana e san ki tu </TM>
+                                    <Answer>
+                                        literally <Eng>"to give 3 to 2"</Eng>
+                                    </Answer>
+                                    <br />
+                                    <TM>[te] li unja wa ki tu kan san </TM>
+                                    <Answer>
+                                        literally <Eng>"to combine 2 with 3"</Eng>
+                                    </Answer>
+                                    <br />
+                                    (informal) <TM>tu en san</TM>
+                                    <Answer>
+                                        literally <Eng>"2 and 3"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Subtraction
+                                    <br />7 - 4
+                                </td>
+                                <td>
+                                    <TM>[te] li weka wa ki po tan sepen</TM>
+                                    <Answer>
+                                        literally <Eng>"to make-absent 4 from 7"</Eng>
+                                    </Answer>
+                                    <br />
+                                    <TM>[te] li lanpan e po tan sepen</TM>
+                                    <Answer>
+                                        literally <Eng>"to take 4 from 7"</Eng>
+                                    </Answer>
+                                    <br />
+                                    <TM>[te] li papon wa ki sepen e po</TM>
+                                    <Answer>
+                                        literally <Eng>"to cause 7 to emit 4"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Multiplication
+                                    <br />2 * 5
+                                </td>
+                                <td>
+                                    <TM>[te] li mute wa ki tu kan lima</TM>
+                                    <Answer>
+                                        literally <Eng>"to make-many 2 with 5"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Division
+                                    <br />9 / 4
+                                </td>
+                                <td>
+                                    <TM>[te] li kipisi ki newen pelu po</TM>
+                                    <Answer>
+                                        literally <Eng>"to cut 9 using 4</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="unofficial">
+                                    Absolute Value
+                                    <br />
+                                    |-5|
+                                </td>
+                                <td className="unofficial">
+                                    <TM>[te] li sata wa ki ta pi lima su nula</TM>
+                                    <Answer>
+                                        literally <Eng>"to make -5 more than 0"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Exponentiation
+                                    <br />6<sup>3</sup>
+                                </td>
+                                <td>
+                                    <TM>[te] li mute wa ki sesi kan sama an san taka</TM>
+                                    <Answer>
+                                        literally <Eng>"to make-many 6 with itself 3 times"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Nth Root
+                                    <br />√<span style={{ borderTop: '1px solid' }}>16</span>
+                                </td>
+                                <td>
+                                    <TM>[te] li alasa e open tu pi ten po</TM>
+                                    <Answer>
+                                        literally <Eng>"to find the 2nd origin of 16</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                        </table>
+                    </Section>
+                    <Separator>* * *</Separator>
+                    <Title id="misc" className="major">
+                        Miscellaneous
+                    </Title>
+                    <Section>
+                        <Title id="cardinal-directions">Cardinal Directions</Title>
+                        <P>
+                            There are no dedicated words for the cardinal directions in toki ma. As such, the words for{' '}
+                            <Eng>"north"</Eng>, <Eng>"south"</Eng>, <Eng>"east"</Eng>, and <Eng>"west"</Eng> are defined
+                            relative to something that is constant regardless of your first language: the motion of the
+                            Sun. We talk about the directions <B>from the Sun's perspective</B>, meaning{' '}
+                            <Eng>"west"</Eng> is considered foreward, and <Eng>"north"</Eng> is considered to the right.
+                        </P>
+                        <table>
+                            <tr>
+                                <th>Direction</th>
+                                <th>toki ma</th>
+                            </tr>
+                            <tr>
+                                <td>West</td>
+                                <td>
+                                    <TM>sinpin suno</TM>
+                                    <Answer>
+                                        literally <Eng>"to the front of the Sun"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>East</td>
+                                <td>
+                                    <TM>monsi suno</TM>
+                                    <Answer>
+                                        literally <Eng>"to the back of the Sun"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>North</td>
+                                <td>
+                                    <TM>jupa suno</TM>
+                                    <Answer>
+                                        literally <Eng>"to the right of the Sun"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>South</td>
+                                <td>
+                                    <TM>soto suno</TM>
+                                    <Answer>
+                                        literally <Eng>"to the left of the Sun"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                        </table>
+                    </Section>
+                    <Section>
+                        <Title id="names-and-loan-words">Names and Loan Words</Title>
+                        <TODO></TODO>
+                    </Section>
+                    <Section>
+                        <Title id="notes">Notes</Title>
                         <P>
                             Many words and/or common constructions have some specifics in their use or meaning that may
                             not be obvious in the definition. This chart contains notes about specific constructions and
@@ -1989,16 +2823,23 @@ function App() {
                                 </td>
                                 <td>
                                     In this definition, <Eng>"to make"</Eng> always means <Eng>"to create"</Eng>,{' '}
-                                    <B>not</B> as in <Eng>"to cause"</Eng>. English uses the word for both meanings, but
-                                    for causation in toki ma you can only use the verb <TM>wa</TM>.
+                                    <B>never</B> <Eng>"to cause"</Eng>. English uses the word for both meanings, but for
+                                    causation in toki ma you can only use <TM>wa</TM>.
                                 </td>
                             </tr>
                         </table>
                     </Section>
+                    <Separator>* * *</Separator>
+                    <Title id="conversations" className="major">
+                        Conversational Examples
+                    </Title>
+                    <TODO></TODO>
                     <TODO style={{ marginTop: 200 }}>
                         <ul>
                             <li>[verb] pi</li>
                             <li>li [modifier] pi</li>
+                            <li>multiple context phrases</li>
+                            <li>informal shortenings?</li>
                         </ul>
                     </TODO>
                 </div>

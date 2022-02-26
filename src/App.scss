@@ -5,10 +5,27 @@
     padding-bottom: 100px;
     background-color: #dcebff;
     color: rgb(0, 32, 129);
-    &.no-unofficial .unofficial {
+    &.no-unofficial .unofficial:not(.no-hide) {
         display: none;
     }
     line-height: 1.4em;
+
+    .header {
+        font-size: 3em;
+        line-height: 1em;
+    }
+
+    .see {
+        display: block;
+        padding-left: 2em;
+        font-size: 0.8em;
+        > span {
+            font-weight: bold;
+        }
+        .tm {
+            background-color: transparent;
+        }
+    }
 
     .todo {
         padding: 10px;
@@ -23,9 +40,10 @@
         background-color: rgb(209, 209, 209);
     }
 
-    .unofficial {
+    .unofficial:not(li) {
         background-color: rgba(255, 0, 0, 0.15);
         border-radius: 10px;
+        padding: 3px;
         &:before {
             content: "Unofficial";
             color: red;
@@ -107,15 +125,69 @@
         }
     }
 
+    .title {
+        font-size: 20pt;
+        margin-bottom: 20px;
+        line-height: 40pt;
+
+        &:not(.major,.minor)::before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            width: 0;
+            height: 0;
+            top: -2px;
+            margin-right: 0.3em;
+            margin-left: 0.2em;
+            border-top: 0.4em solid transparent;
+            border-bottom: 0.4em solid transparent;
+            border-left: 0.4em solid rgb(0, 32, 129);
+        }
+
+        &.major {
+            font-weight: bold;
+        }
+
+        .tm {
+            background-color: transparent;
+        }
+    }
+
+    a.title {
+        text-decoration: none;
+        color: rgb(0, 32, 129);
+        &:hover {
+            text-decoration: underline;
+        }
+        &:visited {
+            color: rgb(0, 32, 129);
+        }
+    }
+
+    a {
+        color:rgb(0, 48, 190);
+        &:visited {
+            color: rgb(0, 48, 190);
+        }
+    }
+
+    .separator {
+        text-align: center;
+        height: 2em;
+        font-size: 2em;
+        line-height: 2em;
+        &.small {
+            height: 1.5em;
+            line-height: 1.5em;
+            font-size: 1.5em;
+        }
+    }
+
     .section {
         padding-left: 20px;
-        .title {
-            font-size: 20pt;
-            margin-top: 20px;
+        &:not(.unofficial) .title {
             margin-left: -20px;
-            .tm {
-                background-color: transparent;
-            }
         }
     }
     th {
@@ -143,4 +215,16 @@
         text-align: left;
     }
 
+}
+
+@media (max-width: 632px) {
+    .App {
+        min-width: 100%;
+        width: fit-content;
+        padding: 10px;
+        max-width: unset;
+        td, th {
+            padding: 1px;
+        }
+    }
 }
