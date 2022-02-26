@@ -1576,7 +1576,7 @@ function App() {
                             </Ex>
                         </Examples>
                         <P>
-                            The response to a polar question should either be <TM>tuntan</TM> or <TM>no</TM>.
+                            The response to a polar question should usually be either <TM>tuntan</TM>, <TM>isala</TM>, or <TM>no</TM>.
                         </P>
                         <P>
                             To ask an <Word>open question</Word>, the special particle <TM>seme</TM> can be placed as
