@@ -331,6 +331,7 @@ function App() {
                             </li>
                         </ul>
                         <a href="#misc">Miscellaneous</a>
+                        <br />
                         <ul>
                             <li>
                                 <a href="#cardinal-directions">Cardinal Directions</a>
@@ -339,9 +340,13 @@ function App() {
                                 <a href="#names-and-foreign-words">Names and Foreign Words</a>
                             </li>
                             <li>
+                                <a href="#peko-and-a"><TM>peko</TM> and <TM>a</TM></a>
+                            </li>
+                            <li>
                                 <a href="#notes">Notes</a>
                             </li>
                         </ul>
+                        <a href="#conversations">Conversational Examples</a>
                     </div>
                     <Separator>* * *</Separator>
                     <Title id="word-derivations" className="major">
@@ -477,6 +482,23 @@ function App() {
                             In English this sounds a bit awkward, but it is a clearly communicated concept and is
                             completely acceptable in toki ma. How often you might say such a thing is a different
                             question.
+                        </P>
+                    </Section>
+                    <Section>
+                        <Title id="ambiguity">Ambiguity</Title>
+                        <P>
+                            It has already been said, but it is important to reiterate: with so few words, communication
+                            in toki ma is often driven by context to resolve ambiguities without having to resort to
+                            much longer descriptions of very simple things. Being specific is often not a major goal of
+                            a toki ma speaker in casual conversation, because the listener can often figure out the
+                            details without major problems.
+                        </P>
+                        <P>
+                            When you read examples in this guide,{' '}
+                            <B>don't worry if you didn't get it exactly the same as the stated translation</B>. It
+                            doesn't mean you were wrong if you read <TM>mi li moku</TM> as <Eng>"I am eating"</Eng> and
+                            the translation says <Eng>"I eat"</Eng>. Keep this in mind as you read the rest of this
+                            guide.
                         </P>
                     </Section>
                     <Section>
@@ -2356,6 +2378,33 @@ function App() {
                         </Examples>
                     </Section>
                     <Section>
+                        <Title id="multiple-contexts">Multiple Contexts</Title>
+                        <P>
+                            It is possible to have multiple context phrases on one sentence. They combine together in a
+                            logical manner, usually from left-to-right in the way they are presented. This is often
+                            avoidable, but in spoken toki ma you may not have fully thought through your sentence by the
+                            time you've started speaking and you realize you want to add more context.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>
+                                    pawo la, iputu la, on li pasan wa ki mi, lekin munkin la, akile la, on li lakima wa
+                                    ki mi ita on li kuton wa ki mi
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "As for dogs, currently, I like them, but in maybe, in the future, I will
+                                        dislike them, if they hurt me.
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            This sentence is very awkward in writing, but in spoken language this kind of thing is
+                            reasonably common.
+                        </P>
+                    </Section>
+                    <Section>
                         <Title id="mood">Mood</Title>
                         <P>
                             <Word>Grammatical mood</Word> is the term for how a sentence is structured to reflect
@@ -3200,7 +3249,7 @@ function App() {
                         <P>
                             Additionally, you can prefix the word or name with the toki ma word for the type of thing it
                             is. If you're naming a person, it's common to say <TM>jan Ankela</TM>, making it clear that
-                            this is the name of a <TM>jan</TM>. If you're naming a food, you'd prefix it with{' '}
+                            this is the name of a <TM>jan</TM>. If you're naming a food, you might prefix it with{' '}
                             <TM>moku</TM>, such as <TM>moku Topu</TM> for <Eng>"tofu"</Eng>.
                         </P>
                         <P>All of the following examples are valid ways to say New York City:</P>
@@ -3221,6 +3270,27 @@ function App() {
                         <P>
                             Which way you choose to phrase a name or foreign word might depend on who you're talking to
                             and how likely it is that they recognize the word you are saying.
+                        </P>
+                    </Section>
+                    <Section>
+                        <Title id="peko-and-a">
+                            <TM>peko</TM> and <TM>a</TM>
+                        </Title>
+                        <P>
+                            There are two words in toki ma that don't really fit into any other group nicely:{' '}
+                            <TM>peko</TM> and <TM>a</TM>. They are both used as <B>interjections</B> rather than
+                            standard words.
+                        </P>
+                        <P>
+                            Use <TM>peko</TM> to show <B>humility</B> and <B>politeness</B>. It is used for phrases like{' '}
+                            <Eng>"please"</Eng>, <Eng>"excuse me"</Eng>, <Eng>"you're welcome"</Eng>, <Eng>"hello"</Eng>
+                            , <Eng>"welcome"</Eng>, and many other polite phrases.
+                        </P>
+                        <P>
+                            Use <TM>a</TM> to show <B>emphasis</B> or <B>emotion</B> in your sentences. It usually goes
+                            at the beginning or end of the sentence, acting as something of an exclamation point. It can
+                            be used for both positive and negative emotion. It can also be repeated as <TM>a a</TM> to
+                            show laughter (<Eng>"ha ha"</Eng>).
                         </P>
                     </Section>
                     <Section>
@@ -3266,13 +3336,6 @@ function App() {
                         Conversational Examples
                     </Title>
                     <TODO></TODO>
-                    <TODO style={{ marginTop: 200 }}>
-                        <ul>
-                            <li>multiple context phrases</li>
-                            <li>peko! a!</li>
-                            <li>ambiguity</li>
-                        </ul>
-                    </TODO>
                 </div>
             </BlurContext.Provider>
         </UnofficialContext.Provider>
