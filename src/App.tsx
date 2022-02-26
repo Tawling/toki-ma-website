@@ -2037,7 +2037,7 @@ function App() {
                                     </Answer>
                                 </td>
                                 <td>
-                                    <TM>tenpo</TM>
+                                    <TM>wetu</TM>
                                     <br />
                                     <Answer className="no-spacer">
                                         <Eng>"star"</Eng>
@@ -2089,7 +2089,7 @@ function App() {
                             Days of the week are also done through numbers, with <Eng>Monday</Eng> being <TM>suno 1</TM>{' '}
                             and <Eng>Friday</Eng>
                             being <TM>suno 6</TM>. <Eng>Sunday</Eng> is therefore either <TM>suno 0</TM> or{' '}
-                            <TM>suno 6</TM>, depending on how you think about the order of days, so the standard term is{' '}
+                            <TM>suno 7</TM>, depending on how you think about the order of days, so the standard term is{' '}
                             <TM>suno suno</TM> to make it less confusing. The same is done for months, with{' '}
                             <Eng>January</Eng> being <TM>mun 1</TM>.
                         </P>
