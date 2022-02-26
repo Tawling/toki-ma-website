@@ -343,7 +343,9 @@ function App() {
                                 <a href="#names-and-foreign-words">Names and Foreign Words</a>
                             </li>
                             <li>
-                                <a href="#peko-and-a"><TM>peko</TM> and <TM>a</TM></a>
+                                <a href="#peko-and-a">
+                                    <TM>peko</TM> and <TM>a</TM>
+                                </a>
                             </li>
                             <li>
                                 <a href="#notes">Notes</a>
@@ -2607,15 +2609,20 @@ function App() {
                         </P>
                         <Examples>
                             <Ex>
-                                <TM></TM>
+                                <TM>mi li kama wisaja pelu palisa kela ilo sankan mi</TM>
+                                <Answer>
+                                    <Eng>"I won using my special bat"</Eng>, literally{' '}
+                                    <Eng>"I become victorious using my special stick-game tool"</Eng>
+                                </Answer>
                             </Ex>
                             <Ex>
-                                <TM></TM>
+                                <TM>mi li kama wisaja pelu walala mi</TM>
+                                <Answer>
+                                    <Eng>"I won with the help of my sibling"</Eng>, implying you did the winning and
+                                    they only provided assistance, as opposed to winning "along with" your sibling as if
+                                    they were on the same team.
+                                </Answer>
                             </Ex>
-                            <Ex>
-                                <TM></TM>
-                            </Ex>
-                            <TODO>examples</TODO>
                         </Examples>
                     </Section>
                     <Section>
@@ -2629,15 +2636,17 @@ function App() {
                         </P>
                         <Examples>
                             <Ex>
-                                <TM></TM>
+                                <TM>mi li tawa ki tomi pi moku kan mama mi</TM>
+                                <Answer>
+                                    <Eng>"I am going to the restaurant with my parents"</Eng>
+                                </Answer>
                             </Ex>
                             <Ex>
-                                <TM></TM>
+                                <TM>mi li awen kan jan pona mi</TM>
+                                <Answer>
+                                    <Eng>"I am staying with my friends"</Eng>
+                                </Answer>
                             </Ex>
-                            <Ex>
-                                <TM></TM>
-                            </Ex>
-                            <TODO>examples</TODO>
                         </Examples>
                     </Section>
                     <Section>
@@ -2677,6 +2686,12 @@ function App() {
                                     <Eng>"I need to learn more in order to understand this"</Eng>
                                 </Answer>
                             </Ex>
+                            <Ex>
+                                <TM>mi li pana pisile e kili ki si</TM>
+                                <Answer>
+                                    <Eng>"I gave you a fruit"</Eng>
+                                </Answer>
+                            </Ex>
                         </Examples>
                     </Section>
                     <Section>
@@ -2690,15 +2705,23 @@ function App() {
                         </P>
                         <Examples>
                             <Ex>
-                                <TM></TM>
+                                <TM>mi li pali tan osa 18</TM>
+                                <Answer>
+                                    <Eng>"I have been busy since 18:00"</Eng>
+                                </Answer>
                             </Ex>
                             <Ex>
-                                <TM></TM>
+                                <TM>mi li tawa tan tomo mi</TM>
+                                <Answer>
+                                    <Eng>"I am leaving my house"</Eng>
+                                </Answer>
                             </Ex>
                             <Ex>
-                                <TM></TM>
+                                <TM>mi li lanpan pisile e kili tan si</TM>
+                                <Answer>
+                                    <Eng>"I received a fruit from you"</Eng>
+                                </Answer>
                             </Ex>
-                            <TODO>examples</TODO>
                         </Examples>
                     </Section>
                     <Separator>* * *</Separator>
