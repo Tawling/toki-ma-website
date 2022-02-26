@@ -1268,7 +1268,7 @@ function App() {
                             </Examples>
                             <P>
                                 There simply isn't a good way to phrase this with the causative <TM>wa</TM> modifier. If
-                                you try <TM>mi li kanti ki si e kanti ki mi</TM>, it's not clear which <TM>ki</TM>{' '}
+                                you try <TM>mi li kanti wa ki si e kanti ki mi</TM>, it's not clear which <TM>ki</TM>{' '}
                                 phrase is meant as the <B>agent</B>, and which is meant as the recipient of the
                                 music-playing.
                             </P>
