@@ -298,7 +298,16 @@ function App() {
                         </ul>
                         <a href="#specifying-further">Specifying Further</a>
                         <br />
-                        <ul></ul>
+                        <ul>
+                            <li>
+                                <a href="#su">
+                                    <TM>su</TM> - Comparisons and Similarity
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#superlatives">Superlatives</a>
+                            </li>
+                        </ul>
                         <a href="#numbers-and-mathematics">Numbers and Mathematics</a>
                         <br />
                         <ul>
@@ -2346,11 +2355,154 @@ function App() {
                             </Ex>
                         </Examples>
                     </Section>
-                    <TODO>
-                        <Section>
-                            <Title id="mood">Mood</Title>
-                        </Section>
-                    </TODO>
+                    <Section>
+                        <Title id="mood">Mood</Title>
+                        <P>
+                            <Word>Grammatical mood</Word> is the term for how a sentence is structured to reflect
+                            different ideas. There are many possible moods, each with technical names, and each used for
+                            different ways of speaking: stating facts, asking questions, talking about wishes,
+                            discussing hypotheticals, the list goes on.
+                        </P>
+                        <P>
+                            You've already learned how to use quite a few of these moods so far: you can state commands,
+                            requests, and desires with <TM>o</TM>, you can ask questions with <TM>seme</TM>, you can
+                            create conditionals with <TM>la</TM> or <TM>ita</TM> to talk about hypotheticals, and more.
+                            Not every grammatical mood that grammarians have defined have unique equivalents in toki ma,
+                            but there are creative ways to approximate many of them to either directly state or heavily
+                            imply a specific mood.
+                        </P>
+                        <table>
+                            <tr>
+                                <th>Mood</th>
+                                <th>What is it?</th>
+                                <th>English</th>
+                                <th>toki ma</th>
+                            </tr>
+                            <tr>
+                                <td>Indicative</td>
+                                <td>Used to talk about what is real</td>
+                                <td>
+                                    <Eng>"I am eating"</Eng>
+                                </td>
+                                <td>
+                                    <TM>mi li moku</TM>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Conditional</td>
+                                <td>Used to talk about events that rely on another condition</td>
+                                <td>
+                                    <Eng>"If I start getting hungry, I will eat"</Eng>
+                                </td>
+                                <td>
+                                    <TM>mi li wile open e moku la mi li moku</TM>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Subjunctive</td>
+                                <td>Used to talk about possible events, often events considered unlikely</td>
+                                <td>
+                                    <Eng>"If I were hungry, I would eat"</Eng>
+                                </td>
+                                <td>
+                                    <TM>mi li wile e moku la mi li moku</TM>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Imperative</td>
+                                <td>Used to issue commands or requests</td>
+                                <td>
+                                    <Eng>"(You), Eat fruit"</Eng>
+                                </td>
+                                <td>
+                                    <TM>o moku e kili</TM>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Optative</td>
+                                <td>Used to talk about things that one hopes for</td>
+                                <td>
+                                    <Eng>"Safe travels!</Eng>
+                                </td>
+                                <td>
+                                    <TM>o tawa pona!</TM>
+                                    <br />
+                                    <Answer className="no-spacer">
+                                        literally <Eng>"Travel well!"</Eng>
+                                    </Answer>
+                                    <br />
+                                    This is not imperative only because of the context of the statement. It is clearly a
+                                    wish and not a command.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jussive</td>
+                                <td>Used to state what is desired or suggested</td>
+                                <td>
+                                    <Eng>"Someone should give them food"</Eng>
+                                </td>
+                                <td>
+                                    <TM>jan o pana e moku ki on</TM>
+                                    <br />
+                                    <Answer className="no-spacer">
+                                        literally <Eng>"A person should give food to them"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hypothetical</td>
+                                <td>Used to talk about hypothetical or possible events</td>
+                                <td>
+                                    <Eng>"I might be able to find food"</Eng>
+                                </td>
+                                <td>
+                                    <TM>mi li alasa munkin e moku</TM>
+                                    <br />
+                                    <Answer className="no-spacer">
+                                        literally <Eng>"I possibly find food"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Permissive</td>
+                                <td>Used to express that an action is allowed by the speaker</td>
+                                <td>
+                                    <Eng>"You may eat"</Eng>
+                                </td>
+                                <td>
+                                    <TM>li lon pi oke te si li moku</TM>
+                                    <br />
+                                    <Answer className="no-spacer">
+                                        literally <Eng>"It is ok that you eat food"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Inferential</td>
+                                <td>Used when the event is unwitnessed and unconfirmed</td>
+                                <td>
+                                    <Eng>"They say you eat fruit"</Eng>
+                                </td>
+                                <td>
+                                    <TM>li toki te si li moku e kili</TM>
+                                    <br />
+                                    <Answer className="no-spacer">
+                                        literally <Eng>"it is said that you eat fruit"</Eng>
+                                    </Answer>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Interrogative</td>
+                                <td>Used to ask a question</td>
+                                <td>
+                                    <Eng>"What are you eating?"</Eng>
+                                </td>
+                                <td>
+                                    <TM>seme li moku</TM>
+                                </td>
+                            </tr>
+                        </table>
+                    </Section>
                     <Separator>* * *</Separator>
                     <Title id="taking-action" className="major">
                         Taking Action
@@ -2501,8 +2653,131 @@ function App() {
                     <Title id="specifying-further" className="major">
                         Specifying Further
                     </Title>
-                    <Section></Section>
-                    <TODO>sata, kata, su, sama, ante, suti, comparatives, superlatives</TODO>
+                    <Section>
+                        <Title id="su">
+                            <TM>su</TM> - Comparisons and Similarity
+                        </Title>
+                        <P>
+                            The preposition <TM>su</TM> means <Eng>"than"</Eng>, <Eng>"as"</Eng>, or{' '}
+                            <Eng>"compared to"</Eng>. This is most often used with <TM>sata</TM> and <TM>kata</TM> to
+                            create <Word>comparatives</Word>. Comparatives are phrases like <Eng>"bigger than"</Eng>,{' '}
+                            <Eng>"less cold than"</Eng>, etc., stating relative comparisons between things.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>
+                                    pawo si li <B>suli sata su</B> pawo mi
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "Your dog is <B>bigger than</B> my dog"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM> mi li wile sata e te li moku su te li lape</TM>
+                                <Answer>
+                                    <Eng>"I would rather eat than sleep"</Eng>, literally{' '}
+                                    <Eng>"I want more to eat than to sleep"</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            Unlike other prepositions in toki ma, <TM>su</TM> can be directly followed by another
+                            preposition in comparative sentences.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>mi li pasan kata nen pawo su nen meja</TM>
+                                <Answer>
+                                    <Eng>"I like dogs less than cats"</Eng>, literally{' '}
+                                    <Eng>"I am less happy because of dogs than because of cats"</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>mi li tawa pi taka sata ki tomo pi moku kan si su kan mama mi</TM>
+                                <Answer>
+                                    <Eng>"I go to the restaurant more often with you than with my parents"</Eng>,
+                                    literally{' '}
+                                    <Eng>
+                                        "I go of more repetitions to the restaurant with you than with my parents"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            Another use of <TM>su</TM> is with <TM>sata</TM> and <TM>ante</TM> to talk about similarity.
+                            This can be combined with <TM>poka</TM> and <TM>suti</TM>, <Eng>"near"</Eng> and{' '}
+                            <Eng>"specific"</Eng>, to differentiate between things being exactly the same or just
+                            similar. Without them, the degree of similarity is implied through context, as is true of so
+                            much of toki ma.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>
+                                    na li <B>sama su</B> ni
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "That is the <B>same as</B> this"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>
+                                    na li <B>ante mute su</B> ni
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "That is <B>very different than</B> this"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>
+                                    pawo na li lukin pi <B>sama suti su</B> pawo mi
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "That dog looks <B>exactly like</B> mine"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>
+                                    si en on li lukin pi <B>sama poka</B> a!
+                                </TM>
+                                <Answer>
+                                    <Eng>
+                                        "You and him look <B>similar</B>!"
+                                    </Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                    </Section>
+                    <Section>
+                        <Title id="superlatives">Superlatives</Title>
+                        <P>
+                            Unlike comparatives, <Word>superlatives</Word> state <B>absolute</B> comparisons:{' '}
+                            <Eng>"best"</Eng>, <Eng>"most enjoyable"</Eng>, <Eng>"fastest"</Eng>. For this, you can use
+                            the phrase <TM>sata su ali</TM>, meaning <Eng>"more than all"</Eng>.
+                        </P>
+                        <Examples>
+                            <Ex>
+                                <TM>mi li jan te li wiki sata su ali</TM>
+                                <Answer>
+                                    <Eng>"I am the fastest person"</Eng>, literally{' '}
+                                    <Eng>"I am the person that is faster than all"</Eng>
+                                </Answer>
+                            </Ex>
+                            <Ex>
+                                <TM>mi li moku pisile sata su ali</TM>
+                                <Answer>
+                                    <Eng>"I ate the most"</Eng>
+                                </Answer>
+                            </Ex>
+                        </Examples>
+                    </Section>
                     <Separator>* * *</Separator>
                     <Title id="numbers-and-counting" className="major">
                         Numbers and Mathematics
@@ -2994,7 +3269,8 @@ function App() {
                     <TODO style={{ marginTop: 200 }}>
                         <ul>
                             <li>multiple context phrases</li>
-                            <li>peko!</li>
+                            <li>peko! a!</li>
+                            <li>ambiguity</li>
                         </ul>
                     </TODO>
                 </div>
