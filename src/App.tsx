@@ -2859,7 +2859,7 @@ function App() {
                             <Ex>
                                 <TM>san ten tu</TM>
                                 <Answer>
-                                    <Eng>23</Eng> (three tens and two)
+                                    <Eng>32</Eng> (three tens and two)
                                 </Answer>
                             </Ex>
                             <Ex>
