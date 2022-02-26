@@ -131,6 +131,7 @@ function App() {
                         Unofficial content is <B>{showUnofficial ? 'on' : 'off'}</B>.
                     </P>
                     <Separator>* * *</Separator>
+                    <h2>Table of Contents</h2>
                     <div className="toc">
                         <a href="#word-derivations">Word Derivations</a>
                         <br />
@@ -150,17 +151,17 @@ function App() {
                         <ul>
                             <li>
                                 <a href="#li">
-                                    <TM>li</TM>
+                                    <TM>li</TM> - Using Verbs
                                 </a>
                             </li>
                             <li>
                                 <a href="#e">
-                                    <TM>e</TM>
+                                    <TM>e</TM> - Direct Objects
                                 </a>
                             </li>
                             <li>
                                 <a href="#o">
-                                    <TM>o</TM>
+                                    <TM>o</TM> - Commands and Requests
                                 </a>
                             </li>
                             <li>
@@ -172,12 +173,17 @@ function App() {
                             <ul>
                                 <li>
                                     <a href="#pi">
-                                        <TM>pi</TM>
+                                        <TM>pi</TM> - Relations and "Of"
                                     </a>
                                 </li>
-                                <li className="#unofficial">
-                                    <a href="ji">
-                                        <TM>ji</TM>
+                                <li className="unofficial">
+                                    <a href="#ji">
+                                        <TM>ji</TM> - Shallow Grouping
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#li-lon">
+                                        <TM>li lon</TM> - To Exist
                                     </a>
                                 </li>
                             </ul>
@@ -187,7 +193,7 @@ function App() {
                         <ul>
                             <li>
                                 <a href="#te">
-                                    <TM>te</TM>
+                                    <TM>te</TM> - Subordinate Clauses
                                 </a>
                             </li>
                             <li>
@@ -202,12 +208,12 @@ function App() {
                             <ul>
                                 <li>
                                     <a href="#wa">
-                                        <TM>wa</TM>
+                                        <TM>wa</TM> - Causatives
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#nen">
-                                        <TM>nen</TM>
+                                        <TM>nen</TM> - Because Of
                                     </a>
                                 </li>
                             </ul>
@@ -217,11 +223,11 @@ function App() {
                             <ul>
                                 <li>
                                     <a href="#en-anu-lekin">
-                                        <TM>en</TM>/<TM>anu</TM>/<TM>lekin</TM>
+                                        <TM>en</TM>/<TM>anu</TM>/<TM>lekin</TM> - And/Or/But
                                     </a>
                                 </li>
-                                <li className="#unofficial">
-                                    <a href="sequentiality">Sequentiality</a>
+                                <li className="unofficial">
+                                    <a href="#sequentiality">Sequentiality</a>
                                 </li>
                             </ul>
                             <li>
@@ -234,12 +240,19 @@ function App() {
                             <li>
                                 <a href="#tense-and-aspect">Tense and Aspect</a>
                             </li>
+                            <ul>
+                                <li>
+                                    <a href="#open-pini">
+                                        <TM>open</TM>/<TM>pini</TM> - Starting and Finishing
+                                    </a>
+                                </li>
+                            </ul>
                             <li>
                                 <a href="#units-of-time">Units of Time</a>
                             </li>
                             <li>
                                 <a href="#la-ita">
-                                    <TM>la</TM>/<TM>ita</TM>
+                                    <TM>la</TM>/<TM>ita</TM> - Marking Context
                                 </a>
                             </li>
                             <li>
@@ -250,7 +263,7 @@ function App() {
                             </li>
                             <li>
                                 <a href="#an">
-                                    <TM>an</TM>
+                                    <TM>an</TM> - In/At/On
                                 </a>
                             </li>
                         </ul>
@@ -259,27 +272,27 @@ function App() {
                         <ul>
                             <li>
                                 <a href="#pali">
-                                    <TM>pali</TM>
+                                    <TM>pali</TM> - Generic Action
                                 </a>
                             </li>
                             <li>
                                 <a href="#pelu">
-                                    <TM>pelu</TM>
+                                    <TM>pelu</TM> - Using
                                 </a>
                             </li>
                             <li>
                                 <a href="#kan">
-                                    <TM>kan</TM>
+                                    <TM>kan</TM> - With
                                 </a>
                             </li>
                             <li>
                                 <a href="#ki">
-                                    <TM>ki</TM>
+                                    <TM>ki</TM> - To
                                 </a>
                             </li>
                             <li>
                                 <a href="#tan">
-                                    <TM>tan</TM>
+                                    <TM>tan</TM> - From
                                 </a>
                             </li>
                         </ul>
@@ -314,7 +327,7 @@ function App() {
                                 <a href="#cardinal-directions">Cardinal Directions</a>
                             </li>
                             <li>
-                                <a href="#names-and-loan-words">Names and Loan Words</a>
+                                <a href="#names-and-foreign-words">Names and Foreign Words</a>
                             </li>
                             <li>
                                 <a href="#notes">Notes</a>
@@ -386,7 +399,7 @@ function App() {
                     </Title>
                     <Section>
                         <Title id="li">
-                            <TM>li</TM>
+                            <TM>li</TM> - Using Verbs
                         </Title>
                         <P>
                             The most basic particle <TM>li</TM> <B>marks the verb</B> of a sentence. Without it, you
@@ -459,7 +472,7 @@ function App() {
                     </Section>
                     <Section>
                         <Title id="e">
-                            <TM>e</TM>
+                            <TM>e</TM> - Direct Objects
                         </Title>
                         <P>
                             Verbs can be <Word>intransitive</Word>, meaning they stand on their own, or{' '}
@@ -504,7 +517,7 @@ function App() {
                     </Section>
                     <Section>
                         <Title id="o">
-                            <TM>o</TM>
+                            <TM>o</TM> - Commands and Requests
                         </Title>
                         <P>
                             The particle <TM>o</TM> works the same way as <TM>li</TM>, marking the verb, except that it
@@ -672,7 +685,7 @@ function App() {
 
                         <Section>
                             <Title id="pi">
-                                <TM>pi</TM>
+                                <TM>pi</TM> - Relations and "Of"
                             </Title>
                             <P>
                                 The preposition <TM>pi</TM> is used for the <Word>genitive case</Word>. Think of the
@@ -748,13 +761,41 @@ function App() {
                                 <Eng>"((mother's house) of my mother)"</Eng>, not{' '}
                                 <Eng>"(house of (the mother of my mother))"</Eng>.
                             </P>
+                            <P>
+                                When using <TM>pi</TM> after a verb, the <TM>pi</TM>-phrase acts like an{' '}
+                                <B>adverbial phrase</B>, just like any other modifier would on a verb. This means the{' '}
+                                <TM>pi</TM>-phrase describes <B>the manner in which the verb is done</B>.
+                            </P>
+                            <Examples>
+                                <Ex>
+                                    <TM>
+                                        mi li toki <B>pi kalama mute</B>
+                                    </TM>
+                                    <Answer>
+                                        <Eng>
+                                            "I talk <B>loudly</B>"
+                                        </Eng>
+                                        , literally{' '}
+                                        <Eng>
+                                            "I talk <B>of much volume</B>"
+                                        </Eng>
+                                        <br />
+                                        It's important to note that this doesn't say{' '}
+                                        <Eng>
+                                            "I talk <B>about</B> much volume"
+                                        </Eng>
+                                        . The phrase <Eng>"of much volume"</Eng> describes{' '}
+                                        <B>the manner in which the talking occurs</B>.
+                                    </Answer>
+                                </Ex>
+                            </Examples>
                         </Section>
                         <Section unofficial>
                             <Title id="ji">
-                                [PROPOSED] <TM>ji</TM>
+                                <TM>ji</TM> - Shallow Grouping
                             </Title>
                             <P>
-                                The grouping of <TM>pi</TM> isn't an issue for the statement{' '}
+                                The grouping of <TM>pi</TM> from left-to-right isn't an issue for the statement{' '}
                                 <TM>tomo pi mama pi mama mi</TM>, as it still translates to a phrase that means{' '}
                                 <Eng>"my grandmother's house"</Eng>, however there are some cases where it can cause
                                 issues. The variant preposition <TM>ji</TM> can be used to resolve this problem.
@@ -781,6 +822,47 @@ function App() {
                                 <TM>pi</TM> clauses are never mistakenly grouped wrong.
                             </P>
                         </Section>
+                        <Section>
+                            <Title id="li-lon">
+                                <TM>li lon</TM> - To Exist
+                            </Title>
+                            <P>
+                                As we learned in the very beginning, it's easy enough to say something{' '}
+                                <Eng>"is [a base noun]"</Eng> or <Eng>"is [a base modifier]"</Eng> simply by using the
+                                base noun or base modifier as a verb. However what if you want to say something{' '}
+                                <Eng>"is food"</Eng> or <Eng>"is edible"</Eng> using the other derivations of{' '}
+                                <TM>moku</TM>? You can't say <TM>li moku</TM>, because that means <Eng>"is eating"</Eng>
+                                . What do you do?
+                                <See href="word-derivations">Word Derivations</See>
+                            </P>
+                            <P>
+                                The solution is to use the modifier <TM>lon</TM> meaning <Eng>"real"</Eng>,{' '}
+                                <Eng>"true"</Eng>, or <Eng>"existing"</Eng>. As a verb it is used to mean{' '}
+                                <Eng>"to be"</Eng> or <Eng>"to exist"</Eng>. This allows you to use modifiers or{' '}
+                                <TM>pi</TM>-phrases to use modifier or noun forms of any word you please.
+                            </P>
+                            <Examples>
+                                <Ex>
+                                    <TM>ni li lon moku</TM>
+                                    <Answer>
+                                        <Eng>"This is edible"</Eng>, literally <Eng>"This exists edibly"</Eng>
+                                    </Answer>
+                                </Ex>
+                                <Ex>
+                                    <TM>ni li lon pi moku</TM>
+                                    <Answer>
+                                        <Eng>"This is food"</Eng>, literally{' '}
+                                        <Eng>"This exists [in a manner] of food"</Eng>
+                                    </Answer>
+                                </Ex>
+                                <Ex>
+                                    <TM>on li lon pi pona mute</TM>
+                                    <Answer>
+                                        <Eng>"He is very good"</Eng>, literally <Eng>"They exist of much goodness"</Eng>
+                                    </Answer>
+                                </Ex>
+                            </Examples>
+                        </Section>
                     </Section>
                     <Separator>* * *</Separator>
                     <Title id="adding-complexity" className="major">
@@ -788,7 +870,7 @@ function App() {
                     </Title>
                     <Section>
                         <Title id="te">
-                            <TM>te</TM>
+                            <TM>te</TM> - Subordinate Clauses
                         </Title>
                         <P>
                             The particle <TM>te</TM> marks <Word>noun clauses</Word> and <Word>relative clauses</Word>.
@@ -1067,7 +1149,7 @@ function App() {
                         </Title>
                         <Section>
                             <Title id="wa">
-                                <TM>wa</TM>
+                                <TM>wa</TM> - Causatives
                             </Title>
                             <P>
                                 As a verb, the word <TM>wa</TM> means <Eng>"to cause"</Eng>, but it can also be used as
@@ -1185,7 +1267,7 @@ function App() {
                         </Section>
                         <Section>
                             <Title id="nen">
-                                <TM>nen</TM>
+                                <TM>nen</TM> - Because Of
                             </Title>
                             <P>
                                 Another way to create causative relationships is with the preposition <TM>nen</TM>{' '}
@@ -1266,7 +1348,7 @@ function App() {
                         </Title>
                         <Section>
                             <Title id="en-anu-lekin">
-                                <TM>en</TM> / <TM>anu</TM> / <TM>lekin</TM>
+                                <TM>en</TM> / <TM>anu</TM> / <TM>lekin</TM> - And/Or/But
                             </Title>
                             <P>
                                 The particles <TM>en</TM> (<Eng>"and"</Eng>), <TM>anu</TM> (<Eng>"or"</Eng>), and{' '}
@@ -1750,13 +1832,50 @@ function App() {
                                 </td>
                             </tr>
                         </table>
-                        <TODO>complex aspect/tense (I will have been) etc</TODO>
+                        <P>
+                            It is possible to use multiple aspect or tense markers at once to suggest even more specific
+                            verbs. For example, <TM>li moku pini sajo</TM> implies thay you are in the process of
+                            finishing eating.
+                        </P>
                         <P>
                             To reiterate, <B>all of this and more</B> can be often inferred through context without
                             adding these modifiers, but they're here to use as needed to make sure you are properly
-                            understood.
+                            understood. Most of the time, people will not use tense and aspect modifiers when it is
+                            clear enough through context, especially in informal speech.
                         </P>
+                        <Section>
+                            <Title id="open-pini">
+                                <TM>open</TM>/<TM>pini</TM> - Starting and Finishing
+                            </Title>
+                            <P>
+                                The aspect modifier <TM>pini</TM> is also used to modify a verb into a "finishing"
+                                action. Similarly, <TM>open</TM> can be used to create a "starting" action. If{' '}
+                                <TM>li moku</TM> is <Eng>"to eat"</Eng>, then <TM>li moku open</TM> is{' '}
+                                <Eng>"to start to eat"</Eng>.
+                            </P>
+                            <Examples>
+                                <Ex>
+                                    <TM>mi li moku open e kili</TM>
+                                    <Answer>
+                                        <Eng>"I start eating fruit"</Eng>
+                                    </Answer>
+                                </Ex>
+                                <Ex>
+                                    <TM>mi li moku pini e kili</TM>
+                                    <Answer>
+                                        <Eng>"I finish eating fruit"</Eng>
+                                    </Answer>
+                                </Ex>
+                            </Examples>
+                            <P>
+                                The latter phrase is often interpreted to mean the same thing as <B>completed aspect</B>
+                                , even though it's not exactly the same in English. Context can clarify further whether
+                                the speaker is talking about a <B>completed state</B> or the <B>act of finishing</B> an
+                                action.
+                            </P>
+                        </Section>
                     </Section>
+                    <Separator className="small">* * *</Separator>
                     <Section>
                         <Title id="units-of-time">Units of Time</Title>
                         <P>
@@ -1941,7 +2060,7 @@ function App() {
                     </Section>
                     <Section>
                         <Title id="la-ita">
-                            <TM>la</TM> / <TM>ita</TM>
+                            <TM>la</TM> / <TM>ita</TM> - Marking Context
                         </Title>
                         <P>
                             The particles <TM>la</TM> and <TM>ita</TM> are used to attach <Word>context</Word> phrases
@@ -2167,7 +2286,7 @@ function App() {
                     </Section>
                     <Section>
                         <Title id="an">
-                            <TM>an</TM>
+                            <TM>an</TM> - In/At/On
                         </Title>
                         <P>
                             The preposition <TM>an</TM> meaning <Eng>in</Eng>, <Eng>at</Eng>, or <Eng>on</Eng> is used
@@ -2238,7 +2357,7 @@ function App() {
                     </Title>
                     <Section>
                         <Title id="pali">
-                            <TM>pali</TM>
+                            <TM>pali</TM> - Generic Action
                         </Title>
                         <P>
                             The verb <TM>pali</TM>, meaning <Eng>"to make"</Eng>, <Eng>"to work"</Eng>, or{' '}
@@ -2275,7 +2394,7 @@ function App() {
                     </Section>
                     <Section>
                         <Title id="pelu">
-                            <TM>pelu</TM>
+                            <TM>pelu</TM> - Using
                         </Title>
                         <P>
                             The preposition <TM>pelu</TM> means <Eng>"using"</Eng>, <Eng>"with the use of"</Eng>, or{' '}
@@ -2297,7 +2416,7 @@ function App() {
                     </Section>
                     <Section>
                         <Title id="kan">
-                            <TM>kan</TM>
+                            <TM>kan</TM> - With
                         </Title>
                         <P>
                             The preposition <TM>kan</TM> means <Eng>"together with"</Eng>, <Eng>"among"</Eng>, or{' '}
@@ -2319,7 +2438,7 @@ function App() {
                     </Section>
                     <Section>
                         <Title id="ki">
-                            <TM>ki</TM>
+                            <TM>ki</TM> - To
                         </Title>
                         <P>
                             The preposition <TM>ki</TM> means <Eng>"to"</Eng>,<Eng>"in order to"</Eng>, or{' '}
@@ -2357,8 +2476,8 @@ function App() {
                         </Examples>
                     </Section>
                     <Section>
-                        <Title>
-                            <TM>tan</TM>
+                        <Title id="tan">
+                            <TM>tan</TM> - From
                         </Title>
                         <P>
                             The preposition <TM>tan</TM> means <Eng>"from"</Eng>, or <Eng>"starting at [a time]"</Eng>.
@@ -2720,12 +2839,12 @@ function App() {
                             <tr>
                                 <td>
                                     Nth Root
-                                    <br />√<span style={{ borderTop: '1px solid' }}>16</span>
+                                    <br />∛<span style={{ borderTop: '1px solid' }}>16</span>
                                 </td>
                                 <td>
-                                    <TM>[te] li alasa e open tu pi ten po</TM>
+                                    <TM>[te] li alasa e open tu pi kenta tu ten lima</TM>
                                     <Answer>
-                                        literally <Eng>"to find the 2nd origin of 16</Eng>
+                                        literally <Eng>"to find the 3rd origin of 125</Eng>
                                     </Answer>
                                 </td>
                             </tr>
@@ -2788,8 +2907,46 @@ function App() {
                         </table>
                     </Section>
                     <Section>
-                        <Title id="names-and-loan-words">Names and Loan Words</Title>
-                        <TODO></TODO>
+                        <Title id="names-and-foreign-words">Names and Foreign Words</Title>
+                        <P>
+                            In order to fulfill the goal of an international language, it is best to try to use toki ma
+                            words to describe the things you are talking about. However, there are times when you will
+                            want to use names or words from outside toki ma in the interest of clarity, accuracy, or
+                            just general ease of use.
+                        </P>
+                        <P>
+                            When using external names or words, you have a few options. You may choose to either use the
+                            Latin script spelling of the word or name, or you can transliterate it into the sounds that
+                            toki ma has to offer. So the name <Eng>"Angela"</Eng> could be spelled <TM>Angela</TM>,{' '}
+                            <TM>Ankela</TM>, <TM>Anjela</TM>, etc. Any of these are acceptable. If you choose not to
+                            transliterate the name into toki ma, there is no guarantee how someone else may pronounce it
+                            based on their native language.
+                        </P>
+                        <P>
+                            Additionally, you can prefix the word or name with the toki ma word for the type of thing it
+                            is. If you're naming a person, it's common to say <TM>jan Ankela</TM>, making it clear that
+                            this is the name of a <TM>jan</TM>. If you're naming a food, you'd prefix it with{' '}
+                            <TM>moku</TM>, such as <TM>moku Topu</TM> for <Eng>"tofu"</Eng>.
+                        </P>
+                        <P>All of the following examples are valid ways to say New York City:</P>
+                        <Examples>
+                            <Ex>
+                                <TM>New York City</TM>
+                            </Ex>
+                            <Ex>
+                                <TM>naka New York City</TM>
+                            </Ex>
+                            <Ex>
+                                <TM>Nu Joka Siti</TM>
+                            </Ex>
+                            <Ex>
+                                <TM>naka Nu Joka Siti</TM>
+                            </Ex>
+                        </Examples>
+                        <P>
+                            Which way you choose to phrase a name or foreign word might depend on who you're talking to
+                            and how likely it is that they recognize the word you are saying.
+                        </P>
                     </Section>
                     <Section>
                         <Title id="notes">Notes</Title>
@@ -2836,10 +2993,8 @@ function App() {
                     <TODO></TODO>
                     <TODO style={{ marginTop: 200 }}>
                         <ul>
-                            <li>[verb] pi</li>
-                            <li>li [modifier] pi</li>
                             <li>multiple context phrases</li>
-                            <li>informal shortenings?</li>
+                            <li>peko!</li>
                         </ul>
                     </TODO>
                 </div>

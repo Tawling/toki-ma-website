@@ -15,6 +15,12 @@
         line-height: 1em;
     }
 
+    .toc {
+        li.unofficial a{
+            color: red;
+        }
+    }
+
     .see {
         display: block;
         padding-left: 2em;
