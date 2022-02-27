@@ -354,6 +354,13 @@ function App() {
                         <a href="#conversations">Conversational Examples</a>
                     </div>
                     <Separator>* * *</Separator>
+                    <div className="vocab-note">
+                        <h3>Vocabulary</h3>
+                        This guide assumes you have some familiarity with the toki ma vocabulary, or at least access to{' '}
+                        <a href="https://toki-ma.com/?page=dictionary">a dictionary</a>. Words that directly affect the
+                        grammar are explained here in the guide, but other words used in the example sentences may not
+                        be.
+                    </div>
                     <Title id="word-derivations" className="major">
                         Word Derivations
                     </Title>
