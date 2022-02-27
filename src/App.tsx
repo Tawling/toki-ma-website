@@ -1576,7 +1576,8 @@ function App() {
                             </Ex>
                         </Examples>
                         <P>
-                            The response to a polar question should usually be either <TM>tuntan</TM>, <TM>isala</TM>, or <TM>no</TM>.
+                            The response to a polar question should usually be either <TM>tuntan</TM>, <TM>isala</TM>,
+                            or <TM>no</TM>.
                         </P>
                         <P>
                             To ask an <Word>open question</Word>, the special particle <TM>seme</TM> can be placed as
@@ -2781,7 +2782,7 @@ function App() {
                             </Ex>
                         </Examples>
                         <P>
-                            Another use of <TM>su</TM> is with <TM>sata</TM> and <TM>ante</TM> to talk about similarity.
+                            Another use of <TM>su</TM> is with <TM>sama</TM> and <TM>ante</TM> to talk about similarity.
                             This can be combined with <TM>poka</TM> and <TM>suti</TM>, <Eng>"near"</Eng> and{' '}
                             <Eng>"specific"</Eng>, to differentiate between things being exactly the same or just
                             similar. Without them, the degree of similarity is implied through context, as is true of so
@@ -3338,9 +3339,10 @@ function App() {
                                     <Eng>he/she/it/they</Eng>
                                 </td>
                                 <td>
-                                    This third person pronoun can only refer to <B>animate objects</B>. You wouldn't use
-                                    it to refer to a previous subject as "it" like you would in English. For that you'd
-                                    use <TM>ni</TM> and <TM>na</TM> for <Eng>this</Eng> and <Eng>that</Eng>.
+                                    This third person pronoun is generally only used to refer to <B>animate objects</B>.
+                                    You wouldn't often use it to refer to a previous subject as "it" like you would in
+                                    English. For that you'd probably use <TM>ni</TM> and <TM>na</TM> for <Eng>this</Eng>{' '}
+                                    and <Eng>that</Eng>.
                                 </td>
                             </tr>
                             <tr>
@@ -3361,7 +3363,7 @@ function App() {
                     <Title id="conversations" className="major">
                         Conversational Examples
                     </Title>
-                    <TODO></TODO>
+                    <TODO>Coming Soon!</TODO>
                 </div>
             </BlurContext.Provider>
         </UnofficialContext.Provider>
