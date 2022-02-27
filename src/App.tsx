@@ -2560,7 +2560,7 @@ function App() {
                                     <Eng>"What are you eating?"</Eng>
                                 </td>
                                 <td>
-                                    <TM>seme li moku</TM>
+                                    <TM>si li moku e seme</TM>
                                 </td>
                             </tr>
                         </table>
@@ -2818,7 +2818,7 @@ function App() {
                             </Ex>
                             <Ex>
                                 <TM>
-                                    pawo na li lukin pi <B>sama suti su</B> pawo mi
+                                    pawo na li lon lukin pi <B>sama suti su</B> pawo mi
                                 </TM>
                                 <Answer>
                                     <Eng>
