@@ -1,7 +1,9 @@
 import { useContext, useEffect, useRef } from 'react';
+import useScrollbarSize from 'react-scrollbar-size';
 import { WordListContext } from './words';
 
 const Popover = ({ word, span }: { word: string; span: null | React.MutableRefObject<null | HTMLSpanElement> }) => {
+    const scrollSize = useScrollbarSize();
     const ref = useRef(null) as React.MutableRefObject<null | HTMLDivElement>;
     if (!word || !span) {
         return null;
@@ -23,16 +25,26 @@ const Popover = ({ word, span }: { word: string; span: null | React.MutableRefOb
                     top: rect.top + (span?.current?.offsetHeight ?? 0) + 10,
                     left: Math.min(
                         rect.left - 10,
-                        document.documentElement.clientWidth - 30 - Math.min(document.documentElement.clientWidth * 0.4, 400),
+                        document.documentElement.clientWidth -
+                            scrollSize.width -
+                            Math.min(document.documentElement.clientWidth * 0.4, 400),
                     ),
                 }}
             >
-                <div className="tip" style={{
-                    left: (rect.right-rect.left)/2 + (rect.left - Math.min(
-                        rect.left - 5,
-                        document.documentElement.clientWidth - 30 - Math.min(document.documentElement.clientWidth * 0.4, 400),
-                    ))
-                }}></div>
+                <div
+                    className="tip"
+                    style={{
+                        left:
+                            (rect.right - rect.left) / 2 +
+                            (rect.left -
+                                Math.min(
+                                    rect.left - 5,
+                                    document.documentElement.clientWidth -
+                                        scrollSize.width -
+                                        Math.min(document.documentElement.clientWidth * 0.4, 400),
+                                )),
+                    }}
+                ></div>
                 <span className="word-def">{word}</span>
                 <br />
                 <span className="base-pos">
