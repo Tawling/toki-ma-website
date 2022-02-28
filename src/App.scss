@@ -1,3 +1,37 @@
+.popover {
+    position: absolute;
+    background-color: rgb(78, 97, 139);
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 1000;
+    color: rgb(250, 240, 152);
+    max-width: 40vw;
+    width: 400px;
+    filter: drop-shadow(0px 0px 5px #0a0a4d);
+
+    .tip {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: -5px;
+        z-index: -1;
+        background-color: rgb(78, 97, 139);
+        transform: rotate(45deg);
+    }
+
+    .word-def {
+        font-weight: bold;
+    }
+
+    .base-pos {
+        font-style: italic;
+    }
+
+    .pos {
+        font-style: italic;
+        text-decoration: underline;
+    }
+}
 .App {
     margin: auto;
     max-width: 1000px;
@@ -15,6 +49,10 @@
         border-radius: 10px;
         padding: 10px;
         background-color: rgb(255, 246, 122);
+    }
+
+    .tmword {
+        cursor: pointer;
     }
 
     ul {
