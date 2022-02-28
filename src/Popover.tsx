@@ -17,18 +17,19 @@ const Popover = ({ word, span }: { word: string; span: null | React.MutableRefOb
             bottom: r.bottom + window.scrollY,
             right: r.right + window.scrollX,
         };
+        const popoverLeft = Math.min(
+            rect.left - 10,
+            document.documentElement.clientWidth -
+                scrollSize.width -
+                Math.min(document.documentElement.clientWidth * 0.5, 400),
+        );
         return (
             <div
                 ref={ref}
                 className="popover"
                 style={{
                     top: rect.top + (span?.current?.offsetHeight ?? 0) + 10,
-                    left: Math.min(
-                        rect.left - 10,
-                        document.documentElement.clientWidth -
-                            scrollSize.width -
-                            Math.min(document.documentElement.clientWidth * 0.4, 400),
-                    ),
+                    left: popoverLeft,
                 }}
             >
                 <div
@@ -37,12 +38,7 @@ const Popover = ({ word, span }: { word: string; span: null | React.MutableRefOb
                         left:
                             (rect.right - rect.left) / 2 +
                             (rect.left -
-                                Math.min(
-                                    rect.left - 5,
-                                    document.documentElement.clientWidth -
-                                        scrollSize.width -
-                                        Math.min(document.documentElement.clientWidth * 0.4, 400),
-                                )),
+                                popoverLeft),
                     }}
                 ></div>
                 <span className="word-def">{word}</span>
