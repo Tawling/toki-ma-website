@@ -1,7 +1,7 @@
 import React, { ReactElement, useContext, useEffect, useState } from 'react';
 import './App.scss';
 import classNames from 'classnames';
-import TM from './TM';
+import TM, { ClickContext } from './TM';
 import { fetchWordList, WordList, WordListContext } from './words';
 import { GetDefContext } from './TMWord';
 import Popover from './Popover';
@@ -50,9 +50,11 @@ const Answer = ({ id, children, className }: Props) => {
 };
 
 const See = ({ children, href }: { children: React.ReactNode; href: string }) => (
-    <a className="see" href={`#${href}`}>
-        [See section on <span>{children}</span> for more]
-    </a>
+    <ClickContext.Provider value={true}>
+        <a className="see" href={`#${href}`}>
+            [See section on <span>{children}</span> for more]
+        </a>
+    </ClickContext.Provider>
 );
 
 const Section = ({
@@ -74,9 +76,11 @@ const Section = ({
 );
 
 const Title = ({ id, children, className, style }: Props) => (
-    <a href={`#${id}`} id={id} style={style} className={classNames('title', className)}>
-        {children}
-    </a>
+    <ClickContext.Provider value={true}>
+        <a href={`#${id}`} id={id} style={style} className={classNames('title', className)}>
+            {children}
+        </a>
+    </ClickContext.Provider>
 );
 
 // const TM = spanType('tm');
@@ -466,7 +470,7 @@ function App() {
                             </Title>
                             <Section>
                                 <Title id="li">
-                                    <TM noclick>li</TM> - Using Verbs
+                                    <TM>li</TM> - Using Verbs
                                 </Title>
                                 <P>
                                     The most basic particle <TM>li</TM> <B>marks the verb</B> of a sentence. Without it,
@@ -590,7 +594,7 @@ function App() {
                             </Section>
                             <Section>
                                 <Title id="e">
-                                    <TM noclick>e</TM> - Direct Objects
+                                    <TM>e</TM> - Direct Objects
                                 </Title>
                                 <P>
                                     Verbs can be <Word>intransitive</Word>, meaning they stand on their own, or{' '}
@@ -635,7 +639,7 @@ function App() {
                             </Section>
                             <Section>
                                 <Title id="o">
-                                    <TM noclick>o</TM> - Commands and Requests
+                                    <TM>o</TM> - Commands and Requests
                                 </Title>
                                 <P>
                                     The particle <TM>o</TM> works the same way as <TM>li</TM>, marking the verb, except
@@ -807,7 +811,7 @@ function App() {
 
                                 <Section>
                                     <Title id="pi">
-                                        <TM noclick>pi</TM> - Relations and "Of"
+                                        <TM>pi</TM> - Relations and "Of"
                                     </Title>
                                     <P>
                                         The preposition <TM>pi</TM> is used for the <Word>genitive case</Word>. Think of
@@ -916,7 +920,7 @@ function App() {
                                 </Section>
                                 <Section unofficial>
                                     <Title id="ji">
-                                        <TM noclick>ji</TM> - Shallow Grouping
+                                        <TM>ji</TM> - Shallow Grouping
                                     </Title>
                                     <P>
                                         The grouping of <TM>pi</TM> from left-to-right isn't an issue for the statement{' '}
@@ -952,7 +956,7 @@ function App() {
                                 </Section>
                                 <Section>
                                     <Title id="li-lon">
-                                        <TM noclick>li lon</TM> - To Exist
+                                        <TM>li lon</TM> - To Exist
                                     </Title>
                                     <P>
                                         As we learned in the very beginning, it's easy enough to say something{' '}
@@ -999,7 +1003,7 @@ function App() {
                             </Title>
                             <Section>
                                 <Title id="te">
-                                    <TM noclick>te</TM> - Subordinate Clauses
+                                    <TM>te</TM> - Subordinate Clauses
                                 </Title>
                                 <P>
                                     The particle <TM>te</TM> marks <Word>noun clauses</Word> and{' '}
@@ -1281,7 +1285,7 @@ function App() {
                                 </Title>
                                 <Section>
                                     <Title id="wa">
-                                        <TM noclick>wa</TM> - Causatives
+                                        <TM>wa</TM> - Causatives
                                     </Title>
                                     <P>
                                         As a verb, the word <TM>wa</TM> means <Eng>"to cause"</Eng>, but it can also be
@@ -1403,7 +1407,7 @@ function App() {
                                 </Section>
                                 <Section>
                                     <Title id="nen">
-                                        <TM noclick>nen</TM> - Because Of
+                                        <TM>nen</TM> - Because Of
                                     </Title>
                                     <P>
                                         Another way to create causative relationships is with the preposition{' '}
@@ -1486,7 +1490,7 @@ function App() {
                                 </Title>
                                 <Section>
                                     <Title id="en-anu-lekin">
-                                        <TM noclick>en</TM> / <TM noclick>anu</TM> / <TM noclick>lekin</TM> - And/Or/But
+                                        <TM>en</TM> / <TM>anu</TM> / <TM>lekin</TM> - And/Or/But
                                     </Title>
                                     <P>
                                         The particles <TM>en</TM> (<Eng>"and"</Eng>), <TM>anu</TM> (<Eng>"or"</Eng>),
@@ -1990,7 +1994,7 @@ function App() {
                                 </P>
                                 <Section>
                                     <Title id="open-pini">
-                                        <TM noclick>open</TM>/<TM noclick>pini</TM> - Starting and Finishing
+                                        <TM>open</TM>/<TM>pini</TM> - Starting and Finishing
                                     </Title>
                                     <P>
                                         The aspect modifier <TM>pini</TM> is also used to modify a verb into a
@@ -2205,7 +2209,7 @@ function App() {
                             </Section>
                             <Section>
                                 <Title id="la-ita">
-                                    <TM noclick>la</TM> / <TM noclick>ita</TM> - Marking Context
+                                    <TM>la</TM> / <TM>ita</TM> - Marking Context
                                 </Title>
                                 <P>
                                     The particles <TM>la</TM> and <TM>ita</TM> are used to attach <Word>context</Word>{' '}
@@ -2440,7 +2444,7 @@ function App() {
                             </Section>
                             <Section>
                                 <Title id="an">
-                                    <TM noclick>an</TM> - In/At/On
+                                    <TM>an</TM> - In/At/On
                                 </Title>
                                 <P>
                                     The preposition <TM>an</TM> meaning <Eng>in</Eng>, <Eng>at</Eng>, or <Eng>on</Eng>{' '}
@@ -2682,7 +2686,7 @@ function App() {
                             </Title>
                             <Section>
                                 <Title id="pali">
-                                    <TM noclick>pali</TM> - Generic Action
+                                    <TM>pali</TM> - Generic Action
                                 </Title>
                                 <P>
                                     The verb <TM>pali</TM>, meaning <Eng>"to make"</Eng>, <Eng>"to work"</Eng>, or{' '}
@@ -2720,7 +2724,7 @@ function App() {
                             </Section>
                             <Section>
                                 <Title id="pelu">
-                                    <TM noclick>pelu</TM> - Using
+                                    <TM>pelu</TM> - Using
                                 </Title>
                                 <P>
                                     The preposition <TM>pelu</TM> means <Eng>"using"</Eng>, <Eng>"with the use of"</Eng>
@@ -2747,7 +2751,7 @@ function App() {
                             </Section>
                             <Section>
                                 <Title id="kan">
-                                    <TM noclick>kan</TM> - With
+                                    <TM>kan</TM> - With
                                 </Title>
                                 <P>
                                     The preposition <TM>kan</TM> means <Eng>"together with"</Eng>, <Eng>"among"</Eng>,
@@ -2772,7 +2776,7 @@ function App() {
                             </Section>
                             <Section>
                                 <Title id="ki">
-                                    <TM noclick>ki</TM> - To
+                                    <TM>ki</TM> - To
                                 </Title>
                                 <P>
                                     The preposition <TM>ki</TM> means <Eng>"to"</Eng>,<Eng>"in order to"</Eng>, or{' '}
@@ -2817,7 +2821,7 @@ function App() {
                             </Section>
                             <Section>
                                 <Title id="tan">
-                                    <TM noclick>tan</TM> - From
+                                    <TM>tan</TM> - From
                                 </Title>
                                 <P>
                                     The preposition <TM>tan</TM> means <Eng>"from"</Eng>, or{' '}
@@ -2851,7 +2855,7 @@ function App() {
                             </Title>
                             <Section>
                                 <Title id="su">
-                                    <TM noclick>su</TM> - Comparisons and Similarity
+                                    <TM>su</TM> - Comparisons and Similarity
                                 </Title>
                                 <P>
                                     The preposition <TM>su</TM> means <Eng>"than"</Eng>, <Eng>"as"</Eng>, or{' '}
@@ -3428,7 +3432,7 @@ function App() {
                             </Section>
                             <Section>
                                 <Title id="peko-and-a">
-                                    <TM noclick>peko</TM> and <TM noclick>a</TM>
+                                    <TM>peko</TM> and <TM>a</TM>
                                 </Title>
                                 <P>
                                     There are two words in toki ma that don't really fit into any other group nicely:{' '}

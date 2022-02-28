@@ -1,5 +1,8 @@
 import classNames from 'classnames';
+import { createContext } from 'react';
 import TMWord from './TMWord';
+
+export const ClickContext = createContext(false);
 
 interface Props {
     id?: string;
