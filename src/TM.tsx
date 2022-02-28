@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { createContext } from 'react';
+import { createContext, useContext } from 'react';
 import TMWord from './TMWord';
 
 export const ClickContext = createContext(false);
@@ -12,7 +12,7 @@ interface Props {
     noclick?: boolean;
 }
 
-const splitWords = (words: string, noclick: boolean, key: {key: number}) => {
+const splitWords = (words: string, noclick: boolean, key: { key: number }) => {
     if (noclick) return words;
     const split = words.split(/\b/);
     return split.map((word) => {
@@ -23,7 +23,7 @@ const splitWords = (words: string, noclick: boolean, key: {key: number}) => {
     });
 };
 
-const splitElement = (element: React.ReactElement, noclick: boolean, key: {key: number}) => {
+const splitElement = (element: React.ReactElement, noclick: boolean, key: { key: number }) => {
     const children = element.props.children as string;
     if (typeof children === 'string' && !(element.props.noclick || noclick)) {
         element = { ...element, props: { ...element.props, children: splitWords(children, noclick, key) } };
@@ -32,12 +32,14 @@ const splitElement = (element: React.ReactElement, noclick: boolean, key: {key: 
 };
 
 const TM = ({ id, children, className, style, noclick = false }: Props) => {
-    const key = {key: 0}
+    const noclickContext = useContext(ClickContext);
+    const key = { key: 0 };
+    const click = noclick || noclickContext;
     if (Array.isArray(children)) {
         return (
             <span className={classNames('tm', className)} id={id} style={style}>
                 {children.map((item: string | React.ReactElement) => {
-                    return typeof item === 'string' ? splitWords(item, noclick, key) : splitElement(item, noclick, key);
+                    return typeof item === 'string' ? splitWords(item, click, key) : splitElement(item, click, key);
                 })}
             </span>
         );
@@ -45,8 +47,8 @@ const TM = ({ id, children, className, style, noclick = false }: Props) => {
         return (
             <span className={classNames('tm', className)} id={id} style={style}>
                 {typeof children === 'string'
-                    ? splitWords(children, noclick, key)
-                    : splitElement(children as React.ReactElement, noclick, key)}
+                    ? splitWords(children, click, key)
+                    : splitElement(children as React.ReactElement, click, key)}
             </span>
         );
     }
