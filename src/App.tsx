@@ -213,8 +213,8 @@ function App() {
                                             </a>
                                         </li>
                                         <li className="unofficial">
-                                            <a href="#ji">
-                                                <TM noclick>ji</TM> - Shallow Grouping
+                                            <a href="#lu">
+                                                <TM noclick>lu</TM> - Shallow Grouping
                                             </a>
                                         </li>
                                         <li>
@@ -259,7 +259,8 @@ function App() {
                                     <ul>
                                         <li>
                                             <a href="#en-anu-lekin">
-                                                <TM noclick>en</TM>/<TM noclick>anu</TM>/<TM noclick>lekin</TM> - And/Or/But
+                                                <TM noclick>en</TM>/<TM noclick>anu</TM>/<TM noclick>lekin</TM> -
+                                                And/Or/But
                                             </a>
                                         </li>
                                         <li className="unofficial">
@@ -420,7 +421,7 @@ function App() {
                                 </P>
                                 <P>
                                     As a <B>noun</B>, <TM>jan</TM> means <Eng>"person"</Eng>.<br />
-                                    As a <B>verb</B> it means <Eng>is a person</Eng> or <Eng>"to be a person"</Eng>.
+                                    As a <B>verb</B> it means <Eng>"is a person"</Eng> or <Eng>"to be a person"</Eng>.
                                     <br />
                                     As a <B>modifier</B> it means <Eng>"of a person"</Eng>.
                                 </P>
@@ -877,16 +878,16 @@ function App() {
                                         <Ex>
                                             <TM>tomo pi mama pi mama mi</TM>
                                             <Answer>
-                                                literally <Eng>"house of the mother of my mother"</Eng>, meaning "my
-                                                grandmother's house"
+                                                literally <Eng>"house of the parent of my parent"</Eng>, meaning "my
+                                                grandparent's house"
                                             </Answer>
                                         </Ex>
                                     </Examples>
                                     <P>
                                         Like modifiers, <TM>pi</TM>-phrases also <B>chain onto each other</B>, making
                                         that last example read as: <TM>((tomo pi mama) pi mama mi)</TM> which would mean{' '}
-                                        <Eng>"((mother's house) of my mother)"</Eng>, not{' '}
-                                        <Eng>"(house of (the mother of my mother))"</Eng>.
+                                        <Eng>"((parent's house) of my parent)"</Eng>, not{' '}
+                                        <Eng>"(house of (the parent of my parent))"</Eng>.
                                     </P>
                                     <P>
                                         When using <TM>pi</TM> after a verb, the <TM>pi</TM>-phrase acts like an{' '}
@@ -919,28 +920,28 @@ function App() {
                                     </Examples>
                                 </Section>
                                 <Section unofficial>
-                                    <Title id="ji">
-                                        <TM>ji</TM> - Shallow Grouping
+                                    <Title id="lu">
+                                        <TM>lu</TM> - Shallow Grouping
                                     </Title>
                                     <P>
                                         The grouping of <TM>pi</TM> from left-to-right isn't an issue for the statement{' '}
                                         <TM>tomo pi mama pi mama mi</TM>, as it still translates to a phrase that means{' '}
-                                        <Eng>"my grandmother's house"</Eng>, however there are some cases where it can
-                                        cause issues. The variant preposition <TM>ji</TM> can be used to resolve this
+                                        <Eng>"my grandparent's house"</Eng>, however there are some cases where it can
+                                        cause issues. The variant preposition <TM>lu</TM> can be used to resolve this
                                         problem.
                                     </P>
                                     <P>
-                                        <TM>ji</TM> acts the same as <TM>pi</TM>, except that it is used for{' '}
+                                        <TM>lu</TM> acts the same as <TM>pi</TM>, except that it is used for{' '}
                                         <Word>shallow regrouping</Word>. Unlike <TM>pi</TM> which applies to everything
-                                        coming before it, <TM>ji</TM> only applies to <B>the word directly before it</B>
+                                        coming before it, <TM>lu</TM> only applies to <B>the word directly before it</B>
                                         .
                                     </P>
                                     <Examples>
                                         <Ex>
-                                            <TM>tomo pi mama ji mama mi</TM>
+                                            <TM>tomo pi mama lu mama mi</TM>
                                             <Answer>
-                                                <Eng>"My grandmother's house"</Eng>, grouped as{' '}
-                                                <Eng>"(house of (the mother of my mother))"</Eng>
+                                                <Eng>"My grandparent's house"</Eng>, grouped as{' '}
+                                                <Eng>"(house of (the parent of my parent))"</Eng>
                                             </Answer>
                                         </Ex>
                                     </Examples>
@@ -949,7 +950,7 @@ function App() {
                                         compound-
                                         <TM>pi</TM> constructions, such as common nouns like <TM>tomo pi moku</TM> for{' '}
                                         <Eng>"restaurant"</Eng> or <TM>into pi pali</TM> for <Eng>"office"</Eng>. In a
-                                        compound situation, it may be easiest to always use <TM>ji</TM> to ensure that
+                                        compound situation, it may be easiest to always use <TM>lu</TM> to ensure that
                                         these compound-
                                         <TM>pi</TM> clauses are never mistakenly grouped wrong.
                                     </P>
@@ -1870,7 +1871,7 @@ function App() {
                                 </P>
                                 <P>Here is a list of all possible tense/aspect combinations.</P>
                                 <table>
-                                    <tbody>
+                                    <thead>
                                         <tr>
                                             <td style={{ border: 'none' }}></td>
                                             <th>
@@ -1892,6 +1893,8 @@ function App() {
                                                 (<Eng>future</Eng>)
                                             </th>
                                         </tr>
+                                    </thead>
+                                    <tbody>
                                         <tr>
                                             <th>
                                                 <TM>
@@ -2034,129 +2037,133 @@ function App() {
                                     when context isn't quite enough and you need to be more specific.
                                 </P>
                                 <table>
-                                    <tr>
-                                        <th>Unit</th>
-                                        <th>Long Form</th>
-                                        <th>
-                                            Short Form
-                                            <br />
-                                            (informal)
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <Eng>second</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>lamo penke</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"length of an instant"</Eng>
-                                            </Answer>
-                                        </td>
-                                        <td>
-                                            <TM>penke</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"instant"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <Eng>minute</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>osa tenpo</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"time segment"</Eng>
-                                            </Answer>
-                                        </td>
-                                        <td>
-                                            <TM>tenpo</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"time"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <Eng>hour</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>osa suno</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"sun segment"</Eng>
-                                            </Answer>
-                                        </td>
-                                        <td>
-                                            <TM>osa</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"segment"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <Eng>day</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>sike suno</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"sun cycle"</Eng>
-                                            </Answer>
-                                        </td>
-                                        <td>
-                                            <TM>suno</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"sun"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <Eng>month</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>sike mun</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"moon cycle"</Eng>
-                                            </Answer>
-                                        </td>
-                                        <td>
-                                            <TM>mun</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"moon"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <Eng>year</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>sike wetu</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"star cycle"</Eng>
-                                            </Answer>
-                                        </td>
-                                        <td>
-                                            <TM>wetu</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                <Eng>"star"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
+                                    <thead>
+                                        <tr>
+                                            <th>Unit</th>
+                                            <th>Long Form</th>
+                                            <th>
+                                                Short Form
+                                                <br />
+                                                (informal)
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <Eng>second</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>lamo penke</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"length of an instant"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>penke</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"instant"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <Eng>minute</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>osa tenpo</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"time segment"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>tenpo</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"time"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <Eng>hour</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>osa suno</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"sun segment"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>osa</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"segment"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <Eng>day</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>sike suno</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"sun cycle"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>suno</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"sun"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <Eng>month</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>sike mun</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"moon cycle"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>mun</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"moon"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <Eng>year</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>sike wetu</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"star cycle"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>wetu</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"star"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                                 <P>
                                     When talking about times, it is common to start the time phrase with{' '}
@@ -2164,17 +2171,17 @@ function App() {
                                 </P>
                                 <Examples>
                                     <Ex>
-                                        <TM>tenpo li seme (an) iputu</TM>
+                                        <TM>tenpo seme li sajo</TM>
                                         <Answer>
-                                            <Eng>"What time is it now?"</Eng>, the <TM>an</TM> is optional
+                                            <Eng>"How much time is ongoing?"</Eng>
                                             <br />
                                             This could also be <TM>tenpo seme li pisile</TM>, literally{' '}
-                                            <Eng>"how much time has passed?"</Eng>, or <TM>tenpo seme li sajo</TM>,{' '}
-                                            <Eng>"how much time is ongoing?"</Eng>
+                                            <Eng>"how much time has passed?"</Eng>, or <TM>tenpo li seme (an) iputu</TM>
+                                            , <Eng>"what time is it now?"</Eng>, the <TM>an</TM> is optional
                                         </Answer>
                                     </Ex>
                                     <Ex>
-                                        <TM>3 tenpo akile pi osa 18 li pisile</TM>
+                                        <TM>3 tenpo akile pi osa 18 li sajo</TM>
                                         <Answer>
                                             <Eng>"It is 18:03"</Eng>, literally{' '}
                                             <Eng>"3 minutes after the 18th hour have passed"</Eng>
@@ -2183,7 +2190,7 @@ function App() {
                                 </Examples>
                                 <P>
                                     When speaking informally, there may be shorter ways to tell the time. If someone
-                                    asks <TM>tenpo seme li pisile</TM>, one might simply respond <TM>18 pi 3</TM>.
+                                    asks <TM>tenpo seme li sajo</TM>, one might simply respond <TM>18 pi 3</TM>.
                                 </P>
                                 <P>
                                     To talk about a duration the unit comes after the number.
@@ -2549,135 +2556,141 @@ function App() {
                                     approximate many of them to either directly state or heavily imply a specific mood.
                                 </P>
                                 <table>
-                                    <tr>
-                                        <th>Mood</th>
-                                        <th>What is it?</th>
-                                        <th>English</th>
-                                        <th>toki ma</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Indicative</td>
-                                        <td>Used to talk about what is real</td>
-                                        <td>
-                                            <Eng>"I am eating"</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>mi li moku</TM>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Conditional</td>
-                                        <td>Used to talk about events that rely on another condition</td>
-                                        <td>
-                                            <Eng>"If I start getting hungry, I will eat"</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>mi li wile open e moku la mi li moku</TM>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Subjunctive</td>
-                                        <td>Used to talk about possible events, often events considered unlikely</td>
-                                        <td>
-                                            <Eng>"If I were hungry, I would eat"</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>mi li wile e moku la mi li moku</TM>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Imperative</td>
-                                        <td>Used to issue commands or requests</td>
-                                        <td>
-                                            <Eng>"(You), Eat fruit"</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>o moku e kili</TM>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Optative</td>
-                                        <td>Used to talk about things that one hopes for</td>
-                                        <td>
-                                            <Eng>"Safe travels!</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>o tawa pona!</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                literally <Eng>"Travel well!"</Eng>
-                                            </Answer>
-                                            <br />
-                                            This is not imperative only because of the context of the statement. It is
-                                            clearly a wish and not a command.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jussive</td>
-                                        <td>Used to state what is desired or suggested</td>
-                                        <td>
-                                            <Eng>"Someone should give them food"</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>jan o pana e moku ki on</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                literally <Eng>"A person should give food to them"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hypothetical</td>
-                                        <td>Used to talk about hypothetical or possible events</td>
-                                        <td>
-                                            <Eng>"I might be able to find food"</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>mi li alasa munkin e moku</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                literally <Eng>"I possibly find food"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Permissive</td>
-                                        <td>Used to express that an action is allowed by the speaker</td>
-                                        <td>
-                                            <Eng>"You may eat"</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>li lon pi oke te si li moku</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                literally <Eng>"It is ok that you eat food"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Inferential</td>
-                                        <td>Used when the event is unwitnessed and unconfirmed</td>
-                                        <td>
-                                            <Eng>"They say you eat fruit"</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>li toki te si li moku e kili</TM>
-                                            <br />
-                                            <Answer className="no-spacer">
-                                                literally <Eng>"it is said that you eat fruit"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Interrogative</td>
-                                        <td>Used to ask a question</td>
-                                        <td>
-                                            <Eng>"What are you eating?"</Eng>
-                                        </td>
-                                        <td>
-                                            <TM>si li moku e seme</TM>
-                                        </td>
-                                    </tr>
+                                    <thead>
+                                        <tr>
+                                            <th>Mood</th>
+                                            <th>What is it?</th>
+                                            <th>English</th>
+                                            <th>toki ma</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Indicative</td>
+                                            <td>Used to talk about what is real</td>
+                                            <td>
+                                                <Eng>"I am eating"</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>mi li moku</TM>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Conditional</td>
+                                            <td>Used to talk about events that rely on another condition</td>
+                                            <td>
+                                                <Eng>"If I start getting hungry, I will eat"</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>mi li wile open e moku la mi li moku</TM>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Subjunctive</td>
+                                            <td>
+                                                Used to talk about possible events, often events considered unlikely
+                                            </td>
+                                            <td>
+                                                <Eng>"If I were hungry, I would eat"</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>mi li wile e moku la mi li moku</TM>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Imperative</td>
+                                            <td>Used to issue commands or requests</td>
+                                            <td>
+                                                <Eng>"(You), Eat fruit"</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>o moku e kili</TM>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Optative</td>
+                                            <td>Used to talk about things that one hopes for</td>
+                                            <td>
+                                                <Eng>"Safe travels!</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>o tawa pona!</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    literally <Eng>"Travel well!"</Eng>
+                                                </Answer>
+                                                <br />
+                                                This is not imperative only because of the context of the statement. It
+                                                is clearly a wish and not a command.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jussive</td>
+                                            <td>Used to state what is desired or suggested</td>
+                                            <td>
+                                                <Eng>"Someone should give them food"</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>jan o pana e moku ki on</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    literally <Eng>"A person should give food to them"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hypothetical</td>
+                                            <td>Used to talk about hypothetical or possible events</td>
+                                            <td>
+                                                <Eng>"I might be able to find food"</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>mi li alasa munkin e moku</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    literally <Eng>"I possibly find food"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Permissive</td>
+                                            <td>Used to express that an action is allowed by the speaker</td>
+                                            <td>
+                                                <Eng>"You may eat"</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>li lon pi oke te si li moku</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    literally <Eng>"It is ok that you eat food"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inferential</td>
+                                            <td>Used when the event is unwitnessed and unconfirmed</td>
+                                            <td>
+                                                <Eng>"They say you eat fruit"</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>li toki te si li moku e kili</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    literally <Eng>"it is said that you eat fruit"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Interrogative</td>
+                                            <td>Used to ask a question</td>
+                                            <td>
+                                                <Eng>"What are you eating?"</Eng>
+                                            </td>
+                                            <td>
+                                                <TM>si li moku e seme</TM>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </Section>
                             <Separator>* * *</Separator>
@@ -3101,7 +3114,7 @@ function App() {
                                     </Ex>
                                     <Ex>
                                         <TM>
-                                            <B>san tenpo</B> akile pi <B>osa ten oto</B> li pisile
+                                            <B>san tenpo</B> akile pi <B>osa ten oto</B> li sajo
                                         </TM>
                                         <Answer>
                                             <Eng>It is 18:03</Eng>, literally{' '}
@@ -3214,120 +3227,124 @@ function App() {
                                     to talk about the operations in a mathematical context.
                                 </P>
                                 <table>
-                                    <tr>
-                                        <th>Operation</th>
-                                        <th>toki ma</th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Addition
-                                            <br />2 + 3
-                                        </td>
-                                        <td>
-                                            <TM>[te] li tewe wa ki tu kan san </TM>
-                                            <Answer>
-                                                literally <Eng>"to join 2 with 3"</Eng>
-                                            </Answer>
-                                            <br />
-                                            <TM>[te] li pana e san ki tu </TM>
-                                            <Answer>
-                                                literally <Eng>"to give 3 to 2"</Eng>
-                                            </Answer>
-                                            <br />
-                                            <TM>[te] li unja wa ki tu kan san </TM>
-                                            <Answer>
-                                                literally <Eng>"to combine 2 with 3"</Eng>
-                                            </Answer>
-                                            <br />
-                                            (informal) <TM>tu en san</TM>
-                                            <Answer>
-                                                literally <Eng>"2 and 3"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Subtraction
-                                            <br />7 - 4
-                                        </td>
-                                        <td>
-                                            <TM>[te] li weka wa ki po tan sepen</TM>
-                                            <Answer>
-                                                literally <Eng>"to make-absent 4 from 7"</Eng>
-                                            </Answer>
-                                            <br />
-                                            <TM>[te] li lanpan e po tan sepen</TM>
-                                            <Answer>
-                                                literally <Eng>"to take 4 from 7"</Eng>
-                                            </Answer>
-                                            <br />
-                                            <TM>[te] li papon wa ki sepen e po</TM>
-                                            <Answer>
-                                                literally <Eng>"to cause 7 to emit 4"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Multiplication
-                                            <br />2 * 5
-                                        </td>
-                                        <td>
-                                            <TM>[te] li mute wa ki tu kan lima</TM>
-                                            <Answer>
-                                                literally <Eng>"to make-many 2 with 5"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Division
-                                            <br />9 / 4
-                                        </td>
-                                        <td>
-                                            <TM>[te] li kipisi ki newen pelu po</TM>
-                                            <Answer>
-                                                literally <Eng>"to cut 9 using 4</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td className="unofficial">
-                                            Absolute Value
-                                            <br />
-                                            |-5|
-                                        </td>
-                                        <td className="unofficial">
-                                            <TM>[te] li sata wa ki ta pi lima su nula</TM>
-                                            <Answer>
-                                                literally <Eng>"to make -5 more than 0"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Exponentiation
-                                            <br />6<sup>3</sup>
-                                        </td>
-                                        <td>
-                                            <TM>[te] li mute wa ki sesi kan sama an san taka</TM>
-                                            <Answer>
-                                                literally <Eng>"to make-many 6 with itself 3 times"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Nth Root
-                                            <br />∛<span style={{ borderTop: '1px solid' }}>16</span>
-                                        </td>
-                                        <td>
-                                            <TM>[te] li alasa e open tu pi kenta tu ten lima</TM>
-                                            <Answer>
-                                                literally <Eng>"to find the 3rd origin of 125</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
+                                    <thead>
+                                        <tr>
+                                            <th>Operation</th>
+                                            <th>toki ma</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Addition
+                                                <br />2 + 3
+                                            </td>
+                                            <td>
+                                                <TM>[te] li tewe wa ki tu kan san </TM>
+                                                <Answer>
+                                                    literally <Eng>"to join 2 with 3"</Eng>
+                                                </Answer>
+                                                <br />
+                                                <TM>[te] li pana e san ki tu </TM>
+                                                <Answer>
+                                                    literally <Eng>"to give 3 to 2"</Eng>
+                                                </Answer>
+                                                <br />
+                                                <TM>[te] li unja wa ki tu kan san </TM>
+                                                <Answer>
+                                                    literally <Eng>"to combine 2 with 3"</Eng>
+                                                </Answer>
+                                                <br />
+                                                (informal) <TM>tu en san</TM>
+                                                <Answer>
+                                                    literally <Eng>"2 and 3"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Subtraction
+                                                <br />7 - 4
+                                            </td>
+                                            <td>
+                                                <TM>[te] li weka wa ki po tan sepen</TM>
+                                                <Answer>
+                                                    literally <Eng>"to make-absent 4 from 7"</Eng>
+                                                </Answer>
+                                                <br />
+                                                <TM>[te] li lanpan e po tan sepen</TM>
+                                                <Answer>
+                                                    literally <Eng>"to take 4 from 7"</Eng>
+                                                </Answer>
+                                                <br />
+                                                <TM>[te] li papon wa ki sepen e po</TM>
+                                                <Answer>
+                                                    literally <Eng>"to cause 7 to emit 4"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Multiplication
+                                                <br />2 * 5
+                                            </td>
+                                            <td>
+                                                <TM>[te] li mute wa ki tu kan lima</TM>
+                                                <Answer>
+                                                    literally <Eng>"to make-many 2 with 5"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Division
+                                                <br />9 / 4
+                                            </td>
+                                            <td>
+                                                <TM>[te] li kipisi ki newen pelu po</TM>
+                                                <Answer>
+                                                    literally <Eng>"to cut 9 using 4</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td className="unofficial">
+                                                Absolute Value
+                                                <br />
+                                                |-5|
+                                            </td>
+                                            <td className="unofficial">
+                                                <TM>[te] li sata wa ki ta pi lima su nula</TM>
+                                                <Answer>
+                                                    literally <Eng>"to make -5 more than 0"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Exponentiation
+                                                <br />6<sup>3</sup>
+                                            </td>
+                                            <td>
+                                                <TM>[te] li mute wa ki sesi kan sama an san taka</TM>
+                                                <Answer>
+                                                    literally <Eng>"to make-many 6 with itself 3 times"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Nth Root
+                                                <br />∛<span style={{ borderTop: '1px solid' }}>16</span>
+                                            </td>
+                                            <td>
+                                                <TM>[te] li alasa e open tu pi kenta tu ten lima</TM>
+                                                <Answer>
+                                                    literally <Eng>"to find the 3rd origin of 125</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </Section>
                             <Separator>* * *</Separator>
@@ -3345,46 +3362,50 @@ function App() {
                                     and <Eng>"north"</Eng> is considered to the right.
                                 </P>
                                 <table>
-                                    <tr>
-                                        <th>Direction</th>
-                                        <th>toki ma</th>
-                                    </tr>
-                                    <tr>
-                                        <td>West</td>
-                                        <td>
-                                            <TM>sinpin suno</TM>
-                                            <Answer>
-                                                literally <Eng>"to the front of the Sun"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>East</td>
-                                        <td>
-                                            <TM>monsi suno</TM>
-                                            <Answer>
-                                                literally <Eng>"to the back of the Sun"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>North</td>
-                                        <td>
-                                            <TM>jupa suno</TM>
-                                            <Answer>
-                                                literally <Eng>"to the right of the Sun"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>South</td>
-                                        <td>
-                                            <TM>soto suno</TM>
-                                            <Answer>
-                                                literally <Eng>"to the left of the Sun"</Eng>
-                                            </Answer>
-                                        </td>
-                                    </tr>
+                                    <thead>
+                                        <tr>
+                                            <th>Direction</th>
+                                            <th>toki ma</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>West</td>
+                                            <td>
+                                                <TM>sinpin suno</TM>
+                                                <Answer>
+                                                    literally <Eng>"to the front of the Sun"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>East</td>
+                                            <td>
+                                                <TM>monsi suno</TM>
+                                                <Answer>
+                                                    literally <Eng>"to the back of the Sun"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>North</td>
+                                            <td>
+                                                <TM>jupa suno</TM>
+                                                <Answer>
+                                                    literally <Eng>"to the right of the Sun"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>South</td>
+                                            <td>
+                                                <TM>soto suno</TM>
+                                                <Answer>
+                                                    literally <Eng>"to the left of the Sun"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </Section>
                             <Section>
@@ -3460,35 +3481,40 @@ function App() {
                                     constructions and how they are used.
                                 </P>
                                 <table className="notes-table">
-                                    <tr>
-                                        <th>Word/Construction</th>
-                                        <th>Notes</th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <TM>on</TM>
-                                            <br />
-                                            <Eng>he/she/it/they</Eng>
-                                        </td>
-                                        <td>
-                                            This third person pronoun is generally only used to refer to{' '}
-                                            <B>animate objects</B>. You wouldn't often use it to refer to a previous
-                                            subject as "it" like you would in English. For that you'd probably use{' '}
-                                            <TM>ni</TM> and <TM>na</TM> for <Eng>this</Eng> and <Eng>that</Eng>.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <TM>[li] pali</TM>
-                                            <br />
-                                            <Eng>to make, to do, to work</Eng>
-                                        </td>
-                                        <td>
-                                            In this definition, <Eng>"to make"</Eng> always means <Eng>"to create"</Eng>
-                                            , <B>never</B> <Eng>"to cause"</Eng>. English uses the word for both
-                                            meanings, but for causation in toki ma you can only use <TM>wa</TM>.
-                                        </td>
-                                    </tr>
+                                    <thead>
+                                        <tr>
+                                            <th>Word/Construction</th>
+                                            <th>Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <TM>on</TM>
+                                                <br />
+                                                <Eng>he/she/it/they</Eng>
+                                            </td>
+                                            <td>
+                                                This third person pronoun is generally only used to refer to{' '}
+                                                <B>animate objects</B>. You wouldn't often use it to refer to a previous
+                                                subject as "it" like you would in English. For that you'd probably use{' '}
+                                                <TM>ni</TM> and <TM>na</TM> for <Eng>this</Eng> and <Eng>that</Eng>.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <TM>[li] pali</TM>
+                                                <br />
+                                                <Eng>to make, to do, to work</Eng>
+                                            </td>
+                                            <td>
+                                                In this definition, <Eng>"to make"</Eng> always means{' '}
+                                                <Eng>"to create"</Eng>, <B>never</B> <Eng>"to cause"</Eng>. English uses
+                                                the word for both meanings, but for causation in toki ma you can only
+                                                use <TM>wa</TM>.
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </Section>
                             <Separator>* * *</Separator>
