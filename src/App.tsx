@@ -3659,7 +3659,7 @@ function App() {
                                                 <br />∛<span style={{ borderTop: '1px solid' }}>125</span>
                                             </td>
                                             <td>
-                                                <TM>[te] li alasa e open tu pi kenta tu ten lima</TM>
+                                                <TM>[te] li alasa e open san pi kenta tu ten lima</TM>
                                                 <Answer>
                                                     literally <Eng>"to find the 3rd origin of 125</Eng>
                                                 </Answer>
@@ -3670,7 +3670,7 @@ function App() {
                                                 ∛<span style={{ borderTop: '1px solid' }}>125</span> = 5
                                             </td>
                                             <td>
-                                                <TM>open tu pi kenta tu ten lima li lima</TM>
+                                                <TM>open san pi kenta tu ten lima li lima</TM>
                                                 <Answer>
                                                     literally <Eng>"3rd origin of 125 is 5"</Eng>
                                                 </Answer>
