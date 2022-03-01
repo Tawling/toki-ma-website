@@ -73,8 +73,8 @@ const extraWords: { [key: string]: WordDef } = {
         base: 'particle',
         word: 'je',
         etymology: '',
-        short: 'relational',
-        particle: 'relational-branching particle (UNOFFICIAL) ',
+        short: '[relational]',
+        particle: 'immediate-relation (UNOFFICIAL) ',
     },
 };
 
