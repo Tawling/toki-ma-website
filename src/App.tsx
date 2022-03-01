@@ -2011,7 +2011,7 @@ function App() {
                                         </TM>
                                         <Answer>
                                             <Eng>
-                                                "<B>Which</B> do you want: fruit, vegetables, or bread?"
+                                                "<B>Which</B> do you want to eat: fruit, vegetables, or bread?"
                                             </Eng>
                                         </Answer>
                                     </Ex>
