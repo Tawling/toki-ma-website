@@ -13,10 +13,10 @@ const Popover = ({
 }) => {
     const scrollSize = useScrollbarSize();
     const ref = useRef(null) as React.MutableRefObject<null | HTMLDivElement>;
+    const wordList = useContext(WordListContext);
     if (!word || !span) {
         return null;
     }
-    const wordList = useContext(WordListContext);
     if (word in wordList.words) {
         const r = span.current?.getBoundingClientRect() ?? { top: 0, bottom: 0, left: 0, right: 0 };
         const rect = {
@@ -62,11 +62,10 @@ const Popover = ({
                 <br />
                 {['noun', 'verb', 'modifier', 'numeral', 'preposition', 'particle']
                     .filter((pos) => wordList.words[word][pos])
-                    .map((pos) => (
-                        <>
-                            <span className="pos">{wordList.labels[pos]}</span>: {wordList.words[word][pos]}
-                            <br />
-                        </>
+                    .map((pos, i) => (
+                        <div>
+                            <span key={i} className="pos">{wordList.labels[pos]}</span>: {wordList.words[word][pos]}
+                        </div>
                     ))}
             </div>
         );
