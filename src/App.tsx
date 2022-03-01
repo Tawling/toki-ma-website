@@ -1956,7 +1956,7 @@ function App() {
                                     </Ex>
                                     <Ex>
                                         <TM>
-                                            si li pilin su <B>seme</B>
+                                            si li pilin (sama) su <B>seme</B>
                                         </TM>
                                         <Answer>
                                             <Eng>
