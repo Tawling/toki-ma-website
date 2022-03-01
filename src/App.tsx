@@ -3618,7 +3618,7 @@ function App() {
                                         <tr>
                                             <td style={{ borderTop: 'none' }}>|-5| = 5</td>
                                             <td>
-                                                <TM>lima ta te li sata su no li lima</TM>
+                                                <TM>lima ta te li sata su no, li lima</TM>
                                                 <Answer>
                                                     literally <Eng>"-5 that is greater than 0 is 5</Eng>
                                                 </Answer>
