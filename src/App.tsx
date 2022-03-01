@@ -93,6 +93,8 @@ const Eng = spanType('eng');
 const Unofficial = divType('unofficial');
 const TODO = divType('todo');
 const Separator = divType('separator');
+const Transliterated = spanType('transliterated');
+const Foreign = spanType('foreign');
 
 function App() {
     const [blur, setBlur] = useState(true);
@@ -644,7 +646,7 @@ function App() {
                                         </Answer>
                                     </Ex>
                                     <Ex>
-                                        <TM>jan Ta li konta e toki ma</TM>
+                                        <TM>jan <Transliterated>Ta</Transliterated> li konta e toki ma</TM>
                                         <Answer>
                                             <Eng>"[the person named] Ta is learning toki ma"</Eng>
                                         </Answer>
@@ -1682,7 +1684,7 @@ function App() {
                                         </Ex>
                                         <Ex>
                                             <TM>
-                                                jan Ken <B>anu</B> jan Susen o pana e mani ki on
+                                                jan <Transliterated>Ken</Transliterated> <B>anu</B> jan <Transliterated>Susen</Transliterated> o pana e mani ki on
                                             </TM>
                                             <Answer>
                                                 <Eng>
@@ -2606,15 +2608,15 @@ function App() {
                                         </Answer>
                                     </Ex>
                                     <Ex>
-                                        <TM>te li toki tuntan pi toki ma, la si o lukin e lipu ni tan jan Ta!</TM>
+                                        <TM>te li toki tuntan pi toki ma, la si o lukin e lipu te jan <Transliterated>Ta</Transliterated> li lika!</TM>
                                         <Answer>
                                             This one is a bit harder to translate into English, but it's roughly{' '}
-                                            <Eng>"On the topic of toki ma grammar, read this guide by jan Ta!"</Eng>
+                                            <Eng>"On the topic of toki ma grammar, read this guide written by by Ta!"</Eng>
                                             <br />
                                             More literally, it's{' '}
                                             <Eng>
                                                 "In the context of speaking toki ma correctly, you should read this
-                                                guide from jan Ta!"
+                                                guide that Ta wrote!"
                                             </Eng>
                                         </Answer>
                                     </Ex>
@@ -3668,30 +3670,30 @@ function App() {
                                     When using external names or words, you have a few options. You may choose to either
                                     use the Latin script spelling of the word or name, or you can transliterate it into
                                     the sounds that toki ma has to offer. So the name <Eng>"Angela"</Eng> could be
-                                    spelled <TM>Angela</TM>, <TM>Ankela</TM>, <TM>Anjela</TM>, etc. Any of these are
+                                    spelled <TM><Foreign>Angela</Foreign></TM>, <TM><Transliterated>Ankela</Transliterated></TM>, <TM><Transliterated>Anjela</Transliterated></TM>, etc. Any of these are
                                     acceptable. If you choose not to transliterate the name into toki ma, there is no
                                     guarantee how someone else may pronounce it based on their native language.
                                 </P>
                                 <P>
                                     Additionally, you can prefix the word or name with the toki ma word for the type of
-                                    thing it is. If you're naming a person, it's common to say <TM>jan Ankela</TM>,
+                                    thing it is. If you're naming a person, it's common to say <TM>jan <Transliterated>Ankela</Transliterated></TM>,
                                     making it clear that this is the name of a <TM>jan</TM>. If you're naming a food,
-                                    you might prefix it with <TM>moku</TM>, such as <TM>moku Topu</TM> for{' '}
+                                    you might prefix it with <TM>moku</TM>, such as <TM>moku <Transliterated>Topu</Transliterated></TM> for{' '}
                                     <Eng>"tofu"</Eng>.
                                 </P>
                                 <P>All of the following examples are valid ways to say New York City:</P>
                                 <Examples>
                                     <Ex>
-                                        <TM>New York City</TM>
+                                        <TM><Foreign>New York City</Foreign></TM>
                                     </Ex>
                                     <Ex>
-                                        <TM>naka New York City</TM>
+                                        <TM>naka <Foreign>New York City</Foreign></TM>
                                     </Ex>
                                     <Ex>
-                                        <TM>Nu Joka Siti</TM>
+                                        <TM><Transliterated>Nu Joka Siti</Transliterated></TM>
                                     </Ex>
                                     <Ex>
-                                        <TM>naka Nu Joka Siti</TM>
+                                        <TM>naka <Transliterated>Nu Joka Siti</Transliterated></TM>
                                     </Ex>
                                 </Examples>
                                 <P>
