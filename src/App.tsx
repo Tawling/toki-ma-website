@@ -3626,7 +3626,7 @@ function App() {
                                                 <br />
                                                 <Unofficial>
                                                     use <TM>nula</TM> instead of <TM>no</TM>
-                                                    <See href="zero">Zero</See>
+                                                    <See href="zero" style={{paddingLeft: 0}}>Zero</See>
                                                 </Unofficial>
                                             </td>
                                         </tr>
