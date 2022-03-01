@@ -3450,7 +3450,8 @@ function App() {
                                 <Title id="negative-numbers">Negative Numbers</Title>
                                 <P>
                                     <B>Negative numbers</B> are stated using <TM>ta pi [number]</TM> meaning{' '}
-                                    <Eng>"reflection of [number]"</Eng> or <Eng>"opposite of [number]"</Eng>.
+                                    <Eng>"reflection of [number]"</Eng> or <Eng>"opposite of [number]"</Eng>, or{' '}
+                                    <TM>[number] ta</TM> for short.
                                 </P>
                                 <Examples>
                                     <Ex>
@@ -3489,7 +3490,7 @@ function App() {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
+                                            <td style={{ borderBottom: 'none' }}>
                                                 Addition
                                                 <br />2 + 3
                                             </td>
@@ -3508,15 +3509,19 @@ function App() {
                                                 <Answer>
                                                     literally <Eng>"to combine 2 with 3"</Eng>
                                                 </Answer>
-                                                <br />
-                                                (informal) <TM>tu en san</TM>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{ borderTop: 'none' }}>2 + 3 = 5</td>
+                                            <td>
+                                                <TM>tu en san li lima</TM>
                                                 <Answer>
-                                                    literally <Eng>"2 and 3"</Eng>
+                                                    literally <Eng>"2 and 3 is 5"</Eng>
                                                 </Answer>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
+                                            <td style={{ borderBottom: 'none' }}>
                                                 Subtraction
                                                 <br />7 - 4
                                             </td>
@@ -3538,7 +3543,16 @@ function App() {
                                             </td>
                                         </tr>
                                         <tr>
+                                            <td style={{ borderTop: 'none' }}>7 - 4 = 3</td>
                                             <td>
+                                                <TM>sepen en po ta li san</TM>
+                                                <Answer>
+                                                    literally <Eng>"7 and -4 is 3"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{ borderBottom: 'none' }}>
                                                 Multiplication
                                                 <br />2 * 5
                                             </td>
@@ -3550,35 +3564,72 @@ function App() {
                                             </td>
                                         </tr>
                                         <tr>
+                                            <td style={{ borderTop: 'none' }}>2 * 5 = 10</td>
                                             <td>
+                                                <TM>lima pi (mute) tu li ten</TM>
+                                                <Answer>
+                                                    literally <Eng>"5 (large amounts) of 2 is 10"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{ borderBottom: 'none' }}>
                                                 Division
                                                 <br />9 / 4
                                             </td>
                                             <td>
                                                 <TM>[te] li kipisi ki newen pelu po</TM>
                                                 <Answer>
-                                                    literally <Eng>"to cut 9 using 4</Eng>
+                                                    literally <Eng>"to cut 9 using 4"</Eng>
                                                 </Answer>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td className="unofficial">
+                                            <td style={{ borderTop: 'none' }}>9 / 4 = 2.25</td>
+                                            <td>
+                                                <TM>po kipisi (pi) newen li tu suti tu lima</TM>
+                                                <Answer>
+                                                    literally <Eng>"4 splits (of) 9 is 2.25"</Eng>
+                                                </Answer>
+                                                <br />
+                                                <TM>newen osa pi po li tu suti tu lima</TM>
+                                                <Answer>
+                                                    stating 9/4 as a <B>fraction</B> directly
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{ borderBottom: 'none' }}>
                                                 Absolute Value
                                                 <br />
                                                 |-5|
                                             </td>
-                                            <td className="unofficial">
-                                                <TM>[te] li sata wa ki ta pi lima su nula</TM>
+                                            <td>
+                                                <TM>[te] li sata wa ki ta pi lima su no</TM>
                                                 <Answer>
                                                     literally <Eng>"to make -5 more than 0"</Eng>
                                                 </Answer>
                                                 <br />
-                                                (Unofficial due to use of <TM>nula</TM>, could be substituted with{' '}
-                                                <TM>no</TM>)
+                                                <Unofficial>
+                                                    use <TM>nula</TM> instead of <TM>no</TM>
+                                                </Unofficial>
                                             </td>
                                         </tr>
                                         <tr>
+                                            <td style={{ borderTop: 'none' }}>|-5| = 5</td>
                                             <td>
+                                                <TM>lima ta te li sata su no li lima</TM>
+                                                <Answer>
+                                                    literally <Eng>"-5 that is greater than 0 is 5</Eng>
+                                                </Answer>
+                                                <br />
+                                                <Unofficial>
+                                                    use <TM>nula</TM> instead of <TM>no</TM>
+                                                </Unofficial>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{ borderBottom: 'none' }}>
                                                 Exponentiation
                                                 <br />6<sup>3</sup>
                                             </td>
@@ -3590,14 +3641,36 @@ function App() {
                                             </td>
                                         </tr>
                                         <tr>
+                                            <td style={{ borderTop: 'none' }}>
+                                                6<sup>3</sup> = 216
+                                            </td>
                                             <td>
+                                                <TM>san mute sama pi sesi li tu kenta ten sesi</TM>
+                                                <Answer>
+                                                    literally <Eng>"3 identical bunches of 6 is 216"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{ borderBottom: 'none' }}>
                                                 Nth Root
-                                                <br />∛<span style={{ borderTop: '1px solid' }}>16</span>
+                                                <br />∛<span style={{ borderTop: '1px solid' }}>125</span>
                                             </td>
                                             <td>
                                                 <TM>[te] li alasa e open tu pi kenta tu ten lima</TM>
                                                 <Answer>
                                                     literally <Eng>"to find the 3rd origin of 125</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{ borderTop: 'none' }}>
+                                                ∛<span style={{ borderTop: '1px solid' }}>125</span> = 5
+                                            </td>
+                                            <td>
+                                                <TM>open tu pi kenta tu ten lima li lima</TM>
+                                                <Answer>
+                                                    literally <Eng>"3rd origin of 125 is 5"</Eng>
                                                 </Answer>
                                             </td>
                                         </tr>
