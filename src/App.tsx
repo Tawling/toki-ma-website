@@ -213,8 +213,8 @@ function App() {
                                             </a>
                                         </li>
                                         <li className="unofficial">
-                                            <a href="#lu">
-                                                <TM noclick>lu</TM> - Shallow Grouping
+                                            <a href="#je">
+                                                <TM noclick>je</TM> - Shallow Grouping
                                             </a>
                                         </li>
                                         <li>
@@ -920,25 +920,25 @@ function App() {
                                     </Examples>
                                 </Section>
                                 <Section unofficial>
-                                    <Title id="lu">
-                                        <TM>lu</TM> - Shallow Grouping
+                                    <Title id="je">
+                                        <TM>je</TM> - Shallow Grouping
                                     </Title>
                                     <P>
                                         The grouping of <TM>pi</TM> from left-to-right isn't an issue for the statement{' '}
                                         <TM>tomo pi mama pi mama mi</TM>, as it still translates to a phrase that means{' '}
                                         <Eng>"my grandparent's house"</Eng>, however there are some cases where it can
-                                        cause issues. The variant preposition <TM>lu</TM> can be used to resolve this
+                                        cause issues. The variant preposition <TM>je</TM> can be used to resolve this
                                         problem.
                                     </P>
                                     <P>
-                                        <TM>lu</TM> acts the same as <TM>pi</TM>, except that it is used for{' '}
+                                        <TM>je</TM> acts the same as <TM>pi</TM>, except that it is used for{' '}
                                         <Word>shallow regrouping</Word>. Unlike <TM>pi</TM> which applies to everything
-                                        coming before it, <TM>lu</TM> only applies to <B>the word directly before it</B>
+                                        coming before it, <TM>je</TM> only applies to <B>the word directly before it</B>
                                         .
                                     </P>
                                     <Examples>
                                         <Ex>
-                                            <TM>tomo pi mama lu mama mi</TM>
+                                            <TM>tomo pi mama je mama mi</TM>
                                             <Answer>
                                                 <Eng>"My grandparent's house"</Eng>, grouped as{' '}
                                                 <Eng>"(house of (the parent of my parent))"</Eng>
@@ -950,7 +950,7 @@ function App() {
                                         compound-
                                         <TM>pi</TM> constructions, such as common nouns like <TM>tomo pi moku</TM> for{' '}
                                         <Eng>"restaurant"</Eng> or <TM>into pi pali</TM> for <Eng>"office"</Eng>. In a
-                                        compound situation, it may be easiest to always use <TM>lu</TM> to ensure that
+                                        compound situation, it may be easiest to always use <TM>je</TM> to ensure that
                                         these compound-
                                         <TM>pi</TM> clauses are never mistakenly grouped wrong.
                                     </P>
@@ -1278,6 +1278,7 @@ function App() {
                                     As a noun, <TM>no</TM> means <Eng>"none"</Eng> or <Eng>"nothingness"</Eng>.
                                     Currently this is also used to mean <Eng>"zero"</Eng>, but a specific word for the
                                     number 0 may be added in the future.
+                                    <See href="zero">Zero</See>
                                 </P>
                             </Section>
                             <Section>
@@ -2874,7 +2875,7 @@ function App() {
                                     The preposition <TM>su</TM> means <Eng>"than"</Eng>, <Eng>"as"</Eng>, or{' '}
                                     <Eng>"compared to"</Eng>. This is most often used with <TM>sata</TM> and{' '}
                                     <TM>kata</TM> to create <Word>comparatives</Word>. Comparatives are phrases like{' '}
-                                    <Eng>"bigger than"</Eng>, <Eng>"less cold than"</Eng>, etc., stating relative
+                                    <Eng>"bigger than"</Eng>, <Eng>"less cold than"</Eng>, etc., stating <B>relative</B>{' '}
                                     comparisons between things.
                                 </P>
                                 <Examples>
@@ -2897,19 +2898,23 @@ function App() {
                                     </Ex>
                                 </Examples>
                                 <P>
-                                    Unlike other prepositions in toki ma, <TM>su</TM> can be directly followed by
+                                    Unlike other prepositions in toki ma, <TM>su</TM> can be <B>directly followed</B> by
                                     another preposition in comparative sentences.
                                 </P>
                                 <Examples>
                                     <Ex>
-                                        <TM>mi li pasan kata nen pawo su nen meja</TM>
+                                        <TM>
+                                            mi li pasan kata nen pawo <B>su nen</B> meja
+                                        </TM>
                                         <Answer>
                                             <Eng>"I like dogs less than cats"</Eng>, literally{' '}
                                             <Eng>"I am less happy because of dogs than because of cats"</Eng>
                                         </Answer>
                                     </Ex>
                                     <Ex>
-                                        <TM>mi li tawa pi taka sata ki tomo pi moku kan si su kan mama mi</TM>
+                                        <TM>
+                                            mi li tawa pi taka sata ki tomo pi moku kan si <B>su kan</B> mama mi
+                                        </TM>
                                         <Answer>
                                             <Eng>"I go to the restaurant more often with you than with my parents"</Eng>
                                             , literally{' '}
@@ -3067,6 +3072,26 @@ function App() {
                                     still a very important concept. Until this becomes official, the word <TM>no</TM>{' '}
                                     can be used as a number word to mean <Eng>"zero"</Eng>.
                                 </P>
+                                <P>
+                                    With this change, <TM>nula</TM> would be used for negation in place of <TM>no</TM> to say
+                                    things like <Eng>"without"</Eng> in sentences like:
+                                </P>
+                                <Examples>
+                                    <Ex>
+                                        <TM>
+                                            mi li tawa kan <B>nula pi mama mi</B>
+                                        </TM>
+                                        <Answer>
+                                            <Eng>
+                                                "I go <B>without my parent</B>
+                                            </Eng>
+                                            , literally{' '}
+                                            <Eng>
+                                                "I go with <B>none of my parent</B>"
+                                            </Eng>
+                                        </Answer>
+                                    </Ex>
+                                </Examples>
                             </Section>
                             <Section>
                                 <Title id="cardinals-and-ordinals">Cardinals and Ordinals</Title>

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { createContext, useContext } from 'react';
+import React, { createContext, useContext } from 'react';
 import TMWord from './TMWord';
 
 export const ClickContext = createContext(false);
@@ -30,6 +30,7 @@ const splitElement = (element: React.ReactElement, noclick: boolean, key: { key:
     }
     return element;
 };
+
 
 const TM = ({ id, children, className, style, noclick = false }: Props) => {
     const noclickContext = useContext(ClickContext);
