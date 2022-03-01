@@ -49,9 +49,9 @@ const Answer = ({ id, children, className }: Props) => {
     );
 };
 
-const See = ({ children, href }: { children: React.ReactNode; href: string }) => (
+const See = ({ children, href, style }: { children: React.ReactNode; href: string; style?: object; }) => (
     <ClickContext.Provider value={true}>
-        <a className="see" href={`#${href}`}>
+        <a className="see" href={`#${href}`} style={style}>
             [See section on <span>{children}</span> for more]
         </a>
     </ClickContext.Provider>
@@ -3612,6 +3612,7 @@ function App() {
                                                 <br />
                                                 <Unofficial>
                                                     use <TM>nula</TM> instead of <TM>no</TM>
+                                                    <See href="zero" style={{paddingLeft: 0}}>Zero</See>
                                                 </Unofficial>
                                             </td>
                                         </tr>
@@ -3625,6 +3626,7 @@ function App() {
                                                 <br />
                                                 <Unofficial>
                                                     use <TM>nula</TM> instead of <TM>no</TM>
+                                                    <See href="zero">Zero</See>
                                                 </Unofficial>
                                             </td>
                                         </tr>
