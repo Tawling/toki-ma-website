@@ -1861,6 +1861,9 @@ function App() {
                                                 "I <B>also</B> go to the <B>restaurant</B>"
                                             </Eng>
                                             , as well as all the other places I go...
+                                            <br />
+                                            The second <TM>pi</TM> is required here because <TM>tomo pi moku pin</TM>{' '}
+                                            would mean <Eng>"house of also-food"</Eng>.
                                         </Answer>
                                     </Ex>
                                 </Examples>
