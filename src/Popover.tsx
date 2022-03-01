@@ -35,7 +35,7 @@ const Popover = ({
         const appWidth = appRect.right - appRect.left;
         const popoverLeft = Math.min(
             rect.left - 10,
-            Math.max(appWidth, document.documentElement.clientWidth) -
+            Math.max(appWidth - 5, document.documentElement.clientWidth - 5) -
                 Math.min(document.documentElement.clientWidth * 0.5, 400),
         );
         return (
