@@ -401,7 +401,6 @@ function App() {
                                 <br />
                                 <br />
                                 You can <B>click on any toki ma word</B> to see a definition of the word if you need it.
-                                {/* TODO: list words */}
                             </div>
                             <Title id="word-derivations" className="major">
                                 Word Derivations
