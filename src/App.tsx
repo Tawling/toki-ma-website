@@ -928,10 +928,35 @@ function App() {
                                         The way <TM>pi</TM>chains isn't an issue for the statement{' '}
                                         <TM>tomo pi mama pi mama mi</TM>, as it still translates to a phrase that
                                         roughly means <Eng>"my grandparent's house"</Eng>, however there are some cases
-                                        where it can cause issues. The variant preposition <TM>je</TM> can be used to
-                                        resolve this problem.
+                                        where it can cause issues.
                                     </P>
+                                    <Examples>
+                                        <Ex>
+                                            <TM>tomo pi moku</TM>
+                                            <Answer>
+                                                <Eng>"restaurant"</Eng>
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>into pi jaki</TM>
+                                            <Answer>
+                                                <Eng>"bathroom"</Eng>
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>into pi jaki pi tomo pi moku</TM>
+                                            <Answer>
+                                                <Eng>"the food-related home bathroom"</Eng>...? That's about the best
+                                                translation possible.
+                                                <br />
+                                                Grouped as <Eng>"(((place of dirtiness) of home) of food)"</Eng>; see
+                                                how <Eng>"food"</Eng> applies to the entire thing, not just the{' '}
+                                                <Eng>"house"</Eng>.
+                                            </Answer>
+                                        </Ex>
+                                    </Examples>
                                     <P>
+                                        The variant preposition <TM>je</TM> can be used to resolve this problem.{' '}
                                         <TM>je</TM> acts the same as <TM>pi</TM>, except that it is used for{' '}
                                         <Word>immediate relationship</Word>. Unlike <TM>pi</TM> which applies to
                                         everything coming before it, <TM>je</TM> only applies to{' '}
@@ -943,6 +968,15 @@ function App() {
                                             <Answer>
                                                 <Eng>"My grandparent's house"</Eng>, grouped as{' '}
                                                 <Eng>"(house of (the parent of my parent))"</Eng>
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>tomo je moku pi walala je mama je mama mi</TM>
+                                            <Answer>
+                                                <Eng>"My great-aunt's restaurant"</Eng>, grouped as{' '}
+                                                <Eng>
+                                                    "((house of food) of (the sibling of (the parent of my parent)))"
+                                                </Eng>
                                             </Answer>
                                         </Ex>
                                         <Ex>
