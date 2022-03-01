@@ -239,6 +239,13 @@ function App() {
                                     </li>
                                     <li>
                                         <a href="#negation">Negation</a>
+                                        <ul>
+                                            <li className="unofficial">
+                                                <a href="#no">
+                                                    <TM noclick>no</TM> Particle
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li>
                                         <a href="#cause-and-effect">Cause and Effect</a>
@@ -1350,6 +1357,83 @@ function App() {
                                     number 0 may be added in the future.
                                     <See href="zero">Zero</See>
                                 </P>
+                                <Section unofficial>
+                                    <Title id="no">
+                                        <TM>no</TM> Particle
+                                    </Title>
+                                    <P>
+                                        With the likely addition of <TM>nula</TM> for <Eng>"zero"</Eng>, <TM>no</TM>{' '}
+                                        will likely turn into a <B>particle</B> rather than a <B>modifier</B>. This
+                                        particle would be used specifically to negate <TM>li</TM>, <TM>o</TM>, and{' '}
+                                        <B>prepositions</B>.
+                                    </P>
+                                    <Examples>
+                                        <Ex>
+                                            <TM>
+                                                mi <B>li no wile</B> te li moku e kili
+                                            </TM>
+                                            <Answer>
+                                                <Eng>
+                                                    "I <B>do not want</B> to eat fruit"
+                                                </Eng>
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>
+                                                mi <B>li no pasan</B>
+                                            </TM>
+                                            <Answer>
+                                                <Eng>
+                                                    "I <B>am not happy</B>"
+                                                </Eng>
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>
+                                                mi li tawa <B>kan no</B> mama mi
+                                            </TM>
+                                            <Answer>
+                                                <Eng>
+                                                    "I go <B>without</B> my parent
+                                                </Eng>
+                                                , literally{' '}
+                                                <Eng>
+                                                    "I go <B>not-with</B> my parent"
+                                                </Eng>
+                                            </Answer>
+                                        </Ex>
+                                    </Examples>
+                                    <P>
+                                        With this, you can no longer use <TM>[thing] no</TM> to talk about none of
+                                        something, instead you must use <TM>nula [thing]</TM> or{' '}
+                                        <TM>nula pi [thing]</TM>, meaning <Eng>"none of [something]"</Eng>
+                                    </P>
+                                    <P>
+                                        Similar to shortenings like <TM>e te li</TM> becoming <TM>te</TM>, the
+                                        construction <TM>li no</TM> can be shortened to just <TM>no</TM>. If <TM>o</TM>{' '}
+                                        is used instead of <TM>li</TM>, however, this cannot be done.
+                                    </P>
+                                    <Examples>
+                                        <Ex>
+                                            <TM>
+                                                mi <B>no wile</B> te li moku e kili
+                                            </TM>
+                                            <Answer>
+                                                <Eng>
+                                                    "I <B>do not want</B> to eat fruit"
+                                                </Eng>
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>
+                                                <B>o no moku</B> e kili
+                                            </TM>
+                                            <Answer>
+                                                <Eng>"Don't eat fruit!"</Eng>
+                                            </Answer>
+                                        </Ex>
+                                    </Examples>
+                                </Section>
                             </Section>
                             <Section>
                                 <Title id="cause-and-effect" className="minor">
