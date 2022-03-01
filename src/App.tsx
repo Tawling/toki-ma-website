@@ -277,6 +277,11 @@ function App() {
                                         </li>
                                     </ul>
                                     <li>
+                                        <a href="#pin">
+                                            <TM noclick>pin</TM> - Also
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="#asking-questions">Asking Questions</a>
                                     </li>
                                 </ul>
@@ -1806,6 +1811,64 @@ function App() {
                                 </Section>
                             </Section>
                             <Separator className="small">* * *</Separator>
+                            <Section>
+                                <Title id="pin">
+                                    <TM>pin</TM> - Also
+                                </Title>
+                                <P>
+                                    The modifier <TM>pin</TM> is used to mean <Eng>"also"</Eng>, <Eng>"as well"</Eng>,{' '}
+                                    <Eng>"too"</Eng>, <Eng>"additionally"</Eng>, etc. In English,<Eng>"also"</Eng> is an
+                                    adverb, used to modify a verb (ex:{' '}
+                                    <Eng>
+                                        "I <B>am also</B> tired"
+                                    </Eng>
+                                    ,{' '}
+                                    <Eng>
+                                        "I <B>also think</B> that"
+                                    </Eng>
+                                    ). In toki ma, however, <TM>pin</TM> can modify nouns to better clarify things.
+                                </P>
+                                <Examples>
+                                    <Ex>
+                                        <TM>
+                                            <B>mi pin</B> li tawa ki tomo pi moku
+                                        </TM>
+                                        <Answer>
+                                            <Eng>
+                                                "<B>I also</B> go to the restaurant"
+                                            </Eng>
+                                            , along with the other people who are going...
+                                        </Answer>
+                                    </Ex>
+                                    <Ex>
+                                        <TM>
+                                            mi li <B>tawa pin</B> ki tomo pi moku
+                                        </TM>
+                                        <Answer>
+                                            <Eng>
+                                                "I <B>also go</B> to the restaurant"
+                                            </Eng>
+                                            , as well as doing other things like review it, pass by it, see it in the
+                                            distance...
+                                        </Answer>
+                                    </Ex>
+                                    <Ex>
+                                        <TM>
+                                            mi <B>pin</B> li tawa ki <B>tomo pi moku</B>
+                                        </TM>
+                                        <Answer>
+                                            <Eng>
+                                                "I <B>also</B> go to the <B>restaurant</B>"
+                                            </Eng>
+                                            , as well as all the other places I go...
+                                        </Answer>
+                                    </Ex>
+                                </Examples>
+                                <P>
+                                    All of these sentences can be said the same way in English, but in toki ma the
+                                    placement of <TM>pin</TM> actually clarifies what you really mean to say.
+                                </P>
+                            </Section>
                             <Section>
                                 <Title id="asking-questions">Asking Questions</Title>
                                 <P>
