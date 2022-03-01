@@ -216,7 +216,7 @@ function App() {
                                         </li>
                                         <li className="unofficial">
                                             <a href="#je">
-                                                <TM noclick>je</TM> - Shallow Grouping
+                                                <TM noclick>je</TM> - Immediate Relation
                                             </a>
                                         </li>
                                         <li>
@@ -922,20 +922,20 @@ function App() {
                                 </Section>
                                 <Section unofficial>
                                     <Title id="je">
-                                        <TM>je</TM> - Shallow Grouping
+                                        <TM>je</TM> - Immediate Relation
                                     </Title>
                                     <P>
-                                        The grouping of <TM>pi</TM> from left-to-right isn't an issue for the statement{' '}
-                                        <TM>tomo pi mama pi mama mi</TM>, as it still translates to a phrase that means{' '}
-                                        <Eng>"my grandparent's house"</Eng>, however there are some cases where it can
-                                        cause issues. The variant preposition <TM>je</TM> can be used to resolve this
-                                        problem.
+                                        The way <TM>pi</TM>chains isn't an issue for the statement{' '}
+                                        <TM>tomo pi mama pi mama mi</TM>, as it still translates to a phrase that
+                                        roughly means <Eng>"my grandparent's house"</Eng>, however there are some cases
+                                        where it can cause issues. The variant preposition <TM>je</TM> can be used to
+                                        resolve this problem.
                                     </P>
                                     <P>
                                         <TM>je</TM> acts the same as <TM>pi</TM>, except that it is used for{' '}
-                                        <Word>shallow regrouping</Word>. Unlike <TM>pi</TM> which applies to everything
-                                        coming before it, <TM>je</TM> only applies to <B>the word directly before it</B>
-                                        .
+                                        <Word>immediate relationship</Word>. Unlike <TM>pi</TM> which applies to
+                                        everything coming before it, <TM>je</TM> only applies to{' '}
+                                        <B>the noun directly before it</B>.
                                     </P>
                                     <Examples>
                                         <Ex>
@@ -945,15 +945,50 @@ function App() {
                                                 <Eng>"(house of (the parent of my parent))"</Eng>
                                             </Answer>
                                         </Ex>
+                                        <Ex>
+                                            <TM>into je jaki pi tomo je moku</TM>
+                                            <Answer>
+                                                <Eng>"restaurant bathroom"</Eng>, grouped as{' '}
+                                                <Eng>"((place of dirtiness) of (the house of food))"</Eng>
+                                            </Answer>
+                                        </Ex>
                                     </Examples>
                                     <P>
-                                        This is mostly used when including compound-<TM>pi</TM> noun phrases in larger
-                                        compound-
-                                        <TM>pi</TM> constructions, such as common nouns like <TM>tomo pi moku</TM> for{' '}
-                                        <Eng>"restaurant"</Eng> or <TM>into pi pali</TM> for <Eng>"office"</Eng>. In a
-                                        compound situation, it may be easiest to always use <TM>je</TM> to ensure that
-                                        these compound-
-                                        <TM>pi</TM> clauses are never mistakenly grouped wrong.
+                                        With this addition, <TM>je</TM> becomes the more common preposition to combine
+                                        words that represent a <B>single concept</B>, such as <Eng>"bathroom"</Eng>,{' '}
+                                        <Eng>"restaurant"</Eng>, or <Eng>"grandmother"</Eng>. If all you wanted to say
+                                        was <Eng>"restaurant"</Eng>, you could use either <TM>pi</TM> or <TM>je</TM> to
+                                        get the point across, but <TM>je</TM> would be the preferred term, as it keeps
+                                        the individual relationships <B>closely tied into one single concept</B>. This
+                                        way, when you do end up using <TM>tomo je moku</TM> within a larger phrase, it's
+                                        already in the same form you're used to hearing. This improves understanding and
+                                        speeds up communication.
+                                    </P>
+                                    <P>
+                                        This idea of <TM>je</TM> implying closer relationships may not <B>always</B>{' '}
+                                        hold true in more complex <TM>pi</TM>/<TM>je</TM> phrases, but it may have some
+                                        implications in more isolated cases.
+                                    </P>
+                                    <Examples>
+                                        <Ex>
+                                            <TM>tapa pi moku</TM>
+                                            <Answer>
+                                                <Eng>"container of food"</Eng>, implying a container that is holding
+                                                food
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>tapa je moku</TM>
+                                            <Answer>
+                                                <Eng>"food container"</Eng>, implying a container designed for holding
+                                                food, such as a lunchbox, regardless of whether it has food in it right
+                                                now
+                                            </Answer>
+                                        </Ex>
+                                    </Examples>
+                                    <P>
+                                        These are likely interchangeable in most contexts, but the implication is still
+                                        there in times when it may be more important.
                                     </P>
                                 </Section>
                                 <Section>
