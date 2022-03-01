@@ -1854,7 +1854,7 @@ function App() {
                                     </Ex>
                                     <Ex>
                                         <TM>
-                                            mi <B>pin</B> li tawa ki <B>tomo pi moku</B>
+                                            mi li tawa ki <B>tomo pi moku pi pin</B>
                                         </TM>
                                         <Answer>
                                             <Eng>
