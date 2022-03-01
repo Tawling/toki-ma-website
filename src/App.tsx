@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext, useEffect, useState } from 'react';
+import React, { ReactElement, useContext, useEffect, useRef, useState } from 'react';
 import './App.scss';
 import classNames from 'classnames';
 import TM, { ClickContext } from './TM';
@@ -103,6 +103,8 @@ function App() {
 
     const [wordList, setWordList] = useState({ words: {}, labels: {} } as WordList);
 
+    const appRef: React.MutableRefObject<null | HTMLDivElement> = useRef(null);
+
     useEffect(() => {
         fetchWordList().then((list) => setWordList(list));
     }, []);
@@ -115,7 +117,7 @@ function App() {
     });
     return (
         <WordListContext.Provider value={wordList}>
-            <Popover word={popoverWord} span={popoverRef}></Popover>
+            <Popover word={popoverWord} span={popoverRef} app={appRef}></Popover>
             <GetDefContext.Provider
                 value={(word: string, ref: React.MutableRefObject<null | HTMLSpanElement>) => {
                     console.log(word);
@@ -125,7 +127,7 @@ function App() {
             >
                 <UnofficialContext.Provider value={showUnofficial}>
                     <BlurContext.Provider value={blur}>
-                        <div className={classNames('App', { 'no-unofficial': !showUnofficial })}>
+                        <div ref={appRef} className={classNames('App', { 'no-unofficial': !showUnofficial })}>
                             <h1 className="header">Complete Guide to toki ma Grammar</h1>
                             <h2>Written by jan Ta</h2>
                             <P>
@@ -3073,8 +3075,8 @@ function App() {
                                     can be used as a number word to mean <Eng>"zero"</Eng>.
                                 </P>
                                 <P>
-                                    With this change, <TM>nula</TM> would be used for negation in place of <TM>no</TM> to say
-                                    things like <Eng>"without"</Eng> in sentences like:
+                                    With this change, <TM>nula</TM> would be used for negation in place of <TM>no</TM>{' '}
+                                    to say things like <Eng>"without"</Eng> in sentences like:
                                 </P>
                                 <Examples>
                                     <Ex>
@@ -3343,6 +3345,9 @@ function App() {
                                                 <Answer>
                                                     literally <Eng>"to make -5 more than 0"</Eng>
                                                 </Answer>
+                                                <br />
+                                                (Unofficial due to use of <TM>nula</TM>, could be substituted with{' '}
+                                                <TM>no</TM>)
                                             </td>
                                         </tr>
                                         <tr>
