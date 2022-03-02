@@ -49,7 +49,7 @@ const Answer = ({ id, children, className }: Props) => {
     );
 };
 
-const See = ({ children, href, style }: { children: React.ReactNode; href: string; style?: object; }) => (
+const See = ({ children, href, style }: { children: React.ReactNode; href: string; style?: object }) => (
     <ClickContext.Provider value={true}>
         <a className="see" href={`#${href}`} style={style}>
             [See section on <span>{children}</span> for more]
@@ -170,6 +170,8 @@ function App() {
                             <Separator>* * *</Separator>
                             <h2>Table of Contents</h2>
                             <div className="toc">
+                                <a href="#rules-vs-conventions">Rules vs Conventions</a>
+                                <br />
                                 <a href="#word-derivations">Word Derivations</a>
                                 <br />
                                 <ul>
@@ -190,6 +192,9 @@ function App() {
                                         <a href="#li">
                                             <TM noclick>li</TM> - Using Verbs
                                         </a>
+                                    </li>
+                                    <li>
+                                        <a href="#ambiguity">Ambiguity</a>
                                     </li>
                                     <li>
                                         <a href="#parts-of-speech">Parts of Speech</a>
@@ -416,6 +421,30 @@ function App() {
                                 <br />
                                 You can <B>click on any toki ma word</B> to see a definition of the word if you need it.
                             </div>
+                            <Title id="rules-vs-conventions" className="major">
+                                Rules vs Conventions
+                            </Title>
+                            <P>
+                                Any language has <Word>rules</Word> that govern the basic features of the language and
+                                what is considered "correct" or "incorrect". For example, in English you put adjectives{' '}
+                                <B>before</B> nouns. That's just a rule. However, languages also have{' '}
+                                <Word>conventions</Word> which determine what sounds "normal" to say. For example, in
+                                English you would say <Eng>"I am happy about that"</Eng> rather than{' '}
+                                <Eng>"I am happy toward that"</Eng> or <Eng>"I am happy because of that"</Eng>. All of
+                                these sentences are equally correct as far as the rules of English go, but the second
+                                two sound awkward, because, <B>by convention</B>, you wouldn't use <Eng>"towards"</Eng>{' '}
+                                or <Eng>"because of"</Eng> to describe the cause of your happiness.
+                            </P>
+                            <P>
+                                In this guide you will find both <B>rules</B> and <B>conventions</B> to help you
+                                understand how to communicate as effectively as possible. Not everything is a
+                                hard-and-fast rule, and not every <B>implication</B> that is explained in this guide
+                                applies 100% of the time. Context matters a lot in toki ma, so be sure to check out the{' '}
+                                <a href="#conversations">
+                                    <B>Conversational Examples</B>
+                                </a>{' '}
+                                section to see examples of formal and informal speech in different situations.
+                            </P>
                             <Title id="word-derivations" className="major">
                                 Word Derivations
                             </Title>
@@ -3612,7 +3641,9 @@ function App() {
                                                 <br />
                                                 <Unofficial>
                                                     use <TM>nula</TM> instead of <TM>no</TM>
-                                                    <See href="zero" style={{paddingLeft: 0}}>Zero</See>
+                                                    <See href="zero" style={{ paddingLeft: 0 }}>
+                                                        Zero
+                                                    </See>
                                                 </Unofficial>
                                             </td>
                                         </tr>
@@ -3626,7 +3657,9 @@ function App() {
                                                 <br />
                                                 <Unofficial>
                                                     use <TM>nula</TM> instead of <TM>no</TM>
-                                                    <See href="zero" style={{paddingLeft: 0}}>Zero</See>
+                                                    <See href="zero" style={{ paddingLeft: 0 }}>
+                                                        Zero
+                                                    </See>
                                                 </Unofficial>
                                             </td>
                                         </tr>
@@ -3807,6 +3840,8 @@ function App() {
                                 <P>
                                     Which way you choose to phrase a name or foreign word might depend on who you're
                                     talking to and how likely it is that they recognize the word you are saying.
+                                    Including a prefix word is often seen as more formal, but it's not at all uncommon
+                                    in informal speech either.
                                 </P>
                             </Section>
                             <Section>
@@ -3829,6 +3864,10 @@ function App() {
                                     usually goes at the beginning or end of the sentence, acting as something of an
                                     exclamation point. It can be used for both positive and negative emotion. It can
                                     also be repeated as <TM>a a</TM> to show laughter (<Eng>"ha ha"</Eng>).
+                                </P>
+                                <P>
+                                    Both are used in both formal and informal speech. In informal speech, <TM>peko</TM>{' '}
+                                    is often seen as friendliness rather than strictly politeness.
                                 </P>
                             </Section>
                             <Section>
