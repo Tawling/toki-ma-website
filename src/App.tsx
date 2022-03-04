@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import './App.scss';
 import classNames from 'classnames';
 import TM, { ClickContext } from './TM';
@@ -83,7 +83,6 @@ const Title = ({ id, children, className, style }: Props) => (
     </ClickContext.Provider>
 );
 
-// const TM = spanType('tm');
 const Examples = divType('examples');
 const Word = spanType('word');
 const B = spanType('bold');
@@ -1076,10 +1075,11 @@ function App() {
                                     <P>
                                         As we learned in the very beginning, it's easy enough to say something{' '}
                                         <Eng>"is [a base noun]"</Eng> or <Eng>"is [a base modifier]"</Eng> simply by
-                                        using the base noun or base modifier as a verb. However what if you want to say
-                                        something <Eng>"is food"</Eng> or <Eng>"is edible"</Eng> using the other
-                                        derivations of <TM>moku</TM>? You can't say <TM>li moku</TM>, because that means{' '}
-                                        <Eng>"is eating"</Eng>. What do you do?
+                                        using the base noun or base modifier as a verb, but this only works{' '}
+                                        <B>if the word is already a base noun or base modifier</B>. What if it's a base
+                                        verb? How do you say something <Eng>"is food"</Eng> or <Eng>"is edible"</Eng>{' '}
+                                        using the other derivations of <TM>moku</TM>? You can't say <TM>li moku</TM>,
+                                        because that means <Eng>"is eating"</Eng>. What do you do?
                                         <See href="word-derivations">Word Derivations</See>
                                     </P>
                                     <P>
@@ -1110,6 +1110,34 @@ function App() {
                                             </Answer>
                                         </Ex>
                                     </Examples>
+                                    <P>
+                                        This allows you to use the <B>noun</B> or <B>modifier</B> form of{' '}
+                                        <B>any word</B> when saying the phrase <Eng>"is [word]"</Eng>.
+                                    </P>
+                                    <Examples>
+                                        <Ex>
+                                            <TM>li lon [word]</TM>
+                                            <Answer className="no-blur">
+                                                always uses <TM>word</TM> as a <B>modifier</B>, regardless of its base
+                                                part of speech
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>li lon pi [word]</TM>
+                                            <Answer className="no-blur">
+                                                always uses <TM>word</TM> as a <B>noun</B>, regardless of its base part
+                                                of speech
+                                            </Answer>
+                                        </Ex>
+                                    </Examples>
+                                    <P>
+                                        Because nouns derived from base modifiers are the <B>abstract object</B> of the
+                                        modifier, it's uncommon that you'd use <TM>li lon pi [base modifier]</TM> to
+                                        talk about a base modifier as a noun in most cases. You'd much more likely say{' '}
+                                        <TM>ni li suli</TM>, <Eng>"this is large"</Eng>, than you'd say{' '}
+                                        <TM>ni li lon pi suli</TM>, <Eng>"this is largeness"</Eng>. In general this is
+                                        most useful for using <B>base verbs</B> in their noun or modifier forms.
+                                    </P>
                                 </Section>
                             </Section>
                             <Separator>* * *</Separator>
