@@ -1,5 +1,4 @@
-import { useContext, useEffect, useRef } from 'react';
-import useScrollbarSize from 'react-scrollbar-size';
+import { useContext, useRef } from 'react';
 import { WordListContext } from './words';
 
 const Popover = ({
@@ -11,7 +10,6 @@ const Popover = ({
     span: null | React.MutableRefObject<null | HTMLSpanElement>;
     app: null | React.MutableRefObject<null | HTMLDivElement>;
 }) => {
-    const scrollSize = useScrollbarSize();
     const ref = useRef(null) as React.MutableRefObject<null | HTMLDivElement>;
     const wordList = useContext(WordListContext);
     if (!word || !span) {
