@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, { createContext, useContext } from 'react';
 import TMWord from './TMWord';
+import { hasChildren, isIterable } from './utils';
 
 export const ClickContext = createContext(false);
 
@@ -23,29 +24,21 @@ const splitWords = (words: string, noclick: boolean, key: { key: number }) => {
     });
 };
 
-const splitElement = (element: React.ReactElement, noclick: boolean, key: { key: number }) => {
-    const children = element.props.children as string;
-    if (typeof children === 'string' && !(element.props.noclick || noclick)) {
-        element = { ...element, props: { ...element.props, children: splitWords(children, noclick, key) } };
-    }
-    return element as React.ReactElement;
-};
-
 const splitChildren = (children: any, noclick: boolean, key: { key: number }): React.ReactNode => {
     if (!children) return children;
     if (typeof children === 'string') {
         return splitWords(children, noclick, key);
-    } else if (typeof children === 'object' && 'props' in children) {
-        if ('children' in children.props) {
-            return splitElement(children, noclick, key);
-        } else {
-            return children;
-        }
-    } else if (Array.isArray(children) || Symbol.iterator in children) {
-        return [...children].map((child) => splitChildren(child, noclick, key));
-    } else {
-        return children;
     }
+    if (isIterable(children)) {
+        return [...children].map((child) => splitChildren(child, noclick, key));
+    }
+    if (hasChildren(children)) { // is a ReactNode with children
+        return {
+            ...children,
+            props: { ...children.props, children: splitChildren(children.props.children, noclick, key) },
+        };
+    }
+    return children;
 };
 
 const TM = ({ id, children, className, style, noclick = false }: Props) => {
