@@ -3,7 +3,7 @@ import React, { createContext, useContext } from 'react';
 import TMWord from './TMWord';
 import { hasChildren, isIterable } from './utils';
 
-export const ClickContext = createContext(false);
+export const NoClickContext = createContext(false);
 
 interface Props {
     id?: string;
@@ -42,7 +42,7 @@ const splitChildren = (children: any, noclick: boolean, key: { key: number }): R
 };
 
 const TM = ({ id, children, className, style, noclick = false }: Props) => {
-    const noclickContext = useContext(ClickContext);
+    const noclickContext = useContext(NoClickContext);
     const key = { key: 0 };
     const click = noclick || noclickContext;
     return (

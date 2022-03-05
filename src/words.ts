@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface WordListResponse {
     [language: string]: {
         labels: {
@@ -23,7 +21,7 @@ interface WordListResponse {
     };
 }
 
-interface WordDef {
+export interface WordDef {
     [key: string]: string | undefined;
     emoji: string;
     base: string;
@@ -78,9 +76,7 @@ const extraWords: { [key: string]: WordDef } = {
     },
 };
 
-export const fetchWordList = async () => {
+export const fetchWordList = async (): Promise<WordList> => {
     const wordList = (await (await fetch('https://toki-ma.com/api/words.php')).json()) as WordListResponse;
     return { labels: wordList['English'].labels, words: { ...wordList['English'].words, ...extraWords } };
 };
-
-export const WordListContext = React.createContext({ labels: {}, words: {} } as WordList);

@@ -1,17 +1,18 @@
-import { useContext, useRef } from 'react';
-import { WordListContext } from './words';
+import { useRef } from 'react';
+import { WordList } from './words';
 
 const Popover = ({
     word,
     span,
     app,
+    wordList,
 }: {
     word: string;
     span: null | React.MutableRefObject<null | HTMLSpanElement>;
     app: null | React.MutableRefObject<null | HTMLDivElement>;
+    wordList: WordList,
 }) => {
     const ref = useRef(null) as React.MutableRefObject<null | HTMLDivElement>;
-    const wordList = useContext(WordListContext);
     if (!word || !span) {
         return null;
     }

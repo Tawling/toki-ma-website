@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import './App.scss';
 import classNames from 'classnames';
-import TM, { ClickContext } from './TM';
-import { fetchWordList, WordList, WordListContext } from './words';
+import TM, { NoClickContext } from './TM';
+import { fetchWordList, WordList } from './words';
 import { GetDefContext } from './TMWord';
 import Popover from './Popover';
 
@@ -50,11 +50,11 @@ const Answer = ({ id, children, className }: Props) => {
 };
 
 const See = ({ children, href, style }: { children: React.ReactNode; href: string; style?: object }) => (
-    <ClickContext.Provider value={true}>
+    <NoClickContext.Provider value={true}>
         <a className="see" href={`#${href}`} style={style}>
             [See section on <span>{children}</span> for more]
         </a>
-    </ClickContext.Provider>
+    </NoClickContext.Provider>
 );
 
 const Section = ({
@@ -76,11 +76,11 @@ const Section = ({
 );
 
 const Title = ({ id, children, className, style }: Props) => (
-    <ClickContext.Provider value={true}>
+    <NoClickContext.Provider value={true}>
         <a href={`#${id}`} id={id} style={style} className={classNames('title', className)}>
             {children}
         </a>
-    </ClickContext.Provider>
+    </NoClickContext.Provider>
 );
 
 const Examples = divType('examples');
@@ -117,8 +117,8 @@ function App() {
         });
     });
     return (
-        <WordListContext.Provider value={wordList}>
-            <Popover word={popoverWord} span={popoverRef} app={appRef}></Popover>
+        <>
+            <Popover word={popoverWord} span={popoverRef} app={appRef} wordList={wordList}></Popover>
             <GetDefContext.Provider
                 value={(word: string, ref: React.MutableRefObject<null | HTMLSpanElement>) => {
                     console.log(word);
@@ -3951,7 +3951,7 @@ function App() {
                     </BlurContext.Provider>
                 </UnofficialContext.Provider>
             </GetDefContext.Provider>
-        </WordListContext.Provider>
+        </>
     );
 }
 
