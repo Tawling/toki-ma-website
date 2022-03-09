@@ -3811,7 +3811,12 @@ function App() {
                                                 <br />2 * 5
                                             </td>
                                             <td>
-                                                <TM>[te] li mute wa ki tu kan lima</TM>
+                                                <TM>[te] li pali e tu kulupu pi lima</TM>
+                                                <Answer>
+                                                    literally <Eng>"to create 2 groups of 5"</Eng>
+                                                </Answer>
+                                                <br />
+                                                <TM>[te] li mute  ki tu kan lima</TM>
                                                 <Answer>
                                                     literally <Eng>"to make-many 2 with 5"</Eng>
                                                 </Answer>
@@ -3820,6 +3825,11 @@ function App() {
                                         <tr>
                                             <td style={{ borderTop: 'none' }}>2 * 5 = 10</td>
                                             <td>
+                                                <TM>tu kulupu pi lima li ten</TM>
+                                                <Answer>
+                                                    literally <Eng>"2 groups of 5 is 10"</Eng>
+                                                </Answer>
+                                                <br />
                                                 <TM>lima pi (mute) tu li ten</TM>
                                                 <Answer>
                                                     literally <Eng>"5 (large amounts) of 2 is 10"</Eng>
