@@ -1136,8 +1136,8 @@ function App() {
                                         <Ex>
                                             <TM>li lon pi [word]</TM>
                                             <Answer className="no-blur">
-                                                always uses <TM>[word]</TM> as a <B>noun</B>, regardless of its base part
-                                                of speech
+                                                always uses <TM>[word]</TM> as a <B>noun</B>, regardless of its base
+                                                part of speech
                                             </Answer>
                                         </Ex>
                                     </Examples>
@@ -2040,7 +2040,7 @@ function App() {
                                 </Examples>
                                 <P>
                                     The response to a polar question should usually be either <TM>tuntan</TM>,{' '}
-                                    <TM>isala</TM>, or <TM>no</TM>.
+                                    <TM>lon</TM>, <TM>isala</TM>, or <TM>no</TM>.
                                 </P>
                                 <P>
                                     To ask an <Word>open question</Word>, the special particle <TM>seme</TM> can be
