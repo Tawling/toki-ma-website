@@ -3972,7 +3972,7 @@ function App() {
                                     Use <TM>a</TM> to show <B>emphasis</B> or <B>emotion</B> in your sentences. It
                                     usually goes at the beginning or end of the sentence, acting as something of an
                                     exclamation point. It can be used for both positive and negative emotion. It can
-                                    also be repeated as <TM>a a</TM> to show laughter (<Eng>"ha ha"</Eng>).
+                                    also be repeated (<TM>a a a</TM>) to show laughter (<Eng>"ha ha"</Eng>).
                                 </P>
                                 <P>
                                     Both are used in both formal and informal speech. In informal speech, <TM>peko</TM>{' '}
