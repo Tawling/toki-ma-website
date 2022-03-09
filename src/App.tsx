@@ -730,6 +730,19 @@ function App() {
                                         </Answer>
                                     </Ex>
                                 </Examples>
+                                <P>
+                                    When using <TM>o</TM> followed by simply a specific <B>animate</B> noun, it can be
+                                    used as a <Word>vocative</Word> expression, calling for someone's attention.
+                                </P>
+                                <Examples>
+                                    <Ex>
+                                        <TM>o jan Ken</TM>
+                                        <Answer>
+                                            <Eng>"Hey, [person named] Ken!"</Eng>
+                                            <See href="names-and-foreign-words">Names and Foreign Words</See>
+                                        </Answer>
+                                    </Ex>
+                                </Examples>
                             </Section>
                             <Section>
                                 <Title id="word-order">Word Order: SVO and SOV</Title>
