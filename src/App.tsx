@@ -2023,7 +2023,7 @@ function App() {
                                 </P>
                                 <Examples>
                                     <Ex>
-                                        <TM>si li wile li moku, anu no?</TM>
+                                        <TM>si li wile te li moku, anu no?</TM>
                                         <Answer>
                                             <Eng>"Do you want to eat?"</Eng>
                                         </Answer>
@@ -2044,6 +2044,17 @@ function App() {
                                 <P>
                                     The response to a polar question should usually be either <TM>tuntan</TM>,{' '}
                                     <TM>lon</TM>, <TM>isala</TM>, or <TM>no</TM>.
+                                </P>
+                                <P>
+                                    You would use the word <TM>lon</TM> to mean <Eng>"that is true"</Eng> or{' '}
+                                    <Eng>"that is the case"</Eng>. This would be the closest to answering{' '}
+                                    <Eng>"yes"</Eng> in most cases where the question is really <B>yes-or-no</B>. The
+                                    alternative would be <TM>no</TM> or, rarely, <TM>powe</TM>.
+                                </P>
+                                <P>
+                                    You would use the word <TM>tuntan</TM> to mean <Eng>"that is correct"</Eng>, as a
+                                    response to someone <B>asking for clarification</B> on a topic. The alternative
+                                    would be <TM>no</TM> or <TM>isala</TM>.
                                 </P>
                                 <P>
                                     To ask an <Word>open question</Word>, the special particle <TM>seme</TM> can be
