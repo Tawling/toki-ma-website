@@ -1136,14 +1136,14 @@ function App() {
                                         <Ex>
                                             <TM>li lon [word]</TM>
                                             <Answer className="no-blur">
-                                                always uses <TM>word</TM> as a <B>modifier</B>, regardless of its base
+                                                always uses <TM>[word]</TM> as a <B>modifier</B>, regardless of its base
                                                 part of speech
                                             </Answer>
                                         </Ex>
                                         <Ex>
                                             <TM>li lon pi [word]</TM>
                                             <Answer className="no-blur">
-                                                always uses <TM>word</TM> as a <B>noun</B>, regardless of its base part
+                                                always uses <TM>[word]</TM> as a <B>noun</B>, regardless of its base part
                                                 of speech
                                             </Answer>
                                         </Ex>
