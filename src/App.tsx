@@ -230,6 +230,11 @@ function App() {
                                                 <TM noclick>li lon</TM> - To Exist
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="#li-kama">
+                                                <TM>li kama</TM> - Changing State
+                                            </a>
+                                        </li>
                                     </ul>
                                 </ul>
                                 <a href="#adding-complexity">Adding Complexity</a>
@@ -1151,6 +1156,64 @@ function App() {
                                         <TM>ni li lon pi suli</TM>, <Eng>"this is largeness"</Eng>. In general this is
                                         most useful for using <B>base verbs</B> in their noun or modifier forms.
                                     </P>
+                                </Section>
+                                <Section>
+                                    <Title id="li-kama">
+                                        <TM>li kama</TM> - Changing State
+                                    </Title>
+                                    <P>
+                                        Many words in toki ma, especially modifiers, represent <B>states</B> rather than{' '}
+                                        <B>actions</B>. As seen in the section on{' '}
+                                        <a href="#word-derivations">word derivations</a>, the usual verb derivation of a
+                                        modifier is <Eng>"to be [modifier]"</Eng>, such as <TM>li lape</TM>:{' '}
+                                        <Eng>"to be sleeping"</Eng>. This allows us to talk about{' '}
+                                        <B>whether something is or is not in a certain state</B>, but it doesn't let us
+                                        talk about <B>the act of transitioning into that state</B>. For this we need{' '}
+                                        <TM>kama</TM>.
+                                    </P>
+                                    <Examples>
+                                        <Ex>
+                                            <TM>
+                                                mi <B>li kama lape</B>
+                                            </TM>
+                                            <Answer>
+                                                <Eng>
+                                                    "I <B>fall asleep</B>"
+                                                </Eng>
+                                                , literally{' '}
+                                                <Eng>
+                                                    "I <B>become sleeping</B>"
+                                                </Eng>
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>
+                                                mi <B>li kama konta</B> e na
+                                            </TM>
+                                            <Answer>
+                                                <Eng>
+                                                    "I <B>learn</B> that"
+                                                </Eng>
+                                                , literally{' '}
+                                                <Eng>
+                                                    "I <B>come to understand</B> that"
+                                                </Eng>
+                                            </Answer>
+                                        </Ex>
+                                    </Examples>
+                                    <P>
+                                        If you want to say that something <B>becomes something else</B>, using a noun,
+                                        you can use <TM>kama pi [noun]</TM>.
+                                    </P>
+                                    <Examples>
+                                        <Ex>
+                                            <TM>ni li kama pi kiwen</TM>
+                                            <Answer>
+                                                <Eng>"This turns to stone"</Eng>, literally{' '}
+                                                <Eng>"This becomes of stone"</Eng>
+                                            </Answer>
+                                        </Ex>
+                                    </Examples>
                                 </Section>
                             </Section>
                             <Separator>* * *</Separator>
