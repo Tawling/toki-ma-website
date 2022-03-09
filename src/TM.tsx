@@ -13,8 +13,7 @@ interface Props {
     noclick?: boolean;
 }
 
-const splitWords = (words: string, noclick: boolean, key: { key: number }) => {
-    if (noclick) return words;
+const splitWords = (words: string, key: { key: number }) => {
     const split = words.split(/\b/);
     return split.map((word) => {
         if (/^[a-z]+$/i.test(word)) {
@@ -24,18 +23,19 @@ const splitWords = (words: string, noclick: boolean, key: { key: number }) => {
     });
 };
 
-const splitChildren = (children: any, noclick: boolean, key: { key: number }): React.ReactNode => {
+const splitChildren = (children: any, key: { key: number }): React.ReactNode => {
     if (!children) return children;
     if (typeof children === 'string') {
-        return splitWords(children, noclick, key);
+        return splitWords(children, key);
     }
     if (isIterable(children)) {
-        return [...children].map((child) => splitChildren(child, noclick, key));
+        return [...children].map((child) => splitChildren(child, key));
     }
-    if (hasChildren(children)) { // is a ReactNode with children
+    if (hasChildren(children)) {
+        // is a ReactNode with children
         return {
             ...children,
-            props: { ...children.props, children: splitChildren(children.props.children, noclick, key) },
+            props: { ...children.props, children: splitChildren(children.props.children, key) },
         };
     }
     return children;
@@ -46,9 +46,11 @@ const TM = ({ id, children, className, style, noclick = false }: Props) => {
     const key = { key: 0 };
     const click = noclick || noclickContext;
     return (
-        <span className={classNames('tm', className)} id={id} style={style}>
-            {splitChildren(children, click, key)}
-        </span>
+        <NoClickContext.Provider value={click}>
+            <span className={classNames('tm', className)} id={id} style={style}>
+                {splitChildren(children, key)}
+            </span>
+        </NoClickContext.Provider>
     );
 };
 
