@@ -1945,6 +1945,11 @@ function App() {
                                     All of these sentences can be said the same way in English, but in toki ma the
                                     placement of <TM>pin</TM> actually clarifies what you really mean to say.
                                 </P>
+                                <P>
+                                    It is worth noting that the word <TM>taso</TM> can be used to mean <Eng>only</Eng>.
+                                    In this usage, it can be used in much the same way as <TM>pin</TM>, modifying
+                                    different words to imply slightly different results.
+                                </P>
                             </Section>
                             <Section>
                                 <Title id="asking-questions">Asking Questions</Title>
