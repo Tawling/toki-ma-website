@@ -1,3 +1,5 @@
+import { createContext } from "react";
+
 interface WordListResponse {
     [language: string]: {
         labels: {
@@ -80,3 +82,5 @@ export const fetchWordList = async (): Promise<WordList> => {
     const wordList = (await (await fetch('https://toki-ma.com/api/words.php')).json()) as WordListResponse;
     return { labels: wordList['English'].labels, words: { ...wordList['English'].words, ...extraWords } };
 };
+
+export const WordListContext = createContext({labels: {}, words: {}} as WordList);

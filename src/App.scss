@@ -19,6 +19,8 @@
 
     .tmword {
         cursor: pointer;
+        font-style: italic;
+        font-weight: 500;
     }
 
     ul {
@@ -120,11 +122,10 @@
     }
 
     .tm {
-        font-style: italic;
         background-color: rgb(232, 226, 166);
         border-radius: 0.3em;
         padding: 0 0.2em;
-        font-weight: normal;
+        font-weight: 300;
     }
 
     .eng {

@@ -10,13 +10,13 @@ const Popover = ({
     word: string;
     span: null | React.MutableRefObject<null | HTMLSpanElement>;
     app: null | React.MutableRefObject<null | HTMLDivElement>;
-    wordList: WordList,
+    wordList: WordList;
 }) => {
     const ref = useRef(null) as React.MutableRefObject<null | HTMLDivElement>;
-    if (!word || !span) {
+    if (!word || !span || !wordList) {
         return null;
     }
-    if (word in wordList.words) {
+    if (word?.toLowerCase() in wordList.words) {
         const r = span.current?.getBoundingClientRect() ?? { top: 0, bottom: 0, left: 0, right: 0 };
         const rect = {
             top: r.top + window.scrollY,
@@ -52,18 +52,24 @@ const Popover = ({
                         left: (rect.right - rect.left) / 2 - 5 + (rect.left - popoverLeft),
                     }}
                 ></div>
-                <span className="word-def">{word}</span>
+                <span className="word-def">{wordList.words[word.toLowerCase()].word}</span>
+                {wordList.words[word.toLowerCase()].emoji ? (
+                    <span className="emoji" style={{paddingLeft: '0.5em'}}>{wordList.words[word.toLowerCase()].emoji}</span>
+                ) : null}
                 <br />
                 <span className="base-pos">
-                    (Base Type: {wordList.labels[wordList.words[word].base] || 'Irregular'})
+                    (Base Type: {wordList.labels[wordList.words[word.toLowerCase()].base] || 'Irregular'})
                 </span>
                 <br />
                 <br />
                 {['noun', 'verb', 'modifier', 'numeral', 'preposition', 'particle']
-                    .filter((pos) => wordList.words[word][pos])
+                    .filter((pos) => wordList.words[word.toLowerCase()][pos])
                     .map((pos, i) => (
                         <div>
-                            <span key={i} className="pos">{wordList.labels[pos]}</span>: {wordList.words[word][pos]}
+                            <span key={i} className="pos">
+                                {wordList.labels[pos]}
+                            </span>
+                            : {wordList.words[word.toLowerCase()][pos]}
                         </div>
                     ))}
             </div>
