@@ -2479,7 +2479,7 @@ function App() {
                                         <TM>3 tenpo akile pi osa 18 li sajo</TM>
                                         <Answer>
                                             <Eng>"It is 18:03"</Eng>, literally{' '}
-                                            <Eng>"3 minutes after the 18th hour have passed"</Eng>
+                                            <Eng>"3 minutes after the 18th hour is ongoing"</Eng>
                                         </Answer>
                                     </Ex>
                                 </Examples>
@@ -2595,7 +2595,7 @@ function App() {
                                     <Ex>
                                         <TM>tenpo pimeja pisile la mi li tawa ki tomo pi moku</TM>
                                         <Answer>
-                                            <Eng>"Last night I went to the store"</Eng>
+                                            <Eng>"Last night I went to the restaurant"</Eng>
                                         </Answer>
                                     </Ex>
                                 </Examples>
@@ -2686,14 +2686,12 @@ function App() {
                                         </TM>
                                         <Answer>
                                             This one is a bit harder to translate into English, but it's roughly{' '}
-                                            <Eng>
-                                                "On the topic of toki ma grammar, read this guide written by by Ta!"
-                                            </Eng>
+                                            <Eng>"On the topic of toki ma grammar, read this guide written by Ta!"</Eng>
                                             <br />
                                             More literally, it's{' '}
                                             <Eng>
                                                 "In the context of speaking toki ma correctly, you should read this
-                                                guide that Ta wrote!"
+                                                document that Ta wrote!"
                                             </Eng>
                                         </Answer>
                                     </Ex>
@@ -2784,12 +2782,14 @@ function App() {
                                             pawo li lon <B>an soto pi meja</B>
                                         </TM>
                                         <Answer>
-                                            "The dog is <B>to the left of the cat</B>"
+                                            <Eng>
+                                                "The dog is <B>to the left of the cat</B>"
+                                            </Eng>
                                         </Answer>
                                     </Ex>
                                     <Ex>
                                         <TM>
-                                            mi li lakima sajo mute <B>an akile pi te on li tawa weka pisile</B>
+                                            mi li lakima mute sajo <B>an akile pi te on li tawa weka pisile</B>
                                         </TM>
                                         <Answer>
                                             <Eng>
