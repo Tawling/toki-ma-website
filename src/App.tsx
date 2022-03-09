@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import './App.scss';
 import classNames from 'classnames';
 import TM, { NoClickContext } from './TM';
-import { fetchWordList, WordList } from './words';
+import { fetchWordList, WordList, WordListContext } from './words';
 import { GetDefContext } from './TMWord';
 import Popover from './Popover';
 
@@ -117,7 +117,7 @@ function App() {
         });
     });
     return (
-        <>
+        <WordListContext.Provider value={wordList}>
             <Popover word={popoverWord} span={popoverRef} app={appRef} wordList={wordList}></Popover>
             <GetDefContext.Provider
                 value={(word: string, ref: React.MutableRefObject<null | HTMLSpanElement>) => {
@@ -302,13 +302,6 @@ function App() {
                                     <li>
                                         <a href="#tense-and-aspect">Tense and Aspect</a>
                                     </li>
-                                    <ul>
-                                        <li>
-                                            <a href="#open-pini">
-                                                <TM noclick>open</TM>/<TM noclick>pini</TM> - Starting and Finishing
-                                            </a>
-                                        </li>
-                                    </ul>
                                     <li>
                                         <a href="#units-of-time">Units of Time</a>
                                     </li>
@@ -2198,10 +2191,21 @@ function App() {
                                     <B>
                                         specify <Word>aspect</Word>
                                     </B>
-                                    , you can use one of three modifiers. Let's use the example sentence{' '}
+                                    , you can use one of six modifiers. Let's use the example sentence{' '}
                                     <TM>mi li moku iputu</TM> to see what they are and how they work:
                                 </P>
                                 <Examples>
+                                    <Ex>
+                                        <TM>posi</TM> indications <B>unstarted</B> action, so{' '}
+                                        <TM>mi li moku iputu posi</TM>
+                                        would mean <Eng>"I have yet to eat"</Eng>. In this case, the action of{' '}
+                                        <Eng>eating</Eng> has not started yet.
+                                    </Ex>
+                                    <Ex>
+                                        <TM>open</TM> indicates <B>starting</B> action, so{' '}
+                                        <TM>mi li moku iputu open</TM> would mean <Eng>"I am starting to eat"</Eng>. In
+                                        this case, the action of <Eng>eating</Eng> is currently starting up.
+                                    </Ex>
                                     <Ex>
                                         <TM>sajo</TM> indicates <B>continuous</B> action, so{' '}
                                         <TM>mi li moku iputu sajo</TM> would mean <Eng>"I am eating"</Eng>, spefically
@@ -2209,9 +2213,14 @@ function App() {
                                         action of <Eng>eating</Eng> is still ongoing.
                                     </Ex>
                                     <Ex>
-                                        <TM>pini</TM> indicates <B>completed</B> actions, so{' '}
-                                        <TM>mi li moku iputu pini</TM> would mean <Eng>"I have eaten"</Eng>, speficially
-                                        stating <Eng>"I am currently in a state of having finished eating"</Eng>. In
+                                        <TM>pini</TM> indicates <B>finishing</B> action, so{' '}
+                                        <TM>mi li moku iputu pini</TM> would mean <Eng>"I am finishing eating"</Eng>. In
+                                        this case, the action of <Eng>eating</Eng> is wrapping up.
+                                    </Ex>
+                                    <Ex>
+                                        <TM>mulu</TM> indicates <B>completed</B> actions, so{' '}
+                                        <TM>mi li moku iputu mulu</TM> would mean <Eng>"I have eaten"</Eng>, speficially
+                                        stating <Eng>"I am currently in a state of having completed eating"</Eng>. In
                                         this case, the action of <Eng>eating</Eng> has now stopped.
                                     </Ex>
                                     <Ex>
@@ -2240,24 +2249,82 @@ function App() {
                                             <th>
                                                 <TM>
                                                     <B>pisile</B>
-                                                </TM>{' '}
-                                                (<Eng>past</Eng>)
+                                                </TM>
+                                                <br />(<Eng>past</Eng>)
                                             </th>
                                             <th>
                                                 <TM>
                                                     <B>iputu</B>
-                                                </TM>{' '}
-                                                (<Eng>present</Eng>)
+                                                </TM>
+                                                <br />(<Eng>present</Eng>)
                                             </th>
                                             <th>
                                                 <TM>
                                                     <B>akile</B>
-                                                </TM>{' '}
-                                                (<Eng>future</Eng>)
+                                                </TM>
+                                                <br />(<Eng>future</Eng>)
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr>
+                                            <th>
+                                                <TM>
+                                                    <B>posi</B>
+                                                </TM>
+                                                <br />(<Eng>unstarted</Eng>)
+                                            </th>
+                                            <td>
+                                                <TM>mi li moku posi pisile</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"I had yet to eat"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>mi li moku posi iputu</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"I have yet to eat"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>mi li moku posi akile</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"I will have yet to eat"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <TM>
+                                                    <B>open</B>
+                                                </TM>
+                                                <br />(<Eng>starting</Eng>)
+                                            </th>
+                                            <td>
+                                                <TM>mi li moku open pisile</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"I was starting to eat"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>mi li moku open iputu</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"I am starting to eat"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>mi li moku open akile</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"I will be starting to eat"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <th>
                                                 <TM>
@@ -2292,24 +2359,53 @@ function App() {
                                                 <TM>
                                                     <B>pini</B>
                                                 </TM>
-                                                <br />(<Eng>completed</Eng>)
+                                                <br />(<Eng>finishing</Eng>)
                                             </th>
                                             <td>
                                                 <TM>mi li moku pini pisile</TM>
+                                                <br />
                                                 <Answer className="no-spacer">
-                                                    <br />
-                                                    <Eng>"I had eaten"</Eng>
+                                                    <Eng>"I was finishing eating"</Eng>
                                                 </Answer>
                                             </td>
                                             <td>
                                                 <TM>mi li moku pini iputu</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"I am finishing eating"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>mi li moku pini akile</TM>
+                                                <br />
+                                                <Answer className="no-spacer">
+                                                    <Eng>"I will be finishing eating"</Eng>
+                                                </Answer>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <TM>
+                                                    <B>mulu</B>
+                                                </TM>
+                                                <br />(<Eng>completed</Eng>)
+                                            </th>
+                                            <td>
+                                                <TM>mi li moku mulu pisile</TM>
+                                                <Answer className="no-spacer">
+                                                    <br />
+                                                    <Eng>"I ate"</Eng>
+                                                </Answer>
+                                            </td>
+                                            <td>
+                                                <TM>mi li moku mulu iputu</TM>
                                                 <Answer className="no-spacer">
                                                     <br />
                                                     <Eng>"I have eaten"</Eng>
                                                 </Answer>
                                             </td>
                                             <td>
-                                                <TM>mi li moku pini akile</TM>
+                                                <TM>mi li moku mulu akile</TM>
                                                 <Answer className="no-spacer">
                                                     <br />
                                                     <Eng>"I will have eaten"</Eng>
@@ -2348,9 +2444,17 @@ function App() {
                                     </tbody>
                                 </table>
                                 <P>
+                                    The aspect <TM>pini</TM> can also be used to indicate that an action{' '}
+                                    <B>was ongoing but has since stopped</B>, without implying that the action is{' '}
+                                    <B>complete</B> and will not be revisited. For example, if someone knocks on the
+                                    door while you are eating dinner and you get up to answer the door, your eating is{' '}
+                                    <TM>pini</TM>, but not <TM>mulu</TM>, because you may sit back down and continue
+                                    eating.
+                                </P>
+                                <P>
                                     It is possible to use multiple aspect or tense markers at once to suggest even more
-                                    specific verbs. For example, <TM>li moku pini sajo</TM> implies thay you are in the
-                                    process of finishing eating.
+                                    specific verbs. For example, <TM>li moku mulu taka</TM> implies thay you repeatedly
+                                    finish eating your food. Maybe you previously used to leave some on the plate.
                                 </P>
                                 <P>
                                     To reiterate, <B>all of this and more</B> can be often inferred through context
@@ -2358,37 +2462,6 @@ function App() {
                                     are properly understood. Most of the time, people will not use tense and aspect
                                     modifiers when it is clear enough through context, especially in informal speech.
                                 </P>
-                                <Section>
-                                    <Title id="open-pini">
-                                        <TM>open</TM>/<TM>pini</TM> - Starting and Finishing
-                                    </Title>
-                                    <P>
-                                        The aspect modifier <TM>pini</TM> is also used to modify a verb into a
-                                        "finishing" action. Similarly, <TM>open</TM> can be used to create a "starting"
-                                        action. If <TM>li moku</TM> is <Eng>"to eat"</Eng>, then <TM>li moku open</TM>{' '}
-                                        is <Eng>"to start to eat"</Eng>.
-                                    </P>
-                                    <Examples>
-                                        <Ex>
-                                            <TM>mi li moku open e kili</TM>
-                                            <Answer>
-                                                <Eng>"I start eating fruit"</Eng>
-                                            </Answer>
-                                        </Ex>
-                                        <Ex>
-                                            <TM>mi li moku pini e kili</TM>
-                                            <Answer>
-                                                <Eng>"I finish eating fruit"</Eng>
-                                            </Answer>
-                                        </Ex>
-                                    </Examples>
-                                    <P>
-                                        The latter phrase is often interpreted to mean the same thing as{' '}
-                                        <B>completed aspect</B>, even though it's not exactly the same in English.
-                                        Context can clarify further whether the speaker is talking about a{' '}
-                                        <B>completed state</B> or the <B>act of finishing</B> an action.
-                                    </P>
-                                </Section>
                             </Section>
                             <Separator className="small">* * *</Separator>
                             <Section>
@@ -3523,6 +3596,35 @@ function App() {
                                 </P>
                                 <See href="units-of-time">Units of Time</See>
                             </Section>
+                            <Section unofficial>
+                                <Title id="quantities">Quantities</Title>
+                                <P>
+                                    Some non-numerical words are often used as <B>quantities</B>. These include words
+                                    like <TM>mute</TM>, <TM>tote</TM>, and <TM>ali</TM>. Words like <TM>ali</TM> are
+                                    roughly the same if you consider the implications of <B>cardinal</B> or{' '}
+                                    <B>ordinal</B>, both meaning <Eng>"all"</Eng>, but words like <TM>mute</TM> or{' '}
+                                    <TM>tote</TM>can imply different things when placed before or after a word.
+                                </P>
+                                <Examples>
+                                    <Ex>
+                                        <TM>jatila mute</TM>
+                                        <Answer>
+                                            <Eng>"a lot of difficuly"</Eng>
+                                        </Answer>
+                                    </Ex>
+                                    <Ex>
+                                        <TM>mute jatila</TM>
+                                        <Answer>
+                                            <Eng>"many difficulties"</Eng>
+                                        </Answer>
+                                    </Ex>
+                                </Examples>
+                                <P>
+                                    This is only relevant when the noun being modified can be interpreted as either a{' '}
+                                    <B>countable</B> or <B>non-countable</B> thing. Otherwise, it's essentially the same
+                                    either way.
+                                </P>
+                            </Section>
                             <Section>
                                 <Title id="fractions-decimals-and-percents">Fractions, Decimals, and Percents</Title>
                                 <P>
@@ -4032,7 +4134,7 @@ function App() {
                     </BlurContext.Provider>
                 </UnofficialContext.Provider>
             </GetDefContext.Provider>
-        </>
+        </WordListContext.Provider>
     );
 }
 
