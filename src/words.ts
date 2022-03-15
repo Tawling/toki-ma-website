@@ -69,7 +69,7 @@ const extraWords: { [key: string]: WordDef } = {
         numeral: 'zero (UNOFFICIAL) ',
     },
     je: {
-        emoji: '🔁',
+        emoji: '🔂',
         base: 'particle',
         word: 'je',
         etymology: '',
