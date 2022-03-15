@@ -3816,7 +3816,7 @@ function App() {
                                                     literally <Eng>"to create 2 groups of 5"</Eng>
                                                 </Answer>
                                                 <br />
-                                                <TM>[te] li mute  ki tu kan lima</TM>
+                                                <TM>[te] li mute ki tu kan lima</TM>
                                                 <Answer>
                                                     literally <Eng>"to make-many 2 with 5"</Eng>
                                                 </Answer>
