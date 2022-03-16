@@ -1111,6 +1111,10 @@ function App() {
                                         <Eng>"to be"</Eng> or <Eng>"to exist"</Eng>. This allows you to use modifiers or{' '}
                                         <TM>pi</TM>-phrases to use modifier or noun forms of any word you please.
                                     </P>
+                                    <P>
+                                        In linguistics, this <Eng>"to be"</Eng> construction is called the{' '}
+                                        <Word>copula</Word>.
+                                    </P>
                                     <Examples>
                                         <Ex>
                                             <TM>ni li lon moku</TM>
