@@ -3272,7 +3272,7 @@ function App() {
                                 </P>
                                 <Examples>
                                     <Ex>
-                                        <TM>mi li tawa ki tomi pi moku kan mama mi</TM>
+                                        <TM>mi li tawa ki tomo pi moku kan mama mi</TM>
                                         <Answer>
                                             <Eng>"I am going to the restaurant with my parents"</Eng>
                                         </Answer>
