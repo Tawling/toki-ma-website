@@ -2191,6 +2191,16 @@ function App() {
                                             </Eng>
                                         </Answer>
                                     </Ex>
+                                    <Ex>
+                                        <TM>
+                                            si li wile e li <B>seme</B> pi kule
+                                        </TM>
+                                        <Answer>
+                                            <Eng>
+                                                "<B>Which</B> color do you want?"
+                                            </Eng>
+                                        </Answer>
+                                    </Ex>
                                 </Examples>
                                 <P>
                                     Simply place <TM>seme</TM> into the sentence where you would normally place the
@@ -2198,7 +2208,8 @@ function App() {
                                 </P>
                                 <P>
                                     Finally, asking an <Word>alternative question</Word>, is kind of a combination of
-                                    the other two:
+                                    the other two. It involves asking <B>which option</B> out of a{' '}
+                                    <B>closed set of options</B>.
                                 </P>
                                 <Examples>
                                     <Ex>
@@ -4201,15 +4212,76 @@ function App() {
                                             </td>
                                             <td>
                                                 In English, the verb <Eng>"to sit"</Eng> on its own just means the
-                                                action of sitting. In order to sit <B>on</B> a seat you need the preposition{' '}
-                                                <Eng>"on"</Eng>.
+                                                action of sitting. In order to sit <B>on</B> a seat you need the
+                                                preposition <Eng>"on"</Eng>.
                                                 <br />
                                                 In toki ma, the idea of <Eng>"on"</Eng> is already built into the verb{' '}
                                                 <TM>[li] siten</TM>, meaning <B>it is transitive</B> by default. You
                                                 would say <TM>mi li siten e siten</TM>: <Eng>"I sit-on a seat"</Eng>,
                                                 using <TM>e</TM> rather than <TM>an</TM>.
                                                 <br />
-                                                When using <TM>[li] siten</TM> without a direct object, it is <B>implicitly transitive</B>. It is implied that you mean <Eng>"to sit on [something]</Eng>, you just don't have to state the something.
+                                                When using <TM>[li] siten</TM> without a direct object, it is{' '}
+                                                <B>implicitly transitive</B>. It is implied that you mean{' '}
+                                                <Eng>"to sit on [something]</Eng>, you just don't have to state the
+                                                something.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <Eng>any</Eng>
+                                            </td>
+                                            <td>
+                                                There is no specific word for <Eng>"any"</Eng> in toki ma, so instead
+                                                the words <TM>wan (pi)</TM> and <TM>osa pi</TM> are used to approximate
+                                                it in different cases.
+                                                <br />
+                                                <Examples>
+                                                    <Ex>
+                                                        <TM>osa pi kulupu si / osa pi mute si</TM>
+                                                        <Answer className="no-blur">
+                                                            <Eng>"any of you"</Eng>, literally{' '}
+                                                            <Eng>"part of the collective of you"</Eng>, implying{' '}
+                                                            <B>any number</B> of nonspecific people
+                                                        </Answer>
+                                                    </Ex>
+                                                    <Ex>
+                                                        <TM>wan si / wan pi kulupu si / wan pi mute si</TM>
+                                                        <Answer className="no-blur">
+                                                            <Eng>
+                                                                "any <B>one</B> of you"
+                                                            </Eng>
+                                                            , implying <B>only one</B> nonspecific person
+                                                        </Answer>
+                                                    </Ex>
+                                                </Examples>
+                                                <Examples>
+                                                    <Ex>
+                                                        <TM>si li wile e seme pi kule</TM>
+                                                        <Answer>
+                                                            <Eng>"Which color do you want?"</Eng>
+                                                        </Answer>
+                                                    </Ex>
+                                                    <Ex>
+                                                        <TM>mi li wile e wan kule</TM>
+                                                        <Answer>
+                                                            <Eng>
+                                                                "I want any <B>color</B>"
+                                                            </Eng>
+                                                            , asking for specifically one
+                                                        </Answer>
+                                                    </Ex>
+                                                    <Ex>
+                                                        <TM>mi li wile e osa pi mute kule</TM>
+                                                        <Answer>
+                                                            <Eng>
+                                                                "I want any <B>colors</B>"
+                                                            </Eng>
+                                                            , asking for any number of colors
+                                                        </Answer>
+                                                    </Ex>
+                                                </Examples>
+                                                Because <TM>kule</TM> can be either singular or plural, both of these
+                                                answers are equally valid. Context would, of course, tell you more.
                                             </td>
                                         </tr>
                                     </tbody>
