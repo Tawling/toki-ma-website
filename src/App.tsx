@@ -1550,6 +1550,10 @@ function App() {
                                                 <Eng>
                                                     "I go <B>not-with</B> my parent"
                                                 </Eng>
+                                                <br />
+                                                This more strongly implies that you are going with different people{' '}
+                                                <B>instead</B>, compared to <TM>mi li tawa kan nula pi mama mi</TM>
+                                                <See href="zero">Zero</See>
                                             </Answer>
                                         </Ex>
                                     </Examples>
@@ -3595,12 +3599,18 @@ function App() {
                                         </TM>
                                         <Answer>
                                             <Eng>
-                                                "I go <B>without my parent</B>
+                                                "I go <B>without my parent</B>"
                                             </Eng>
                                             , literally{' '}
                                             <Eng>
                                                 "I go with <B>none of my parent</B>"
                                             </Eng>
+                                            <br />
+                                            This more strongly implies that you are going alone, compared to{' '}
+                                            <TM>mi li tawa kan no mama mi</TM>
+                                            <See href="no">
+                                                <TM>no</TM> Particle
+                                            </See>
                                         </Answer>
                                     </Ex>
                                 </Examples>
