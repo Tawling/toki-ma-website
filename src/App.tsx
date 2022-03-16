@@ -2193,7 +2193,7 @@ function App() {
                                     </Ex>
                                     <Ex>
                                         <TM>
-                                            si li wile e li <B>seme</B> pi kule
+                                            si li wile e li <B>seme pi</B> kule
                                         </TM>
                                         <Answer>
                                             <Eng>
