@@ -1775,6 +1775,40 @@ function App() {
                                         art, but how much that is a focus of the sentence is changed based on which
                                         sentence structure you choose to use.
                                     </P>
+                                    <P>
+                                        When talking about verbs such as <TM>li intisa</TM>, meaning{' '}
+                                        <Eng>"to wait"</Eng> or <Eng>"to be patient"</Eng>, it's not so clear how one
+                                        might say{' '}
+                                        <Eng>
+                                            "to wait <B>for</B> [something]
+                                        </Eng>
+                                        . For this, <TM>nen</TM> is still used. Think of it like{' '}
+                                        <Eng>"the reason being..."</Eng>.
+                                    </P>
+                                    <Examples>
+                                        <Ex>
+                                            <TM>mi li intisa nen te li lanpan e moku</TM>
+                                            <Answer>
+                                                <Eng>"I am waiting for food"</Eng>, literally{' '}
+                                                <Eng>"I am waiting, the reason being to receive food"</Eng>
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>mi li intisa nen moku</TM>
+                                            <Answer>
+                                                <Eng>"I am waiting for food"</Eng>, literally{' '}
+                                                <Eng>"I am waiting, the reason being food"</Eng>
+                                                <br />
+                                                This is a more informal expression than the previous example
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>o intisa nen mi</TM>
+                                            <Answer>
+                                                <Eng>"Wait for me!"</Eng>
+                                            </Answer>
+                                        </Ex>
+                                    </Examples>
                                 </Section>
                             </Section>
                             <Section>
