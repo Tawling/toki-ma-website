@@ -503,6 +503,15 @@ function App() {
                                     As a <B>noun</B> it means <Eng>"food"</Eng>.<br />
                                     As a <B>modifier</B> it means <Eng>"food-like"</Eng>, or <Eng>"edible"</Eng>.
                                 </P>
+                                <P>
+                                    When used as a modifier, the idea of <Eng>"resembling [the generic object]"</Eng>{' '}
+                                    doesn't necessarily mean resembling in looks. Rather, it requires considering{' '}
+                                    <B>what quality or qualities make that object unique</B> in the context of its base
+                                    verb. For example, the thing that makes food be food-like is that it is able to be
+                                    eaten, regardless of how it looks. Something that is seat-like simply means that it
+                                    can be sat upon (or maybe that it is <B>intended</B> to be sat upon), not that it
+                                    has four legs and a back and looks like the stereotypical idea of a chair.
+                                </P>
                             </Section>
                             <P>
                                 These rules apply to <B>almost every</B> word in toki ma, with only a few irregular
