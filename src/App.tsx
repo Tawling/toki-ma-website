@@ -4189,6 +4189,25 @@ function App() {
                                                 use <TM>wa</TM>.
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td>
+                                                <TM>[li] siten</TM>
+                                                <br />
+                                                <Eng>to sit-on</Eng>
+                                            </td>
+                                            <td>
+                                                In English, the verb <Eng>"to sit"</Eng> on its own just means the
+                                                action of sitting. In order to sit <B>on</B> a seat you need the preposition{' '}
+                                                <Eng>"on"</Eng>.
+                                                <br />
+                                                In toki ma, the idea of <Eng>"on"</Eng> is already built into the verb{' '}
+                                                <TM>[li] siten</TM>, meaning <B>it is transitive</B> by default. You
+                                                would say <TM>mi li siten e siten</TM>: <Eng>"I sit-on a seat"</Eng>,
+                                                using <TM>e</TM> rather than <TM>an</TM>.
+                                                <br />
+                                                When using <TM>[li] siten</TM> without a direct object, it is <B>implicitly transitive</B>. It is implied that you mean <Eng>"to sit on [something]</Eng>, you just don't have to state the something.
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </Section>
