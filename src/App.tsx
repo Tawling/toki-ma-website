@@ -492,7 +492,7 @@ function App() {
                                     When a <B>verb</B> is used as a <B>noun</B>, it becomes the{' '}
                                     <Word>generic object</Word> of the verb: the{' '}
                                     <B>most basic object you would normally do the verb to</B>. For example, the{' '}
-                                    <B>generic object</B> of <Eng>"to sit"</Eng> would be <Eng>"chair"</Eng> or{' '}
+                                    <B>generic object</B> of <Eng>"to sit-on"</Eng> would be <Eng>"chair"</Eng> or{' '}
                                     <Eng>"seat"</Eng>. The <B>generic object</B> of <Eng>"to use"</Eng> would be{' '}
                                     <Eng>"tool"</Eng>. When used as a <B>modifier</B>, it means{' '}
                                     <Eng>"[generic object]-like"</Eng> or <Eng>"resembling [the generic object]"</Eng>.
