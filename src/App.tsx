@@ -5,7 +5,25 @@ import TM, { NoClickContext } from './TM';
 import { fetchWordList, WordList, WordListContext } from './words';
 import { GetDefContext } from './TMWord';
 import Popover from './Popover';
-import { B, BlurContext, Eng, P, Section, Separator, UnofficialContext, Word, Title, Examples, Ex, Answer, See, Transliterated, Foreign, Unofficial, TODO } from './elements';
+import {
+    B,
+    BlurContext,
+    Eng,
+    P,
+    Section,
+    Separator,
+    UnofficialContext,
+    Word,
+    Title,
+    Examples,
+    Ex,
+    Answer,
+    See,
+    Transliterated,
+    Foreign,
+    Unofficial,
+    TODO,
+} from './elements';
 
 function App() {
     const [blur, setBlur] = useState(true);
@@ -1089,8 +1107,12 @@ function App() {
                                         modifier is <Eng>"to be [modifier]"</Eng>, such as <TM>li lape</TM>:{' '}
                                         <Eng>"to be sleeping"</Eng>. This allows us to talk about{' '}
                                         <B>whether something is or is not in a certain state</B>, but it doesn't let us
-                                        talk about <B>the act of transitioning into that state</B>. For this we need{' '}
-                                        <TM>kama</TM>.
+                                        talk about <B>the act of transitioning into that state</B>. For this we need the
+                                        verb <TM>kama</TM>.
+                                    </P>
+                                    <P>
+                                        When using <TM>kama</TM> with a modifier, the modifier can simply modify the
+                                        verb <TM>kama</TM>.
                                     </P>
                                     <Examples>
                                         <Ex>
@@ -1103,38 +1125,46 @@ function App() {
                                                 </Eng>
                                                 , literally{' '}
                                                 <Eng>
-                                                    "I <B>become sleeping</B>"
-                                                </Eng>
-                                            </Answer>
-                                        </Ex>
-                                        <Ex>
-                                            <TM>
-                                                mi <B>li kama konta</B> e na
-                                            </TM>
-                                            <Answer>
-                                                <Eng>
-                                                    "I <B>learn</B> that"
-                                                </Eng>
-                                                , literally{' '}
-                                                <Eng>
-                                                    "I <B>come to understand</B> that"
+                                                    "I <B>become sleeply</B>"
                                                 </Eng>
                                             </Answer>
                                         </Ex>
                                     </Examples>
                                     <P>
                                         If you want to say that something <B>becomes something else</B>, using a noun,
-                                        you can use <TM>kama pi [noun]</TM>.
+                                        you can use <TM>kama e [noun]</TM>.
                                     </P>
                                     <Examples>
                                         <Ex>
-                                            <TM>ni li kama pi kiwen</TM>
+                                            <TM>ni li kama e kiwen</TM>
                                             <Answer>
                                                 <Eng>"This turns to stone"</Eng>, literally{' '}
                                                 <Eng>"This becomes of stone"</Eng>
                                             </Answer>
                                         </Ex>
                                     </Examples>
+                                    <P>
+                                        Lastly, when using it with a verb, you must use a <TM>te</TM> clause.
+                                    </P>
+                                    <Examples>
+                                        <Ex>
+                                            <TM>
+                                                mi <B>li kama e te li konta e na</B>
+                                            </TM>
+                                            <Answer>
+                                                <Eng>
+                                                    "I <B>learn that</B>"
+                                                </Eng>
+                                                , literally{' '}
+                                                <Eng>
+                                                    "I <B>come to understand that</B>"
+                                                </Eng>
+                                            </Answer>
+                                        </Ex>
+                                    </Examples>
+                                    <P>
+                                        How does this magical <TM>te</TM> clause work? Keep reading to find out!
+                                    </P>
                                 </Section>
                             </Section>
                             <Separator>* * *</Separator>
@@ -4071,7 +4101,7 @@ function App() {
                                 <P>
                                     Use <TM>peko</TM> to show <B>humility</B> and <B>politeness</B>. It is used for
                                     phrases like <Eng>"please"</Eng>, <Eng>"excuse me"</Eng>,{' '}
-                                    <Eng>"you're welcome"</Eng>, <Eng>"hello"</Eng>, <Eng>"welcome"</Eng>, and many
+                                    <Eng>"you're welcome"</Eng>, <Eng>"hello"</Eng>, <Eng>"thank you"</Eng>, and many
                                     other polite phrases.
                                 </P>
                                 <P>
