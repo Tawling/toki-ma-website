@@ -49,6 +49,10 @@
             background-color: transparent;
             font-weight: inherit;
         }
+
+        &.unofficial a {
+            color: red;
+        }
     }
 
     .todo {
@@ -69,7 +73,6 @@
         border-radius: 10px;
         padding: 3px;
         &:before {
-            content: 'Unofficial';
             color: red;
             position: relative;
             display: block;
@@ -238,6 +241,30 @@
 
     table.notes-table td:nth-child(2) {
         text-align: left;
+    }
+
+    .toc {
+        > li {
+            list-style-type: none;
+    
+            > a {
+                font-weight: bold;
+            }
+        }
+
+        ul {
+            margin-block-start: 0.3em;
+            margin-block-end: 0.3em;
+            padding-inline-start: 2em;
+        }
+    }
+    
+
+
+    &.English {
+        .unofficial:not(li):before {
+            content: 'Unofficial';
+        }
     }
 }
 

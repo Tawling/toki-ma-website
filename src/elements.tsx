@@ -1,6 +1,6 @@
-import classNames from "classnames";
-import { createContext, useContext, useState } from "react";
-import { NoClickContext } from "./TM";
+import classNames from 'classnames';
+import { createContext, useContext, useState } from 'react';
+import { NoClickContext } from './TM';
 
 export const BlurContext = createContext(true);
 export const UnofficialContext = createContext(true);
@@ -30,14 +30,31 @@ export const divType =
             </div>
         );
 
-export const Answer = ({ id, children, className }: Props) => {
+export const Answer = ({
+    id,
+    children,
+    className,
+    noblur = false,
+    nospacer = false,
+}: {
+    id?: string;
+    children?: React.ReactNode;
+    className?: string | object;
+    style?: object;
+    nospacer?: boolean;
+    noblur?: boolean;
+}) => {
     const [hidden, setHidden] = useState(true);
     const blur = useContext(BlurContext);
     return (
         <span
             id={id}
             onClick={() => setHidden(!hidden)}
-            className={classNames('answer', className, { hidden: blur && hidden })}
+            className={classNames('answer', className, {
+                hidden: blur && hidden,
+                'no-spacer': nospacer,
+                'no-blur': noblur,
+            })}
         >
             <span className="spacer"> - </span>
             {children}
