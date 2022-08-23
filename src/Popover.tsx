@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { WordList } from './words';
 
 const Popover = ({
@@ -13,6 +14,7 @@ const Popover = ({
     wordList: WordList;
 }) => {
     const ref = useRef(null) as React.MutableRefObject<null | HTMLDivElement>;
+    const { t } = useTranslation();
     if (!word || !span || !wordList) {
         return null;
     }
@@ -54,22 +56,23 @@ const Popover = ({
                 ></div>
                 <span className="word-def">{wordList.words[word.toLowerCase()].word}</span>
                 {wordList.words[word.toLowerCase()].emoji ? (
-                    <span className="emoji" style={{paddingLeft: '0.5em'}}>{wordList.words[word.toLowerCase()].emoji}</span>
+                    <span className="emoji" style={{ paddingLeft: '0.5em' }}>
+                        {wordList.words[word.toLowerCase()].emoji}
+                    </span>
                 ) : null}
                 <br />
                 <span className="base-pos">
-                    (Base Type: {wordList.labels[wordList.words[word.toLowerCase()].base] || 'Irregular'})
+                    ({t('Base Part Of Speech')}:{' '}
+                    {wordList.labels[wordList.words[word.toLowerCase()].base] || 'Irregular'})
                 </span>
                 <br />
                 <br />
                 {['noun', 'verb', 'modifier', 'numeral', 'preposition', 'particle']
                     .filter((pos) => wordList.words[word.toLowerCase()][pos])
                     .map((pos, i) => (
-                        <div>
-                            <span key={i} className="pos">
-                                {wordList.labels[pos]}
-                            </span>
-                            : {wordList.words[word.toLowerCase()][pos]}
+                        <div key={i}>
+                            <span className="pos">{wordList.labels[pos]}</span>:{' '}
+                            {wordList.words[word.toLowerCase()][pos]}
                         </div>
                     ))}
             </div>

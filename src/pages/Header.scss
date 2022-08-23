@@ -1,0 +1,58 @@
+.header {
+    background-color: #41476a;
+    width: 100%;
+    position: relative;
+    padding: 0;
+
+    .lang-select {
+        position: absolute;
+        right: 0;
+        padding: 10px;
+        color: white;
+        select {
+            border-radius: 10px;
+            border: 1px solid goldenrod;
+            color: goldenrod;
+            background-color: rgb(59, 59, 93);
+            padding: 2px;
+        }
+    }
+
+    .title-text {
+        font-size: 80px;
+        // outline: 1px solid red;
+        width: max-content;
+        margin: auto;
+        color: goldenrod;
+    }
+
+    .nav-bar {
+        font-size: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        // outline: 1px solid red;
+        color: goldenrod;
+        font-weight: bold;
+        border-top: 1px solid goldenrod;
+        border-bottom: 1px solid goldenrod;
+        .nav-item {
+            color: inherit;
+            padding: 10px 0;
+            flex: 1 1 0px;
+            height: 100%;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            &.current {
+                background-color: rgb(100, 100, 141);
+            }
+
+            &:hover {
+                //text-decoration: underline;
+                background-color: rgb(113, 113, 158);
+            }
+        }
+    }
+}
+

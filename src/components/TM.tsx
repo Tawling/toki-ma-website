@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { createContext, useContext } from 'react';
 import TMWord from './TMWord';
-import { hasChildren, isIterable } from './utils';
+import { hasChildren, isIterable } from '../utils';
 
 export const NoClickContext = createContext(false);
 

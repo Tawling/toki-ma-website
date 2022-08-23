@@ -9,16 +9,12 @@ export interface TOCEntry {
     children?: TOCEntry[];
 }
 
-export const ContentsContext = createContext<[number, (entry: TOCEntry, depth: number) => void, boolean]>([
+export const ContentsContext = createContext<[number, (entry: TOCEntry, depth: number) => void, boolean, React.MutableRefObject<TOCEntry[]> | null]>([
     0,
     (entry: TOCEntry, depth: number) => {},
     false,
+    null
 ]);
-
-export const X = () => {
-    const tocEntries = useState<TOCEntry[]>([])
-
-}
 
 export const Section = ({
     id,
@@ -33,11 +29,11 @@ export const Section = ({
     style?: object;
     unofficial?: boolean;
 }) => {
-    const [depth, updateEntry] = useContext(ContentsContext);
+    const [depth, updateEntry, _ , tocRef] = useContext(ContentsContext);
 
     return (
         <ContentsContext.Provider
-            value={[depth + 1, (entry: TOCEntry, depth: number) => updateEntry(entry, depth), unofficial]}
+            value={[depth + 1, (entry: TOCEntry, depth: number) => updateEntry(entry, depth), unofficial, tocRef]}
         >
             <div id={id} className={classNames('section', className, { unofficial })} style={style}>
                 {children}
@@ -57,10 +53,10 @@ export const Title = ({
     className?: string;
     style?: object;
 }) => {
-    const [depth, updateEntry, unofficial] = useContext(ContentsContext);
+    const [depth, updateEntry, unofficial, tocRef] = useContext(ContentsContext);
     useEffect(() => {
         updateEntry({ id, unofficial, title: children }, depth);
-    }, []);
+    }, [tocRef?.current]);
     return (
         <NoClickContext.Provider value={true}>
             <a href={`#${id}`} id={id} style={style} className={classNames('title', className)}>

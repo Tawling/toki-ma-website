@@ -1,4 +1,5 @@
-import { B, Eng, P, Section, Title } from '../elements';
+import { Section, Title } from '../components/sections';
+import { B, Loc, P } from '../components/elements';
 
 export const contents = [{ id: 'pronunciation-and-syllable-structure', title: 'Pronunciation and Syllable Structure' }];
 
@@ -142,7 +143,7 @@ export const Pronunciation = () => {
                 <P>
                     Every syllable in toki ma must <B>start with a consonant</B>, with one exception: the first syllable
                     in a word may start with just a vowel. There are no <B>vowel clusters</B> in toki ma, such as the{' '}
-                    <Eng>"io"</Eng> in <Eng>"ion"</Eng>, even when they occur in separate syllables like that example.
+                    <Loc>"io"</Loc> in the word <Loc>"ion"</Loc>, even when they occur in separate syllables like that example.
                     Syllables can optionally end with "n", otherwise they simply end with a vowel.
                 </P>
                 <P>

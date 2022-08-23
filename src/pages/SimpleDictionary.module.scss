@@ -1,0 +1,53 @@
+.searchContainer {
+    .searchBox {
+        border-radius: 5px;
+        padding: 3px;
+        width: 300px;
+        position: relative;
+        margin: 5px;
+    }
+}
+
+.simpleDictEntry {
+    padding: 15px;
+
+    .wordHeader {
+        font-weight: bold;
+    }
+    .basePOS {
+        font-style: italic;
+        padding-inline-start: 0.5em;
+    }
+    .etymology {
+        font-weight: 100;
+        padding-inline-start: 0.5em;
+    }
+
+    .posContainer {
+        padding-block-start: 0.2em;
+        padding-inline-start: 1.3em;
+        .pos {
+            .posLabel {
+                text-decoration: underline;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.tmWordList {
+    select {
+        padding: 5px 0px;
+        font-size: 1em;
+        width: 200px;
+        option {
+            padding: 1px 10px;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .tmWordList {
+        float: right;
+    }
+}

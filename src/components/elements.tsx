@@ -1,9 +1,7 @@
 import classNames from 'classnames';
 import { createContext, useContext, useState } from 'react';
+import { BlurContext } from '../contexts';
 import { NoClickContext } from './TM';
-
-export const BlurContext = createContext(true);
-export const UnofficialContext = createContext(true);
 
 interface Props {
     id?: string;
@@ -70,38 +68,12 @@ export const See = ({ children, href, style }: { children: React.ReactNode; href
     </NoClickContext.Provider>
 );
 
-export const Section = ({
-    id,
-    children,
-    className,
-    style,
-    unofficial = false,
-}: {
-    id?: string;
-    children?: React.ReactNode;
-    className?: string | object;
-    style?: object;
-    unofficial?: boolean;
-}) => (
-    <div id={id} className={classNames('section', className, { unofficial })} style={style}>
-        {children}
-    </div>
-);
-
-export const Title = ({ id, children, className, style }: Props) => (
-    <NoClickContext.Provider value={true}>
-        <a href={`#${id}`} id={id} style={style} className={classNames('title', className)}>
-            {children}
-        </a>
-    </NoClickContext.Provider>
-);
-
 export const Examples = divType('examples');
 export const Word = spanType('word');
 export const B = spanType('bold');
 export const P = divType('expos');
 export const Ex = divType('example');
-export const Eng = spanType('eng');
+export const Loc = spanType('localized');
 export const Unofficial = divType('unofficial');
 export const TODO = divType('todo');
 export const Separator = divType('separator');

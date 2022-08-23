@@ -1,8 +1,6 @@
 import React, { useContext, useRef, createContext } from 'react';
+import { GetDefContext, WordListContext } from '../contexts';
 import { NoClickContext } from './TM';
-import { WordListContext } from './words';
-
-export const GetDefContext = createContext((word: string, ref: React.MutableRefObject<HTMLSpanElement | null>) => {});
 
 const TMWord = ({ children }: { children: string }) => {
     const ref = useRef(null);

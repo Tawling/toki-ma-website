@@ -1,5 +1,3 @@
-import { createContext } from "react";
-
 interface WordListResponse {
     [language: string]: {
         labels: {
@@ -7,6 +5,7 @@ interface WordListResponse {
         };
         words: {
             [word: string]: {
+                [key: string]: string | undefined;
                 emoji: string;
                 base: string;
                 word: string;
@@ -59,28 +58,56 @@ export interface WordList {
     };
 }
 
-const extraWords: { [key: string]: WordDef } = {
-    nula: {
-        emoji: '0️⃣',
-        base: 'numeral',
-        word: 'nula',
-        etymology: '',
-        short: 'zero',
-        numeral: 'zero (UNOFFICIAL) ',
-    },
-    je: {
-        emoji: '🔂',
-        base: 'particle',
-        word: 'je',
-        etymology: '',
-        short: '[relational]',
-        particle: 'immediate-relation (UNOFFICIAL) ',
+const extraWords: { [language: string]: { [key: string]: WordDef } } = {
+    English: {
+        nula: {
+            emoji: '0️⃣',
+            base: 'numeral',
+            word: 'nula',
+            etymology: '',
+            short: 'zero',
+            numeral: 'zero (UNOFFICIAL) ',
+        },
+        je: {
+            emoji: '🔂',
+            base: 'particle',
+            word: 'je',
+            etymology: '',
+            short: '[relational]',
+            particle: 'immediate-relation (UNOFFICIAL) ',
+        },
     },
 };
 
-export const fetchWordList = async (): Promise<WordList> => {
-    const wordList = (await (await fetch('https://toki-ma.com/api/words.php')).json()) as WordListResponse;
-    return { labels: wordList['English'].labels, words: { ...wordList['English'].words, ...extraWords } };
+// for response caching
+let wordListPromise: Promise<WordListResponse> | null = null;
+
+export const fetchWordList = async (language: string): Promise<WordList> => {
+    if (!wordListPromise) {
+        wordListPromise = (await fetch('https://toki-ma.com/api/words.php')).json();
+    }
+    const wordList = await wordListPromise;
+    return {
+        labels: (wordList[language] ?? wordList['English']).labels,
+        words: {
+            ...(wordList[language] ?? wordList['English']).words,
+            ...(extraWords[language] ?? extraWords['English']),
+        },
+    };
 };
 
-export const WordListContext = createContext({labels: {}, words: {}} as WordList);
+export const fetchFullDict = async (): Promise<WordListResponse> => {
+    if (!wordListPromise) {
+        wordListPromise = (await fetch('https://toki-ma.com/api/words.php')).json();
+    }
+    return await wordListPromise;
+};
+
+export const fetchDictLanguages = async (): Promise<string[]> => {
+    if (!wordListPromise) {
+        wordListPromise = (await fetch('https://toki-ma.com/api/words.php')).json();
+    }
+    return Object.keys(await wordListPromise);
+};
+
+export const simplePartsOfSpeech = ['noun', 'verb', 'modifier', 'preposition', 'particle', 'numeral'];
