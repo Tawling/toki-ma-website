@@ -1,6 +1,6 @@
 {
-    "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:react/recommended"],
-    "env": {
+    "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:react/recommended", "plugin:compat/recommended"],
+    "env": { 
         "browser": true,
         "es6": true,
         "node": true
