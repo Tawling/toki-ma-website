@@ -1,5 +1,5 @@
 import React from 'react';
-import { isIterable, isReactElement } from './utils';
+import { hasChildren, isIterable, isReactElement } from './utils';
 describe('utils', () => {
     describe('isIterable', () => {
         it('should return true if passed an object with an iterator ([1,2,3])', () => {
@@ -31,5 +31,21 @@ describe('utils', () => {
         it('should return false if passed an object', () => {
             expect(isReactElement({ key: 'hello world' })).toBe(false);
         });
+    });
+    describe('hasChildren', () => {
+        it('should return true if passed a react element with children', () => {
+            expect(
+                hasChildren(
+                    <>
+                        <h1>This has children</h1>
+                    </>,
+                ),
+            ).toBe(true);
+        });
+        it('should return false if passed a react element with no children', () => {
+            expect(hasChildren(<></>)).toBe(false);
+        });
+        // ? Does this actually need to throw an exception if passed a
+        // ? non-element? Right now it just returns false
     });
 });
