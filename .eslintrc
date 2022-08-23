@@ -1,0 +1,26 @@
+{
+    "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:react/recommended"],
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "singleQuote": true
+            }
+        ],
+        "no-console": "off",
+        "react/prop-types": 0
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
