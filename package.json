@@ -15,8 +15,8 @@
     "react-dom": "^17.0.2",
     "react-i18next": "^11.16.7",
     "react-router-dom": "^6.3.0",
-    "sass": "^1.49.7",
-    "twemoji-react": "^1.0.4"
+    "react-twemoji": "^0.5.0",
+    "sass": "^1.49.7"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
