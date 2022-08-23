@@ -1,3 +1,4 @@
+import React from 'react';
 import classNames from 'classnames';
 import { useRef, useState } from 'react';
 import { TOCEntry } from './sections';

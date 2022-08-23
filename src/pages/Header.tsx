@@ -1,3 +1,4 @@
+import React from 'react';
 import classNames from 'classnames';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

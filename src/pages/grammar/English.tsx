@@ -1,3 +1,4 @@
+import React from 'react';
 import TM from '../../components/TM';
 import {
     B,
@@ -787,7 +788,8 @@ export const English = () => {
                                     <Ex>
                                         <TM>na li lon pi kipisi</TM>
                                         <Answer>
-                                            <Loc>"That is a division"</Loc>, literally <Loc>"that is dividedness"</Loc> referring to the split in the object.
+                                            <Loc>"That is a division"</Loc>, literally <Loc>"that is dividedness"</Loc>{' '}
+                                            referring to the split in the object.
                                         </Answer>
                                     </Ex>
                                 </Examples>
@@ -856,17 +858,17 @@ export const English = () => {
                                             </Answer>
                                         </Ex>
                                         <Ex>
-                                        <TM>na li kipisi</TM>
-                                        <Answer>
-                                            <Loc>"That is divided"</Loc>
-                                        </Answer>
-                                    </Ex>
-                                    <Ex>
-                                        <TM>na li lon pi kipisi</TM>
-                                        <Answer>
-                                            <Loc>"That is a division"</Loc>
-                                        </Answer>
-                                    </Ex>
+                                            <TM>na li kipisi</TM>
+                                            <Answer>
+                                                <Loc>"That is divided"</Loc>
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>na li lon pi kipisi</TM>
+                                            <Answer>
+                                                <Loc>"That is a division"</Loc>
+                                            </Answer>
+                                        </Ex>
                                     </Examples>
                                     <P>
                                         This property of implicit <TM>lon</TM> is also useful when using prepositions.

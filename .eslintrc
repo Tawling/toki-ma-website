@@ -3,7 +3,8 @@
       "eslint:recommended",
       "plugin:prettier/recommended",
       "plugin:react/recommended",
-      "plugin:compat/recommended"
+      "plugin:compat/recommended",
+      "plugin:@typescript-eslint/recommended"
     ],
     "env": {
       "browser": true,
@@ -18,8 +19,16 @@
         }
       ],
       "no-console": "off",
-      "react/prop-types": 0
+      "react/prop-types": 0,
+      "react/no-unescaped-entities": 0,
+      "react/display-name": 1,
+      "compat/compat": 1,
+      "@typescript-eslint/no-unused-vars": 0
     },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
     "parserOptions": {
         "sourceType": "module"
     },

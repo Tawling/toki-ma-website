@@ -1,9 +1,11 @@
-import { createContext } from "react";
-import { WordList } from "./words";
+import { createContext } from 'react';
+import { WordList } from './words';
 
-export const WordListContext = createContext({labels: {}, words: {}} as WordList);
+export const WordListContext = createContext({ labels: {}, words: {} } as WordList);
 
-export const GetDefContext = createContext((word: string, ref: React.MutableRefObject<HTMLSpanElement | null>) => {});
+export const GetDefContext = createContext((word: string, ref: React.MutableRefObject<HTMLSpanElement | null>) => {
+    // ? TODO fill this out
+});
 
 export const BlurContext = createContext(true);
 

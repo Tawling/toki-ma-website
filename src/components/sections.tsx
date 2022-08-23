@@ -1,3 +1,4 @@
+import React from 'react';
 import classNames from 'classnames';
 import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
 import { NoClickContext } from './TM';
@@ -9,11 +10,15 @@ export interface TOCEntry {
     children?: TOCEntry[];
 }
 
-export const ContentsContext = createContext<[number, (entry: TOCEntry, depth: number) => void, boolean, React.MutableRefObject<TOCEntry[]> | null]>([
+export const ContentsContext = createContext<
+    [number, (entry: TOCEntry, depth: number) => void, boolean, React.MutableRefObject<TOCEntry[]> | null]
+>([
     0,
-    (entry: TOCEntry, depth: number) => {},
+    (entry: TOCEntry, depth: number) => {
+        // ? Fill this out?
+    },
     false,
-    null
+    null,
 ]);
 
 export const Section = ({
@@ -29,7 +34,7 @@ export const Section = ({
     style?: object;
     unofficial?: boolean;
 }) => {
-    const [depth, updateEntry, _ , tocRef] = useContext(ContentsContext);
+    const [depth, updateEntry, _, tocRef] = useContext(ContentsContext);
 
     return (
         <ContentsContext.Provider
