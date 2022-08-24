@@ -1,3 +1,4 @@
+import React from 'react';
 import { P } from '../components/elements';
 import { Section, Title } from '../components/sections';
 
