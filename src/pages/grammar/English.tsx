@@ -16,7 +16,7 @@ import {
 } from '../../components/elements';
 import { ContentsContext, Section, Title } from '../../components/sections';
 import { useTableOfContents } from '../../components/TableOfContents';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { BlurContext, UnofficialContext } from '../../contexts';
 import classNames from 'classnames';
 
@@ -787,7 +787,8 @@ export const English = () => {
                                     <Ex>
                                         <TM>na li lon pi kipisi</TM>
                                         <Answer>
-                                            <Loc>"That is a division"</Loc>, literally <Loc>"that is dividedness"</Loc> referring to the split in the object.
+                                            <Loc>"That is a division"</Loc>, literally <Loc>"that is dividedness"</Loc>{' '}
+                                            referring to the split in the object.
                                         </Answer>
                                     </Ex>
                                 </Examples>
@@ -856,17 +857,17 @@ export const English = () => {
                                             </Answer>
                                         </Ex>
                                         <Ex>
-                                        <TM>na li kipisi</TM>
-                                        <Answer>
-                                            <Loc>"That is divided"</Loc>
-                                        </Answer>
-                                    </Ex>
-                                    <Ex>
-                                        <TM>na li lon pi kipisi</TM>
-                                        <Answer>
-                                            <Loc>"That is a division"</Loc>
-                                        </Answer>
-                                    </Ex>
+                                            <TM>na li kipisi</TM>
+                                            <Answer>
+                                                <Loc>"That is divided"</Loc>
+                                            </Answer>
+                                        </Ex>
+                                        <Ex>
+                                            <TM>na li lon pi kipisi</TM>
+                                            <Answer>
+                                                <Loc>"That is a division"</Loc>
+                                            </Answer>
+                                        </Ex>
                                     </Examples>
                                     <P>
                                         This property of implicit <TM>lon</TM> is also useful when using prepositions.

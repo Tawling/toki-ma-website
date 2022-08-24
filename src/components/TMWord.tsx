@@ -11,10 +11,14 @@ const TMWord = ({ children }: { children: string }) => {
         <span
             ref={ref}
             className={wordList?.words[children.toLowerCase()] ? 'tmword' : ''}
-            onClick={noclick ? undefined : ((e) => {
-                getDef(children, ref);
-                e.stopPropagation();
-            })}
+            onClick={
+                noclick
+                    ? undefined
+                    : (e) => {
+                          getDef(children, ref);
+                          e.stopPropagation();
+                      }
+            }
         >
             {children}
         </span>
