@@ -6,7 +6,7 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:compat/recommended"
     ],
-    "plugins": ["@typescript-eslint", "react"],
+    "plugins": ["@typescript-eslint", "react", "prettier", "compat"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 2021,
