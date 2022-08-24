@@ -1,18 +1,12 @@
+import React from 'react';
 import classNames from 'classnames';
-import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { createSearchParams, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useSearchParams } from 'react-router-dom';
 
 import './Header.scss';
 
-export const useQuery = () => {
-    const { search } = useLocation();
-    return useMemo(() => new URLSearchParams(search), [search]);
-};
-
-const Header = ({ language, setLanguage }: { language: string; setLanguage: (lang: string) => void }) => {
-    const location = useLocation();
-    const navigate = useNavigate();
+const Header = ({ language, onChangeLanguage }: { language: string; onChangeLanguage: (lang: string) => void }) => {
+    const [searchParams, setSearchParams] = useSearchParams();
     const { t } = useTranslation();
     return (
         <div className="header">
@@ -20,13 +14,9 @@ const Header = ({ language, setLanguage }: { language: string; setLanguage: (lan
                 <select
                     value={language}
                     onChange={(e) => {
-                        navigate({
-                            pathname: location.pathname,
-                            search: createSearchParams({
-                                language: e.target.value,
-                            }).toString(),
-                        });
-                        setLanguage(e.target.value);
+                        searchParams.set('language', e.target.value);
+                        setSearchParams(searchParams);
+                        onChangeLanguage(e.target.value);
                     }}
                 >
                     <option value="English">English</option>
