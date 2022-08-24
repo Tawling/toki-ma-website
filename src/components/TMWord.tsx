@@ -1,4 +1,4 @@
-import React, { useContext, useRef, createContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import { GetDefContext, WordListContext } from '../contexts';
 import { NoClickContext } from './TM';
 

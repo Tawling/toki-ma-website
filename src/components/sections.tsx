@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
+import { createContext, ReactNode, useContext, useEffect } from 'react';
 import { NoClickContext } from './TM';
 
 export interface TOCEntry {
