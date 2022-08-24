@@ -15,7 +15,7 @@ import {
     TODO,
 } from '../../components/elements';
 import { ContentsContext, Section, Title } from '../../components/sections';
-import { useTableOfContents } from '../../components/Contents';
+import { useTableOfContents } from '../../components/TableOfContents';
 import { useState } from 'react';
 import { BlurContext, UnofficialContext } from '../../contexts';
 import classNames from 'classnames';
