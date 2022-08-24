@@ -68,13 +68,18 @@ export const SimpleDictionary = () => {
             </div>
             {!toTM && wordList ? (
                 <div className={styles.tmWordList}>
-                    <select size={15}
+                    <select
+                        size={15}
                         onChange={(e) => {
                             setQuery(e.target.value);
                             setExact(true);
                         }}
                     >
-                        {Object.values(wordList?.words).map((def) => <option key={def.word} value={def.word}>{def.emoji} {def.word}</option>)}
+                        {Object.values(wordList?.words).map((def) => (
+                            <option key={def.word} value={def.word}>
+                                {def.emoji} {def.word}
+                            </option>
+                        ))}
                     </select>
                 </div>
             ) : null}
@@ -89,7 +94,12 @@ export const SimpleDictionary = () => {
                 </select>
             </div>
             <div className={styles.searchContainer}>
-                <input type="text" value={query} className={styles.searchBox} onChange={(e) => setQuery(e.target.value)} />
+                <input
+                    type="text"
+                    value={query}
+                    className={styles.searchBox}
+                    onChange={(e) => setQuery(e.target.value)}
+                />
                 {!toTM && (
                     <label>
                         <input

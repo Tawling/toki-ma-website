@@ -9,12 +9,9 @@ export interface TOCEntry {
     children?: TOCEntry[];
 }
 
-export const ContentsContext = createContext<[number, (entry: TOCEntry, depth: number) => void, boolean, React.MutableRefObject<TOCEntry[]> | null]>([
-    0,
-    (entry: TOCEntry, depth: number) => {},
-    false,
-    null
-]);
+export const ContentsContext = createContext<
+    [number, (entry: TOCEntry, depth: number) => void, boolean, React.MutableRefObject<TOCEntry[]> | null]
+>([0, (entry: TOCEntry, depth: number) => {}, false, null]);
 
 export const Section = ({
     id,
@@ -29,7 +26,7 @@ export const Section = ({
     style?: object;
     unofficial?: boolean;
 }) => {
-    const [depth, updateEntry, _ , tocRef] = useContext(ContentsContext);
+    const [depth, updateEntry, _, tocRef] = useContext(ContentsContext);
 
     return (
         <ContentsContext.Provider

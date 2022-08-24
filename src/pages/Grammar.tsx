@@ -1,14 +1,14 @@
-import { useContext } from "react";
-import { LanguageContext } from "../contexts";
-import English from "./grammar/English";
+import { useContext } from 'react';
+import { LanguageContext } from '../contexts';
+import English from './grammar/English';
 
 export const Grammar = () => {
-    const language = useContext(LanguageContext)
+    const language = useContext(LanguageContext);
     switch (language) {
         case 'English':
         default:
-            return <English />
+            return <English />;
     }
-}
+};
 
 export default Grammar;

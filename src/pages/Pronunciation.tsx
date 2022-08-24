@@ -143,8 +143,8 @@ export const Pronunciation = () => {
                 <P>
                     Every syllable in toki ma must <B>start with a consonant</B>, with one exception: the first syllable
                     in a word may start with just a vowel. There are no <B>vowel clusters</B> in toki ma, such as the{' '}
-                    <Loc>"io"</Loc> in the word <Loc>"ion"</Loc>, even when they occur in separate syllables like that example.
-                    Syllables can optionally end with "n", otherwise they simply end with a vowel.
+                    <Loc>"io"</Loc> in the word <Loc>"ion"</Loc>, even when they occur in separate syllables like that
+                    example. Syllables can optionally end with "n", otherwise they simply end with a vowel.
                 </P>
                 <P>
                     Additionally there are <B>logographic</B> representations of toki ma, using a different symbol to

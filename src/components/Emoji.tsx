@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
 
 export function toCodePoint(unicodeSurrogates: string, sep?: string) {
-    var r = [],
+    let r = [],
         c = 0,
         p = 0,
         i = 0;
