@@ -4,7 +4,8 @@
         "plugin:react/recommended",
         "eslint:recommended",
         "plugin:prettier/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:compat/recommended"
     ],
     "plugins": ["@typescript-eslint", "react"],
     "parser": "@typescript-eslint/parser",
@@ -28,6 +29,7 @@
     "rules": {
         "react/no-unescaped-entities": 0,
         "react/display-name": 1,
-        "@typescript-eslint/no-empty-function": 1
+        "@typescript-eslint/no-empty-function": 1,
+        "compat/compat": 1
     }
 }
