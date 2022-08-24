@@ -24,7 +24,7 @@ export const English = () => {
     const [blur, setBlur] = useState(true);
     const [showUnofficial, setUnofficial] = useState(true);
 
-    const [tableOfContents, tocProviderValue, refreshToC] = useTableOfContents();
+    const [tableOfContents, tocProviderValue] = useTableOfContents();
 
     return (
         <UnofficialContext.Provider value={showUnofficial}>
