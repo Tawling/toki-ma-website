@@ -16,7 +16,7 @@ import {
 } from '../../components/elements';
 import { ContentsContext, Section, Title } from '../../components/sections';
 import { useTableOfContents } from '../../components/Contents';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { BlurContext, UnofficialContext } from '../../contexts';
 import classNames from 'classnames';
 

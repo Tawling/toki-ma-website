@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { TwemojiRender } from '../components/Emoji';
 import { LanguageContext } from '../contexts';
@@ -115,7 +115,7 @@ export const SimpleDictionary = () => {
             <div>
                 {!wordList
                     ? t('Loading...')
-                    : results.map((def) => <DictEntry labels={wordList?.labels || {}} word={def} />)}
+                    : results.map((def, index) => <DictEntry key={index} labels={wordList?.labels || {}} word={def} />)}
             </div>
         </div>
     );

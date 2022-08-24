@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useRef, useState } from 'react';
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 
 export function toCodePoint(unicodeSurrogates: string, sep?: string) {
     let r = [],

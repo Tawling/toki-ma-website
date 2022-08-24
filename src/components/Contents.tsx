@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { TOCEntry } from './sections';
 
 const mapEntry = (entry: TOCEntry) => {
