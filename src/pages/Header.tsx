@@ -10,7 +10,7 @@ const Header = ({ language, onChangeLanguage }: { language: string; onChangeLang
     const { t } = useTranslation();
     return (
         <div className="header">
-            <div className="lang-select">
+            <div id="lang-select">
                 <select
                     value={language}
                     onChange={(e) => {
