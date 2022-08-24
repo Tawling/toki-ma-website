@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 
 export function toCodePoint(unicodeSurrogates: string, sep?: string) {
-    let r = [],
-        c = 0,
+    const r = [];
+    let c = 0,
         p = 0,
         i = 0;
     while (i < unicodeSurrogates.length) {
