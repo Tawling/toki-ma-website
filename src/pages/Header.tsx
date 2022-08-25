@@ -26,7 +26,7 @@ const Header = ({ language, onChangeLanguage, availableLanguages = ['English'] }
                     }}
                 >
                     {availableLanguages.map((lang, index) => (
-                        <option key={index} value={lang}>
+                        <option key={index} value={lang} id={`${lang.toLowerCase()}-language-option`}>
                             {lang}
                         </option>
                     ))}
