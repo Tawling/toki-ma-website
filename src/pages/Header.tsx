@@ -5,7 +5,13 @@ import { NavLink, useSearchParams } from 'react-router-dom';
 
 import './Header.scss';
 
-const Header = ({ language, onChangeLanguage }: { language: string; onChangeLanguage: (lang: string) => void }) => {
+export interface Props {
+    availableLanguages?: string[];
+    language: string;
+    onChangeLanguage: (lang: string) => void;
+}
+
+const Header = ({ language, onChangeLanguage, availableLanguages = ['English'] }: Props) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const { t } = useTranslation();
     return (
@@ -19,7 +25,11 @@ const Header = ({ language, onChangeLanguage }: { language: string; onChangeLang
                         onChangeLanguage(e.target.value);
                     }}
                 >
-                    <option value="English">English</option>
+                    {availableLanguages.map((lang, index) => (
+                        <option key={index} value="English">
+                            {lang}
+                        </option>
+                    ))}
                 </select>
             </div>
             <div className="title-text">TOKI MA</div>
