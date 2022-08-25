@@ -34,6 +34,20 @@ npm test
 
 We are working towards adding more tests overall, so any help in this area is much appreciated!
 
+# Running the Linter
+
+To run ESLint, simply run:
+
+```
+npm run lint
+```
+
+You can also attempt to auto-fix linting issues with:
+
+```
+npm run lint-fix
+```
+
 # Building for Production
 
 To build for production, run:
