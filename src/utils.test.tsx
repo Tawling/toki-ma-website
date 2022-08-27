@@ -11,9 +11,16 @@ describe('utils', () => {
         it('should return false if passed a non-iterable argument (1)', () => {
             expect(isIterable(1)).toBe(false);
         });
-        it('should return false if it is passed null', () => {
-            expect(isIterable(null)).toBe(false);
+        it('should return false if it is passed null or undefined', () => {
+			expect(isIterable(null)).toBe(false);
+			expect(isIterable(undefined)).toBe(false);
         });
+		it('should return true when passed the string "test"', () => {
+			expect(isIterable('test')).toBe(true);
+		});
+		it('should return true when passed the string ""', () => {
+			expect(isIterable('')).toBe(true);
+		});
     });
     describe('isReactElement', () => {
         it('should return true if a fragment is passed to it', () => {
@@ -31,6 +38,10 @@ describe('utils', () => {
         it('should return false if passed an object', () => {
             expect(isReactElement({ key: 'hello world' })).toBe(false);
         });
+		it('should return false if passed null or undefined', () => {
+			expect(isReactElement(null)).toBe(false);
+			expect(isReactElement(undefined)).toBe(false);
+		})
     });
     describe('hasChildren', () => {
         it('should return true if passed a react element with children', () => {
