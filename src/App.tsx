@@ -46,7 +46,7 @@ function App() {
                     }}
                 >
                     <div ref={appRef} className={classNames('App', language)}>
-                        <Header language={language} setLanguage={setLanguage} />
+                        <Header language={language} onChangeLanguage={setLanguage} />
                         <Routes>
                             <Route path="/" element={<Introduction />} />
                             <Route path="/dictionary" element={<SimpleDictionary />} />

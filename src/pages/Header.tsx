@@ -1,33 +1,35 @@
+import React from 'react';
 import classNames from 'classnames';
-import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useSearchParams } from 'react-router-dom';
 
 import './Header.scss';
 
-export const useQuery = () => {
-    const { search } = useLocation();
-    return useMemo(() => new URLSearchParams(search), [search]);
-};
+export interface Props {
+    availableLanguages?: string[];
+    language: string;
+    onChangeLanguage: (lang: string) => void;
+}
 
-const Header = ({ language, setLanguage }: { language: string; setLanguage: (lang: string) => void }) => {
-    const location = useLocation();
-    const query = useQuery();
-    const navigate = useNavigate();
+const Header = ({ language, onChangeLanguage, availableLanguages = ['English'] }: Props) => {
+    const [searchParams, setSearchParams] = useSearchParams();
     const { t } = useTranslation();
     return (
         <div className="header">
-            <div className="lang-select">
+            <div id="lang-select">
                 <select
                     value={language}
                     onChange={(e) => {
-                        const url = new URL(location.pathname + location.search);
-                        url.searchParams.set('language', e.target.value);
-                        setLanguage(e.target.value);
-                        navigate(url.toString());
+                        searchParams.set('language', e.target.value);
+                        setSearchParams(searchParams);
+                        onChangeLanguage(e.target.value);
                     }}
                 >
-                    <option value="English">English</option>
+                    {availableLanguages.map((lang, index) => (
+                        <option key={index} value={lang} id={`${lang.toLowerCase()}-language-option`}>
+                            {lang}
+                        </option>
+                    ))}
                 </select>
             </div>
             <div className="title-text">TOKI MA</div>

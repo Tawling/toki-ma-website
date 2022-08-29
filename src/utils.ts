@@ -1,13 +1,12 @@
 export const isIterable = (obj: any) => {
-    // checks for null and undefined
-    if (obj == null) {
+    if (obj === null || obj === undefined) {
         return false;
     }
     return typeof obj[Symbol.iterator] === 'function';
 };
 
 export const isReactElement = (value: any) => {
-    if (value == null) {
+    if (value === null || value === undefined) {
         return false;
     }
     if (typeof value === 'object') {
