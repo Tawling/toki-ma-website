@@ -23,7 +23,7 @@ module.exports = function (plop) {
             {
                 type: 'add',
                 path: 'src/{{ typeToCreate }}s/{{ camelCase name }}/{{ camelCase name }}.tsx',
-                templateFile: 'plop_templates/new-{{ typeToCreate }}.hbs',
+                templateFile: 'plop_templates/new_{{ typeToCreate }}.hbs',
             },
         ],
     });
