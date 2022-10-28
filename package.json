@@ -8,7 +8,8 @@
         "preview": "vite preview",
         "test": "jest --maxWorkers=25%",
         "lint": "eslint .",
-        "lint-fix": "eslint --fix ."
+        "lint-fix": "eslint --fix .",
+        "create": "plop"
     },
     "dependencies": {
         "classnames": "^2.3.1",
