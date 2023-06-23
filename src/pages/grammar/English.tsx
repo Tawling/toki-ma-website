@@ -125,7 +125,7 @@ export const English = () => {
                                 <Loc>"of [the noun]"</Loc> or <Loc>"relating to [the noun]</Loc>.
                             </P>
                             <P>
-                                As a <B>noun</B>, <TM>jan</TM> means <Loc>"person"</Loc>.<br />
+                                As a <B>noun</B>, <TM>nin</TM> means <Loc>"person"</Loc>.<br />
                                 As a <B>verb</B> it means <Loc>"is a person"</Loc> or <Loc>"to be a person"</Loc>.
                                 <br />
                                 As a <B>modifier</B> it means <Loc>"of a person"</Loc>.
@@ -140,7 +140,7 @@ export const English = () => {
                                 also just means <Loc>"to be [the modifier]"</Loc> or <Loc>"is [the modifier]"</Loc>.
                             </P>
                             <P>
-                                As a <B>modifier</B>, <TM>lete</TM> means <Loc>"cold"</Loc>.<br />
+                                As a <B>modifier</B>, <TM>tanu</TM> means <Loc>"cold"</Loc>.<br />
                                 As a <B>noun</B> it means <Loc>"coldness"</Loc>.<br />
                                 As a <B>verb</B> it means <Loc>"is cold"</Loc> or <Loc>"to be cold"</Loc>.
                             </P>
@@ -157,7 +157,7 @@ export const English = () => {
                                 <Loc>"[generic object]-like"</Loc> or <Loc>"resembling [the generic object]"</Loc>.
                             </P>
                             <P>
-                                As a <B>verb</B>, <TM>moku</TM> means <Loc>"to eat"</Loc> or <Loc>"to consume"</Loc>
+                                As a <B>verb</B>, <TM>makan</TM> means <Loc>"to eat"</Loc> or <Loc>"to consume"</Loc>
                                 .<br />
                                 As a <B>noun</B> it means <Loc>"food"</Loc>.<br />
                                 As a <B>modifier</B> it means <Loc>"food-like"</Loc>, or <Loc>"edible"</Loc>.
@@ -182,28 +182,28 @@ export const English = () => {
                             Basic Sentence Structure
                         </Title>
                         <Section>
-                            <Title id="li">
-                                <TM>li</TM> - Using Verbs
+                            <Title id="le">
+                                <TM>le</TM> - Using Verbs
                             </Title>
                             <P>
-                                The most basic particle <TM>li</TM> <B>marks the verb</B> of a sentence. Without it, you
+                                The most basic particle <TM>le</TM> <B>marks the verb</B> of a sentence. Without it, you
                                 could only talk about nouns and adjectives!
                             </P>
                             <Examples>
                                 <Ex>
-                                    <TM>mi li moku</TM>
+                                    <TM>mi le makan</TM>
                                     <Answer>
                                         <Loc>"I am eating"</Loc>
                                     </Answer>
                                 </Ex>
                                 <Ex>
-                                    <TM>si li jan</TM>
+                                    <TM>tu le nin</TM>
                                     <Answer>
                                         <Loc>"You are a person"</Loc>
                                     </Answer>
                                 </Ex>
                                 <Ex>
-                                    <TM>on li lete</TM>
+                                    <TM>ja le tanu</TM>
                                     <Answer>
                                         <Loc>"They are cold"</Loc>
                                     </Answer>
@@ -211,19 +211,19 @@ export const English = () => {
                             </Examples>
                             <P>
                                 It's a bit confusing here just due to how English works, but it's very important not to
-                                get confused thinking <TM>li</TM> means <Loc>"to be"</Loc>. That comes from the verb
-                                forms of the words <TM>moku</TM>, <TM>jan</TM>, and <TM>lete</TM> themselves. The role
-                                of <TM>li</TM> is <B>only</B> to mark that the following word{' '}
+                                get confused thinking <TM>le</TM> means <Loc>"to be"</Loc>. That comes from the verb
+                                forms of the words <TM>makan</TM>, <TM>nin</TM>, and <TM>tanu</TM> themselves. The role
+                                of <TM>le</TM> is <B>only</B> to mark that the following word{' '}
                                 <B>should be interpreted as a verb</B>.
                             </P>
                             <P>
-                                While these translations are valid, it's important to note that <TM>li</TM> alone does
+                                While these translations are valid, it's important to note that <TM>le</TM> alone does
                                 not say anything about the <Word>tense</Word>, meaning <B>past</B> (
                                 <Loc>"I was eating"</Loc>), <B>present</B> (<Loc>"I am eating"</Loc>), or <B>future</B>{' '}
                                 (<Loc>"I will be eating"</Loc>), or about the <Word>aspect</Word>, meaning{' '}
                                 <B>perfective</B> (completed action, <Loc>I ate</Loc>), continuous (ongoing action,{' '}
                                 <Loc>I am eating</Loc>), or repeated (habitual action, <Loc>I eat</Loc>
-                                ). These are all valid translations of the sentence <TM>mi li moku</TM>. Which one is
+                                ). These are all valid translations of the sentence <TM>mi le makan</TM>. Which one is
                                 meant must be inferred through context.
                             </P>
                             <P>
@@ -231,18 +231,18 @@ export const English = () => {
                                 now, example sentences will just assume one for convenience.
                             </P>
                             <P>
-                                When using <TM>li</TM> <B>without a subject</B>, the sentence usually becomes a
+                                When using <TM>le</TM> <B>without a subject</B>, the sentence usually becomes a
                                 statement simply <B>that an action is performed</B>.
                             </P>
                             <Examples>
                                 <Ex>
-                                    <TM>li moku e kili</TM>
+                                    <TM>le moku in kuwosi</TM>
                                     <Answer>
                                         <Loc>"Fruit is eaten"</Loc>
                                     </Answer>
                                 </Ex>
                                 <Ex>
-                                    <TM>li lape</TM>
+                                    <TM>le jamu</TM>
                                     <Answer>
                                         <Loc>"Sleep is had"</Loc>, <Loc>"Sleeping is done"</Loc>
                                     </Answer>
@@ -266,7 +266,7 @@ export const English = () => {
                             <P>
                                 When you read examples in this guide,{' '}
                                 <B>don't worry if you didn't get it exactly the same as the stated translation</B>. It
-                                doesn't mean you were wrong if you read <TM>mi li moku</TM> as <Loc>"I am eating"</Loc>{' '}
+                                doesn't mean you were wrong if you read <TM>mi le makan</TM> as <Loc>"I am eating"</Loc>{' '}
                                 and the translation says <Loc>"I eat"</Loc>. Keep this in mind as you read the rest of
                                 this guide.
                             </P>
@@ -275,16 +275,18 @@ export const English = () => {
                             <Title id="parts-of-speech">Parts of Speech</Title>
                             <P>
                                 We've learned how to derive words in the different parts of speech, but we haven't
-                                learned how to recognize words in different parts of speech. What makes <TM>moku</TM>{' '}
+                                learned how to recognize words in different parts of speech. What makes <TM>makan</TM>{' '}
                                 sometimes mean <Loc>"to eat"</Loc>, sometimes mean <Loc>"food"</Loc> and sometimes mean{' '}
                                 <Loc>"edible"</Loc>? It all has to do with where the word is in the sentence.
                             </P>
                             <P>
-                                You know now that <TM>li</TM> makes the following word a <B>verb</B>. That is the{' '}
-                                <B>only</B> way that a word acts as a verb. When a word appears on its own, it's a{' '}
-                                <B>noun</B>, such as at the beginning of a sentence or after a <B>preposition</B>. A
-                                word following a noun or verb is a <B>modifier</B>. Modifiers can also follow other
-                                modifiers to stack together. We'll talk more about modifiers later.
+                                You have now learned that <TM>le</TM> designates the ensuing word as a <B>verb</B>. While
+                                it's not the <B>only</B> way to mark a word as a verb, it's one of the most common
+                                methods and the one we're focusing on. Typically, a standalone word functions as
+                                a <B>noun</B>, such as when it's placed at the start of a sentence or follows a
+                                <B>preposition</B>. A word that comes after a noun or verb acts as a <B>modifier</B>.
+                                These modifiers can be compounded by following other modifiers. We'll dive deeper into
+                                the concept of modifiers later.
                                 <See href="modifiers">Modifiers</See>
                             </P>
                             <P>
@@ -296,55 +298,55 @@ export const English = () => {
                             </P>
                             <P>
                                 Lastly, there are <B>particles</B>. Particles are words that don't have meaning on their
-                                own, but are used to affect other parts of the sentence. For example, <TM>li</TM> is a
+                                own, but are used to affect other parts of the sentence. For example, <TM>le</TM> is a
                                 particle because it doesn't mean anything on its own, but it affects the next word. Toki
-                                ma uses particles like <TM>li</TM>, <TM>te</TM> and <TM>la</TM> to modify the structure
+                                ma uses particles like <TM>le</TM>, <TM>ta</TM> and <TM>imo</TM> to modify the structure
                                 of sentences in various ways. More on those later, too.
                             </P>
                         </Section>
                         <Section>
-                            <Title id="e">
-                                <TM>e</TM> - Direct Objects
+                            <Title id="in">
+                                <TM>in</TM> - Direct Objects
                             </Title>
                             <P>
                                 Verbs can be <Word>intransitive</Word>, meaning they stand on their own, or{' '}
                                 <Word>transitive</Word>, meaning they act on something known as the{' '}
-                                <Word>direct object</Word>. The preposition <TM>e</TM> <B>marks the direct object</B> in
-                                the same way that <TM>li</TM> marks the verb.
+                                <Word>direct object</Word>. The preposition <TM>in</TM> <B>marks the direct object</B> in
+                                the same way that <TM>le</TM> marks the verb.
                             </P>
                             <Examples>
                                 <Ex>
-                                    <TM>mi li moku e kili</TM>
+                                    <TM>mi le makan in kuwosi</TM>
                                     <Answer>
                                         <Loc>"I am eating fruit"</Loc>
                                     </Answer>
                                 </Ex>
                             </Examples>
                             <P>
-                                The particle <TM>e</TM> marks <TM>kili</TM> as the object of the verb <TM>moku</TM>.
-                                It's important to note that <TM>e</TM> is considered a preposition, not a particle. This
+                                The preposition <TM>in</TM> marks <TM>kuwosi</TM> as the object of the verb <TM>makan</TM>.
+                                It's important to note that <TM>in</TM> is considered a preposition, not a particle. This
                                 is relevant because of word order, which we will discuss in a moment. Here are a few
                                 more examples:
                             </P>
                             <Examples>
                                 <Ex>
-                                    <TM>si li moku e telo</TM>
+                                    <TM>tu le makan in pani</TM>
                                     <Answer>
                                         <Loc>"You are drinking water"</Loc>
                                     </Answer>
                                 </Ex>
                                 <Ex>
-                                    <TM>on li ato e ato</TM>
+                                    <TM>ja le ato in ato</TM>
                                     <Answer>
                                         <Loc>"They are driving a car"</Loc>
                                     </Answer>
                                 </Ex>
                                 <Ex>
                                     <TM>
-                                        jan <Transliterated>Ta</Transliterated> li konta e toki ma
+                                        nin <Transliterated>Ta</Transliterated> li pen in kota sula
                                     </TM>
                                     <Answer>
-                                        <Loc>"[the person named] Ta is learning toki ma"</Loc>
+                                        <Loc>"[the person named] Ta is learning a simple language"</Loc>
                                     </Answer>
                                 </Ex>
                             </Examples>
@@ -354,25 +356,25 @@ export const English = () => {
                                 <TM>o</TM> - Commands and Requests
                             </Title>
                             <P>
-                                The particle <TM>o</TM> works the same way as <TM>li</TM>, marking the verb, except that
+                                The particle <TM>o</TM> works the same way as <TM>le</TM>, marking the verb, except that
                                 it turns the statement into a <B>recommendation</B>, <B>suggestion</B>, or what the
                                 speaker believes <B>should</B> happen.
                             </P>
                             <Examples>
                                 <Ex>
-                                    <TM>on o moku e kili</TM>
+                                    <TM>ja o makan in kuwosi</TM>
                                     <Answer>
                                         <Loc>"They should eat fruit"</Loc>
                                     </Answer>
                                 </Ex>
                                 <Ex>
-                                    <TM>jan o pana e kili ki on</TM>
+                                    <TM>nin o tene in kuwosi ke ja</TM>
                                     <Answer>
                                         <Loc>"Someone should give them fruit"</Loc>
                                     </Answer>
                                 </Ex>
                                 <Ex>
-                                    <TM>mi o moku e kasi...</TM>
+                                    <TM>mi o makan in ukama...</TM>
                                     <Answer>
                                         <Loc>"I should eat a vegetable..."</Loc>
                                     </Answer>
@@ -384,9 +386,9 @@ export const English = () => {
                             </P>
                             <Examples>
                                 <Ex>
-                                    <TM>o moku e kili</TM>
+                                    <TM>o makan in kuwosi</TM>
                                     <Answer>
-                                        <Loc>"(you) Eat fruit!"</Loc> or <Loc>"I wish you would eat fruit"</Loc>
+                                        <Loc>"Eat fruit!"</Loc> or <Loc>"I wish you would eat fruit"</Loc>
                                     </Answer>
                                 </Ex>
                                 <Ex>
@@ -402,7 +404,7 @@ export const English = () => {
                             </P>
                             <Examples>
                                 <Ex>
-                                    <TM>o jan Ken</TM>
+                                    <TM>o nin <Transliterated>Ken</Transliterated></TM>
                                     <Answer>
                                         <Loc>"Hey, [person named] Ken!"</Loc>
                                         <See href="names-and-foreign-words">Names and Foreign Words</See>
@@ -423,13 +425,13 @@ export const English = () => {
                             </P>
                             <Examples>
                                 <Ex>
-                                    <TM>mi li moku e kili</TM>
+                                    <TM>mi le makan in kuwosi</TM>
                                     <Answer>
                                         <Loc>"I am eating fruit"</Loc>
                                     </Answer>
                                 </Ex>
                                 <Ex>
-                                    <TM>mi e kili li moku</TM>
+                                    <TM>mi in kuwosi le makan</TM>
                                     <Answer>
                                         <Loc>"I am eating fruit"</Loc>
                                     </Answer>
@@ -451,19 +453,19 @@ export const English = () => {
                             <Examples>
                                 <Ex>
                                     <TM>
-                                        pawo <B>mi</B> li pona
+                                        pawo <B>mi</B> le tope
                                     </TM>
                                     <Answer>
                                         <Loc>
                                             "<B>My</B> dog is good"
                                         </Loc>{' '}
                                         (Yes, the adjective here is <Loc>"my"</Loc>. We don't usually talk about
-                                        possessives as adjectives, but trust me they are!)
+                                        possessives as adjectives, but trust me—they are!)
                                     </Answer>
                                 </Ex>
                                 <Ex>
                                     <TM>
-                                        mi li moku e kili <B>mi</B>
+                                        mi le makan in kuwosi <B>mi</B>
                                     </TM>
                                     <Answer>
                                         <Loc>
@@ -473,7 +475,7 @@ export const English = () => {
                                 </Ex>
                                 <Ex>
                                     <TM>
-                                        pawo <B>ni</B> li suli
+                                        pawo <B>ne</B> le kima
                                     </TM>
                                     <Answer>
                                         <Loc>
@@ -483,7 +485,7 @@ export const English = () => {
                                 </Ex>
                                 <Ex>
                                     <TM>
-                                        pawo <B>mi</B> li moku <B>mute</B>
+                                        pawo <B>mi</B> le makan <B>niju</B>
                                     </TM>
                                     <Answer>
                                         <Loc>
@@ -500,7 +502,7 @@ export const English = () => {
                             <Examples>
                                 <Ex>
                                     <TM>
-                                        pawo <B>suli mi</B> li pona
+                                        pawo <B>kima mi</B> le tope
                                     </TM>
                                     <Answer>
                                         <Loc>
@@ -510,7 +512,7 @@ export const English = () => {
                                 </Ex>
                                 <Ex>
                                     <TM>
-                                        jan <B>pona mute</B> li moku
+                                        nin <B>tope niju</B> le makan
                                     </TM>
                                     <Answer>
                                         <Loc>
@@ -523,9 +525,9 @@ export const English = () => {
                                 Wait a second, why does that second sentence say <Loc>"many good people"</Loc> and not{' '}
                                 <Loc>"a very good person"</Loc>? Remember that modifiers chain together{' '}
                                 <B>but apply to the whole noun phrase so far</B>, not just to the previous modifier.{' '}
-                                <TM>pona</TM> applies to <TM>jan</TM>, so now <TM>mute</TM> applies to the entire phrase{' '}
-                                <TM>jan pona</TM>, not just to <TM>pona</TM>. Think of it like parentheses in math
-                                class: <TM>((((jan pasan) lamo) pona) mute)</TM> -{' '}
+                                <TM>tope</TM> applies to <TM>nin</TM>, so now <TM>niju</TM> applies to the entire phrase{' '}
+                                <TM>nin tope</TM>, not just to <TM>tope</TM>. Think of it like parentheses in math
+                                class: <TM>((((nin pasan) lamo) tope) niju)</TM> -{' '}
                                 <Loc>many good, tall, happy people</Loc>.
                             </P>
                             <P>
