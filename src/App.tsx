@@ -15,15 +15,15 @@ function App() {
     const [popoverRef, setPopoverRef] = useState(null as null | React.MutableRefObject<null | HTMLSpanElement>);
     const [popoverWord, setPopoverWord] = useState('');
 
-    const [wordList, setWordList] = useState({ words: {}, labels: {} } as WordList);
+    const [wordList, setWordList] = useState({} as WordList); //useState({ words: {}, labels: {} } as WordList);
 
     const appRef = useRef<HTMLDivElement>(null);
 
     const [language, setLanguage] = useState('English');
 
-    useEffect(() => {
-        fetchWordList(language).then((list) => setWordList(list));
-    }, [language]);
+    // useEffect(() => {
+    //     fetchWordList(language).then((list) => setWordList(list));
+    // }, [language]);
 
     useEffect(() => {
         const event = () => {
@@ -48,10 +48,10 @@ function App() {
                     <div ref={appRef} className={classNames('App', language)}>
                         <Header language={language} onChangeLanguage={setLanguage} />
                         <Routes>
-                            <Route path="/" element={<Introduction />} />
-                            <Route path="/dictionary" element={<SimpleDictionary />} />
-                            <Route path="/grammar" element={<Grammar />} />
-                            <Route path="/tools" element={<></>} />
+                            <Route path="/tokima" element={<Introduction />} />
+                            <Route path="/tokima/dictionary" element={<SimpleDictionary />} />
+                            <Route path="/tokima/grammar" element={<Grammar />} />
+                            <Route path="/tokima/tools" element={<></>} />
                         </Routes>
                     </div>
                 </GetDefContext.Provider>

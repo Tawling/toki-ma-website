@@ -36,7 +36,7 @@ const Header = ({ language, onChangeLanguage, availableLanguages = ['English'] }
             <div className="nav-bar">
                 <NavLink
                     className={(active) => classNames('nav-item', { active })}
-                    to={`/?language=${language || 'English'}`}
+                    to={`/tokima?language=${language || 'English'}`}
                 >
                     {t('navAbout')}
                     <br />
@@ -44,7 +44,7 @@ const Header = ({ language, onChangeLanguage, availableLanguages = ['English'] }
                 </NavLink>
                 <NavLink
                     className={(active) => classNames('nav-item', { active })}
-                    to={`/dictionary?language=${language || 'English'}`}
+                    to={`/tokima/dictionary?language=${language || 'English'}`}
                 >
                     {t('navDictionary')}
                     <br />
@@ -52,7 +52,7 @@ const Header = ({ language, onChangeLanguage, availableLanguages = ['English'] }
                 </NavLink>
                 <NavLink
                     className={(active) => classNames('nav-item', { active })}
-                    to={`/grammar?language=${language || 'English'}`}
+                    to={`/tokima/grammar?language=${language || 'English'}`}
                 >
                     {t('navGrammar')}
                     <br />
@@ -60,7 +60,7 @@ const Header = ({ language, onChangeLanguage, availableLanguages = ['English'] }
                 </NavLink>
                 <NavLink
                     className={(active) => classNames('nav-item', { active })}
-                    to={`/tools?language=${language || 'English'}`}
+                    to={`/tokima/tools?language=${language || 'English'}`}
                 >
                     {t('navTools')}
                     <br />

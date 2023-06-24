@@ -18,7 +18,7 @@ const Popover = ({
     if (!word || !span || !wordList) {
         return null;
     }
-    if (word?.toLowerCase() in wordList.words) {
+    if (word?.toLowerCase() in wordList) {
         const r = span.current?.getBoundingClientRect() ?? { top: 0, bottom: 0, left: 0, right: 0 };
         const rect = {
             top: r.top + window.scrollY,
@@ -54,7 +54,30 @@ const Popover = ({
                         left: (rect.right - rect.left) / 2 - 5 + (rect.left - popoverLeft),
                     }}
                 ></div>
-                <span className="word-def">{wordList.words[word.toLowerCase()].word}</span>
+                <div className="def-holder">
+                    {'noun' in (wordList[word] || {}) ? (
+                        ['noun', 'verb', 'modifier']
+                            .filter((p) => wordList[word]?.[p])
+                            .map((pos) => (
+                                <div key={pos}>
+                                    {/* <Badge color="secondary" pill style={{ fontSize: '0.5em', marginRight: 5 }}> */}
+                                    {pos === 'short' ? wordList[word]?.type : pos}
+                                    {': '}
+                                    {/* </Badge> */}
+                                    {wordList[word]?.[pos]}
+                                </div>
+                            ))
+                    ) : (
+                        <div>
+                            {/* <Badge color="secondary" pill style={{ fontSize: '0.5em', marginRight: 5 }}> */}
+                            {wordList[word]?.type}
+                            {': '}
+                            {/* </Badge> */}
+                            {wordList[word]?.short}
+                        </div>
+                    )}
+                </div>
+                {/* <span className="word-def">{wordList.words[word.toLowerCase()].word}</span>
                 {wordList.words[word.toLowerCase()].emoji ? (
                     <span className="emoji" style={{ paddingLeft: '0.5em' }}>
                         {wordList.words[word.toLowerCase()].emoji}
@@ -74,7 +97,7 @@ const Popover = ({
                             <span className="pos">{wordList.labels[pos]}</span>:{' '}
                             {wordList.words[word.toLowerCase()][pos]}
                         </div>
-                    ))}
+                    ))} */}
             </div>
         );
     }
