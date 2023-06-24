@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { TwemojiRender } from '../components/Emoji';
 import { LanguageContext } from '../contexts';
-import { fetchDictLanguages, fetchWordList, simplePartsOfSpeech, WordDef, WordList } from '../words';
+import { fetchDictLanguages, fetchWordList, WordDef, WordList } from '../words';
 
 import styles from './SimpleDictionary.module.scss';
 
@@ -30,23 +30,23 @@ export const SimpleDictionary = () => {
 
     useEffect(() => {
         setLanguage(dictLanguages.includes(language) ? language : 'English');
-        fetchWordList(language).then((list) => setWordList(list));
+        fetchWordList().then((list) => setWordList(list));
     }, [dictLanguages, language]);
 
     useEffect(() => {
         if (toTM) {
             setResults(
-                Object.values(wordList?.words ?? {}).filter(
+                Object.values(wordList ?? {}).filter(
                     (def: WordDef) =>
                         def.short?.toLocaleLowerCase().includes(query.toLocaleLowerCase()) ||
-                        simplePartsOfSpeech.some(
+                        ['short', 'noun', 'verb', 'modifier'].some(
                             (pos) => def[pos] && def[pos]?.toLocaleLowerCase().includes(query.toLocaleLowerCase()),
                         ),
                 ),
             );
         } else {
             setResults(
-                Object.values(wordList?.words ?? {}).filter((def) =>
+                Object.values(wordList ?? {}).filter((def) =>
                     exact
                         ? def.word.toLocaleLowerCase() === query.toLocaleLowerCase()
                         : def.word.toLocaleLowerCase().includes(query.toLocaleLowerCase()),
@@ -75,7 +75,7 @@ export const SimpleDictionary = () => {
                             setExact(true);
                         }}
                     >
-                        {Object.values(wordList?.words).map((def) => (
+                        {Object.values(wordList).map((def) => (
                             <option key={def.word} value={def.word}>
                                 {def.emoji} {def.word}
                             </option>
@@ -112,16 +112,12 @@ export const SimpleDictionary = () => {
                     </label>
                 )}
             </div>
-            <div>
-                {!wordList
-                    ? t('Loading...')
-                    : results.map((def, index) => <DictEntry key={index} labels={wordList?.labels || {}} word={def} />)}
-            </div>
+            <div>{!wordList ? t('Loading...') : results.map((def, index) => <DictEntry key={index} word={def} />)}</div>
         </div>
     );
 };
 
-const DictEntry = ({ labels, word }: { labels: { [key: string]: string }; word: WordDef }) => {
+const DictEntry = ({ word }: { word: WordDef }) => {
     return (
         <div className={styles.simpleDictEntry}>
             <div className={styles.wordHeader}>
@@ -132,13 +128,13 @@ const DictEntry = ({ labels, word }: { labels: { [key: string]: string }; word: 
                 )}
                 {word.word}
             </div>
-            <div className={styles.basePOS}>({word.base})</div>
+            <div className={styles.basePOS}>({word.type})</div>
             <div className={styles.etymology}>{word.origin}</div>
             <div className={styles.posContainer}>
-                {simplePartsOfSpeech.map((pos) =>
+                {('noun' in word ? ['noun', 'modifier', 'verb'] : ['short']).map((pos) =>
                     word[pos] ? (
                         <div className={classNames(styles.pos, pos)}>
-                            <span className={styles.posLabel}>{labels[pos] ?? pos}:</span>{' '}
+                            <span className={styles.posLabel}>{pos === 'short' ? word.type : pos}:</span>{' '}
                             <span className={styles.posDef}>{word[pos]}</span>
                         </div>
                     ) : null,

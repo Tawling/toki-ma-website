@@ -10,7 +10,7 @@ const TMWord = ({ children }: { children: string }) => {
     return (
         <span
             ref={ref}
-            className={wordList?.words[children.toLowerCase()] ? 'tmword' : ''}
+            className={wordList[children.toLowerCase()] ? 'tmword' : ''}
             onClick={
                 noclick
                     ? undefined
