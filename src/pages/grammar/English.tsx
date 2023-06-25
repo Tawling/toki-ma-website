@@ -236,7 +236,7 @@ export const English = () => {
                             </P>
                             <Examples>
                                 <Ex>
-                                    <TM>le moku in kuwosi</TM>
+                                    <TM>le makan in kuwosi</TM>
                                     <Answer>
                                         <Loc>"Fruit is eaten"</Loc>
                                     </Answer>
@@ -343,7 +343,7 @@ export const English = () => {
                                 </Ex>
                                 <Ex>
                                     <TM>
-                                        nin <Transliterated>Ta</Transliterated> li pen in kota sula
+                                        nin <Transliterated>Ta</Transliterated> le pen in kota sula
                                     </TM>
                                     <Answer>
                                         <Loc>"[the person named] Ta is learning a simple language"</Loc>
