@@ -1,0 +1,34 @@
+/*
+    Description: {{ description }}
+*/
+
+import React, { useCallback, useEffect, useState } from 'react';
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface Props {
+    // TODO implement props
+}
+
+export const {{ pascalCase name }} = (props: Props) => {
+    const [loaded, setLoaded] = useState<boolean>();
+
+    const load = useCallback(() => {
+        // TODO implement loading logic here
+
+        setLoaded(true);
+    }, [setLoaded]);
+
+    const cleanup = useCallback(() => {
+        // TODO implement cleanup
+    }, []);
+
+    useEffect(() => {
+        if (!loaded) load();
+
+        return () => {
+            cleanup();
+        };
+    }, [load, cleanup]);
+
+    return <>{{ pascalCase name }} works!</>;
+};

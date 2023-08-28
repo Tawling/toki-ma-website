@@ -8,7 +8,8 @@
         "preview": "vite preview",
         "test": "jest --maxWorkers=25%",
         "lint": "eslint .",
-        "lint-fix": "eslint --fix ."
+        "lint-fix": "eslint --fix .",
+        "create": "plop"
     },
     "dependencies": {
         "classnames": "^2.3.1",
@@ -39,6 +40,7 @@
         "identity-obj-proxy": "^3.0.0",
         "jest": "^28.1.3",
         "jest-environment-jsdom": "^28.1.3",
+        "plop": "^3.1.1",
         "prettier": "^2.7.1",
         "ts-jest": "^28.0.8",
         "typescript": "^4.7.4",

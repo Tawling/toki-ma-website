@@ -63,3 +63,15 @@ npm run preview
 ```
 
 Note that preview simply serves the dist folder in a production-like environment - it will not build the production build for you (you need to have already made a production build).
+
+# Creating New Pages or Components
+
+This repository has Plop.js for creating new components and pages.
+
+To create a new component or page, run:
+
+```
+npm run create
+```
+
+From there, select "page" or "component" and fill out the information requested. New components will be in `src/components` and new pages will be in `src/pages`.
